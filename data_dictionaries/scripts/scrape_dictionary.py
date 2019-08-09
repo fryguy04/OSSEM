@@ -128,7 +128,7 @@ if __name__ == "__main__":
             m = re.search('[\\/](\S+)[\\/]\S+\.md', str(filename))
 
             if m:
-                product = m.group(1)
+                product = m.group(1).replace('\\', '_').replace('/', '_')
            
             #master_json[product][file_base] = []
             master_json[product][file_base] = data_dictionary_to_json(data_dict)

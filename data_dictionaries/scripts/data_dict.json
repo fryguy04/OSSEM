@@ -1,5 +1,5 @@
 {
-    "linux/osquery": {
+    "linux_osquery": {
         "file": {
             "path": {
                 "Standard Name": "file _path",
@@ -105,7 +105,7 @@
             }
         }
     },
-    "macos/osquery": {
+    "macos_osquery": {
         "file": {
             "path": {
                 "Standard Name": "file _path",
@@ -211,7 +211,7 @@
             }
         }
     },
-    "windows/carbonblack": {
+    "windows_carbonblack": {
         "childproc": {
             "cb_server": {
                 "Standard Name": "cb_server",
@@ -1151,7 +1151,7 @@
             }
         }
     },
-    "windows/osquery": {
+    "windows_osquery": {
         "file": {
             "path": {
                 "Standard Name": "file_path",
@@ -1421,7 +1421,7 @@
             }
         }
     },
-    "windows/powershell/events": {
+    "windows_powershell_events": {
         "event-400": {
             "NewEngineState": {
                 "Standard Name": "powershell_new_engine_state",
@@ -1841,7 +1841,7 @@
             }
         }
     },
-    "windows/security/events": {
+    "windows_security_events": {
         "event-4624": {
             "SubjectUserSid": {
                 "Standard Name": "user_reporter_sid",
@@ -6551,7 +6551,7 @@
             }
         }
     },
-    "windows/so-host-data": {
+    "windows_so-host-data": {
         "accesstoken": {
             "SourceType": {
                 "Standard Name": "source_type",
@@ -7147,7 +7147,7 @@
             }
         }
     },
-    "windows/sysmon": {
+    "windows_sysmon": {
         "event-1": {
             "UtcTime": {
                 "Standard Name": "event_date_creation",
@@ -8243,7 +8243,7 @@
             }
         }
     },
-    "windows/windowsdefenderatp": {
+    "windows_windowsdefenderatp": {
         "AlertEvents": {
             "AlertId": {
                 "Standard Name": "alert_id",
