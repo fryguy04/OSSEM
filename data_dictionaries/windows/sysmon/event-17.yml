@@ -1,0 +1,46 @@
+author: Roberto Rodriguez (@Cyb3rWard0g)
+channel: Microsoft-Windows-Sysmon/Operational
+date: 04/26/2019
+description: This event generates when a named pipe is created.
+details: 'This event generates when a named pipe is created. Malware often uses named
+  pipes for interprocess communication.[Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-17-pipeevent-pipe-created)
+
+  '
+eventData:
+  Image:
+    Description: File path of the process that created the pipe
+    Sample Value: C:\WINDOWS\system32\cmd.exe
+    Standard Name: process_path
+    Type: string
+  PipeName:
+    Description: Name of the pipe created
+    Sample Value: Anonymous Pipe
+    Standard Name: pipe_name
+    Type: string
+  ProcessGuid:
+    Description: Process Guid of the process that created the pipe
+    Sample Value: '{A98268C1-A968-5ACD-0000-0010BD4EC200}'
+    Standard Name: process_guid
+    Type: string
+  ProcessId:
+    Description: Process ID used by the os to identify the process that created the
+      pipe
+    Sample Value: '1224'
+    Standard Name: process_id
+    Type: integer
+  RuleName:
+    Description: custom tag mapped to event. i.e ATT&CK technique ID
+    Sample Value: T1114
+    Standard Name: tag
+    Type: string
+  UtcTime:
+    Description: Time in UTC when event was created
+    Sample Value: 4/11/18 6:21
+    Standard Name: event_date_creation
+    Type: date
+eventID: 17
+logtype: sysmon
+name: PipeEvent (Pipe Created)
+platform: windows
+provider: Microsoft-Windows-Sysmon
+providerGUID: 5770385f-c22a-43e0-bf4c-06f5698ffbd9

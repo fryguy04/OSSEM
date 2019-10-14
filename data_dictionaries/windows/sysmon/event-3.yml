@@ -1,0 +1,109 @@
+author: Roberto Rodriguez (@Cyb3rWard0g)
+channel: Microsoft-Windows-Sysmon/Operational
+date: 04/26/2019
+description: The network connection event logs TCP/UDP connections on the machine.
+details: 'The network connection event logs TCP/UDP connections on the machine. It
+  is disabled by default. Each connection is linked to a process through the ProcessId
+  and ProcessGUID fields. The event also contains the source and destination host
+  names IP addresses, port numbers and IPv6 status.[Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-3-network-connection)
+
+  '
+eventData:
+  DestinationHostName:
+    Description: name of the host that received the network connection
+    Sample Value: DC-WD-001
+    Standard Name: dst_host_name
+    Type: string
+  DestinationIp:
+    Description: ip address destination
+    Sample Value: 192.168.64.135
+    Standard Name: dst_ip
+    Type: ip
+  DestinationIsIpv6:
+    Description: is the destination ip an Ipv6
+    Sample Value: C:\Windows\System32\cmd.exe
+    Standard Name: dst_is_ipv6
+    Type: boolean
+  DestinationPort:
+    Description: destination port number
+    Sample Value: '138'
+    Standard Name: dst_port
+    Type: integer
+  DestinationPortName:
+    Description: name of the destination port
+    Sample Value: netbios-dgm
+    Standard Name: dst_port_name
+    Type: string
+  Image:
+    Description: File path of the process that made the network connection
+    Sample Value: System
+    Standard Name: process_path
+    Type: string
+  Initiated:
+    Description: Indicated process initiated tcp connection
+    Sample Value: 'FALSE'
+    Standard Name: network_connection_initiated
+    Type: boolean
+  ProcessGuid:
+    Description: Process Guid of the process that made the network connection
+    Sample Value: '{A98268C1-957F-5ACD-0000-0010EB030000}'
+    Standard Name: process_guid
+    Type: string
+  ProcessId:
+    Description: Process ID used by the os to identify the process that made the network
+      connection
+    Sample Value: '4'
+    Standard Name: process_id
+    Type: integer
+  Protocol:
+    Description: Protocol being used for the network connection
+    Sample Value: udp
+    Standard Name: network_protocol
+    Type: string
+  RuleName:
+    Description: custom tag mapped to event. i.e ATT&CK technique ID
+    Sample Value: T1114
+    Standard Name: tag
+    Type: string
+  SourceHostname:
+    Description: name of the host that made the network connection
+    Sample Value: computer_name or none for broadcast
+    Standard Name: src_host_name
+    Type: string
+  SourceIp:
+    Description: source ip address that made the network connection
+    Sample Value: 192.168.64.255
+    Standard Name: src_ip
+    Type: ip
+  SourceIsIpv6:
+    Description: is the source ip an Ipv6
+    Sample Value: 'FALSE'
+    Standard Name: src_is_ipv6
+    Type: boolean
+  SourcePort:
+    Description: source port number
+    Sample Value: '138'
+    Standard Name: src_port
+    Type: integer
+  SourcePortName:
+    Description: name of the source port being used (i.e. netbios-dgm)
+    Sample Value: netbios-dgm
+    Standard Name: src_port_name
+    Type: string
+  User:
+    Description: Name of the account who made the network connection. It usually containes
+      domain name and user name
+    Sample Value: NT AUTHORITY\SYSTEM
+    Standard Name: user_name
+    Type: string
+  UtcTime:
+    Description: Time in UTC when event was created
+    Sample Value: 4/11/18 5:29
+    Standard Name: event_date_creation
+    Type: date
+eventID: 3
+logtype: sysmon
+name: Network connection
+platform: windows
+provider: Microsoft-Windows-Sysmon
+providerGUID: 5770385f-c22a-43e0-bf4c-06f5698ffbd9

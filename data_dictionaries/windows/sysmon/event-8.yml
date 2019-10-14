@@ -1,0 +1,86 @@
+author: Roberto Rodriguez (@Cyb3rWard0g)
+channel: Microsoft-Windows-Sysmon/Operational
+date: 04/26/2019
+description: The CreateRemoteThread event detects when a process creates a thread
+  in another process.
+details: 'The CreateRemoteThread event detects when a process creates a thread in
+  another process. This technique is used by malware to inject code and hide in other
+  processes. The event indicates the source and target process. It gives information
+  on the code that will be run in the new thread: StartAddress, StartModule and StartFunction.
+  Note that StartModule and StartFunction fields are inferred, they might be empty
+  if the starting address is outside loaded modules or known exported functions.[Sysmon
+  Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-8-createremotethread)
+
+  '
+eventData:
+  NewThreadId:
+    Description: Id of the new thread created in the target process
+    Sample Value: '2336'
+    Standard Name: thread_new_id
+    Type: integer
+  RuleName:
+    Description: custom tag mapped to event. i.e ATT&CK technique ID
+    Sample Value: T1114
+    Standard Name: tag
+    Type: string
+  SourceImage:
+    Description: File path of the source process that created a thread in another
+      process
+    Sample Value: C:\Windows\System32\csrss.exe
+    Standard Name: process_path
+    Type: string
+  SourceProcessGuid:
+    Description: Process Guid of the source process that created a thread in another
+      process
+    Sample Value: '{A98268C1-9586-5ACD-0000-001070A20000}'
+    Standard Name: process_guid
+    Type: string
+  SourceProcessId:
+    Description: Process ID used by the os to identify the source process that created
+      a thread in another process
+    Sample Value: '684'
+    Standard Name: process_id
+    Type: integer
+  StartAddress:
+    Description: New thread start address
+    Sample Value: '0x00007FFA356A7E40'
+    Standard Name: thread_start_address
+    Type: string
+  StartFunction:
+    Description: Start function is reported if exact match to function in image export
+      table
+    Sample Value: CtrlRoutine
+    Standard Name: thread_start_function
+    Type: string
+  StartModule:
+    Description: Start module determined from thread start address mapping to PEB
+      loaded module list
+    Sample Value: C:\WINDOWS\System32\KERNELBASE.dll
+    Standard Name: thread_start_module
+    Type: string
+  TargetImage:
+    Description: File path of the target process
+    Sample Value: C:\Windows\System32\cmd.exe
+    Standard Name: target_process_path
+    Type: string
+  TargetProcessGuid:
+    Description: Process Guid of the target process
+    Sample Value: '{A98268C1-9C2E-5ACD-0000-00100266AB00}'
+    Standard Name: target_process_guid
+    Type: string
+  TargetProcessId:
+    Description: Process ID used by the os to identify the target process
+    Sample Value: '240'
+    Standard Name: target_process_id
+    Type: integer
+  UtcTime:
+    Description: Time in UTC when event was created
+    Sample Value: 4/11/18 5:25
+    Standard Name: event_date_creation
+    Type: date
+eventID: 8
+logtype: sysmon
+name: CreateRemoteThread
+platform: windows
+provider: Microsoft-Windows-Sysmon
+providerGUID: 5770385f-c22a-43e0-bf4c-06f5698ffbd9

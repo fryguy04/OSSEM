@@ -1,0 +1,59 @@
+author: Roberto Rodriguez (@Cyb3rWard0g)
+channel: Microsoft-Windows-Sysmon/Operational
+date: 04/26/2019
+description: This event logs when a WMI event filter is registered, which is a method
+  used by malware to execute
+details: 'When a WMI event filter is registered, which is a method used by malware
+  to execute, this event logs the WMI namespace, filter name and filter expression.[Sysmon
+  Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-19-wmievent-wmieventfilter-activity-detected)
+
+  '
+eventData:
+  EventNamespace:
+    Description: event namespace where the wmi clas
+    Sample Value: root\\CimV2
+    Standard Name: wmi_namespace
+    Type: string
+  EventType:
+    Description: wmievent type
+    Sample Value: WmiFilterEvent
+    Standard Name: event_type
+    Type: string
+  Name:
+    Description: Wmi filter name being created
+    Sample Value: Updater
+    Standard Name: wmi_filter_name
+    Type: string
+  Operation:
+    Description: wmievent filter operation
+    Sample Value: Created
+    Standard Name: wmi_operation
+    Type: string
+  Query:
+    Description: wmi filter query
+    Sample Value: '"SELECT * FROM __InstanceModificationEvent WITHIN 60 WHERE TargetInstance
+      ISA ''Win32_PerfFormattedData_PerfOS_System'' AND TargetInstance.SystemUpTime
+      >= 240 AND TargetInstance.SystemUpTime < 325"'
+    Standard Name: wmi_query
+    Type: string
+  RuleName:
+    Description: custom tag mapped to event. i.e ATT&CK technique ID
+    Sample Value: T1114
+    Standard Name: tag
+    Type: string
+  User:
+    Description: user that created the wmi filter
+    Sample Value: DESKTOP-LFD11QP\pedro
+    Standard Name: user_name
+    Type: string
+  UtcTime:
+    Description: Time in UTC when event was created
+    Sample Value: '2018-09-11 23:12:46.606'
+    Standard Name: event_date_creation
+    Type: date
+eventID: 19
+logtype: sysmon
+name: WmiEvent (WmiEventFilter activity detected)
+platform: windows
+provider: Microsoft-Windows-Sysmon
+providerGUID: 5770385f-c22a-43e0-bf4c-06f5698ffbd9

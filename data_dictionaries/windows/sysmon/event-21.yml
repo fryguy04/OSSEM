@@ -1,0 +1,51 @@
+author: Roberto Rodriguez (@Cyb3rWard0g)
+channel: Microsoft-Windows-Sysmon/Operational
+date: 04/26/2019
+description: When a consumer binds to a filter, this event logs the consumer name
+  and filter path.
+details: 'When a consumer binds to a filter, this event logs the consumer name and
+  filter path.[Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-21-wmievent-wmieventconsumertofilter-activity-detected)
+
+  '
+eventData:
+  Consumer:
+    Description: Consumer created to bind
+    Sample Value: CommandLineEventConsumer.Name=\"Updater\"
+    Standard Name: wmi_consumer_path
+    Type: string
+  EventType:
+    Description: wmievent type
+    Sample Value: WmiBindingEvent
+    Standard Name: event_type
+    Type: string
+  Filter:
+    Description: Filter created to bind
+    Sample Value: __EventFilter.Name=\"Updater\"
+    Standard Name: wmi_filter_path
+    Type: string
+  Operation:
+    Description: wmievent filter operation
+    Sample Value: Created
+    Standard Name: wmi_operation
+    Type: string
+  RuleName:
+    Description: custom tag mapped to event. i.e ATT&CK technique ID
+    Sample Value: T1114
+    Standard Name: tag
+    Type: string
+  User:
+    Description: user that created the wmi filter
+    Sample Value: DESKTOP-LFD11QP\pedro
+    Standard Name: user_name
+    Type: string
+  UtcTime:
+    Description: Time in UTC when event was created
+    Sample Value: '2018-09-12 00:47:16.997'
+    Standard Name: event_date_creation
+    Type: date
+eventID: 21
+logtype: sysmon
+name: WmiEvent (WmiEventConsumerToFilter activity detected)
+platform: windows
+provider: Microsoft-Windows-Sysmon
+providerGUID: 5770385f-c22a-43e0-bf4c-06f5698ffbd9

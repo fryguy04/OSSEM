@@ -1,0 +1,54 @@
+author: Roberto Rodriguez (@Cyb3rWard0g)
+channel: Microsoft-Windows-Sysmon/Operational
+date: 04/26/2019
+description: The driver loaded events provides information about a driver being loaded
+  on the system.
+details: 'The driver loaded events provides information about a driver being loaded
+  on the system. The configured hashes are provided as well as signature information.
+  The signature is created asynchronously for performance reasons and indicates if
+  the file was removed after loading.[Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-6-driver-loaded)
+
+  '
+eventData:
+  Hashes:
+    Description: Hashes captured by sysmon driver
+    Sample Value: SHA1=38310AD6805DC31D5AA61BE182689D63060ACE94, MD5=BF2513029E231BE96D82F7C3ABFF87F4,
+      SHA256=F6DB64112CC50EEE495E2D7C61B8BDBE757A31B03144B0396615FD38C312824E, IMPHASH=06D4A412CF7F5363C49E629BF34446B3
+    Standard Name: hash
+    Type: string
+  ImageLoaded:
+    Description: full path of the driver loaded
+    Sample Value: C:\ProgramData\Microsoft\Windows Defender\Definition Updates{741285CC-BF49-492C-90BE-E84BD6CADD73}\MpKsl4d223a5a.sys
+    Standard Name: driver_loaded
+    Type: string
+  RuleName:
+    Description: custom tag mapped to event. i.e ATT&CK technique ID
+    Sample Value: T1114
+    Standard Name: tag
+    Type: string
+  Signature:
+    Description: The signer
+    Sample Value: Microsoft Corporation
+    Standard Name: driver_signature
+    Type: string
+  SignatureStatus:
+    Description: status of the signature (i.e valid)
+    Sample Value: Valid
+    Standard Name: driver_signature_status
+    Type: string
+  Signed:
+    Description: is the driver loaded signed
+    Sample Value: 'TRUE'
+    Standard Name: driver_is_signed
+    Type: boolean
+  UtcTime:
+    Description: Time in UTC when event was created
+    Sample Value: 4/11/18 5:21
+    Standard Name: event_date_creation
+    Type: date
+eventID: 6
+logtype: sysmon
+name: Driver loaded
+platform: windows
+provider: Microsoft-Windows-Sysmon
+providerGUID: 5770385f-c22a-43e0-bf4c-06f5698ffbd9

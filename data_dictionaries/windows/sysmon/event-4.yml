@@ -1,0 +1,36 @@
+author: Roberto Rodriguez (@Cyb3rWard0g)
+channel: Microsoft-Windows-Sysmon/Operational
+date: 04/26/2019
+description: The service state change event reports the state of the Sysmon service
+  (started or stopped).
+details: 'The service state change event reports the state of the Sysmon service (started
+  or stopped).[Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-4-sysmon-service-state-changed)
+
+  '
+eventData:
+  SchemaVersion:
+    Description: sysmon config schema version
+    Sample Value: '4'
+    Standard Name: sysmon_schema_version
+    Type: string
+  State:
+    Description: sysmon service state (i.e. stopped)
+    Sample Value: Stopped
+    Standard Name: service_state
+    Type: string
+  UtcTime:
+    Description: Time in UTC when event was created
+    Sample Value: 4/11/18 5:36
+    Standard Name: event_date_creation
+    Type: date
+  Version:
+    Description: sysmon version
+    Sample Value: '7.01'
+    Standard Name: file_version
+    Type: string
+eventID: 4
+logtype: sysmon
+name: Sysmon service state changed
+platform: windows
+provider: Microsoft-Windows-Sysmon
+providerGUID: 5770385f-c22a-43e0-bf4c-06f5698ffbd9

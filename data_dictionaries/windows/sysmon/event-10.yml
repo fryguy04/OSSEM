@@ -1,0 +1,82 @@
+author: Roberto Rodriguez (@Cyb3rWard0g)
+channel: Microsoft-Windows-Sysmon/Operational
+date: 04/26/2019
+description: The process accessed event reports when a process opens another process.
+details: "The process accessed event reports when a process opens another process,\
+  \ an operation that\u2019s often followed by information queries or reading and\
+  \ writing the address space of the target process. This enables detection of hacking\
+  \ tools that read the memory contents of processes like Local Security Authority\
+  \ (Lsass.exe) in order to steal credentials for use in Pass-the-Hash attacks. Enabling\
+  \ it can generate significant amounts of logging if there are diagnostic utilities\
+  \ active that repeatedly open processes to query their state, so it generally should\
+  \ only be done so with filters that remove expected accesses.[Sysmon Source](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon#event-id-10-processaccess)\n"
+eventData:
+  CallTrace:
+    Description: Stack trace of where open process is called. Included is the DLL
+      and the relative virtual address of the functions in the call stack right before
+      the open process call
+    Sample Value: C:\WINDOWS\SYSTEM32\ntdll.dll+a0344 \
+    Standard Name: process_call_trace
+    Type: string
+  GrantedAccess:
+    Description: The access flags (bitmask) associated with the process rights requested
+      for the target process
+    Sample Value: '0x1000'
+    Standard Name: process_granted_access
+    Type: string
+  RuleName:
+    Description: custom tag mapped to event. i.e ATT&CK technique ID
+    Sample Value: T1114
+    Standard Name: tag
+    Type: string
+  SourceImage:
+    Description: File path of the source process that created a thread in another
+      process
+    Sample Value: C:\WINDOWS\system32\svchost.exe
+    Standard Name: process_path
+    Type: string
+  SourceProcessGuid:
+    Description: Process Guid of the source process that opened another process. It
+      is derived from a truncated part of the machine GUID, the process start-time
+      and the process token ID.
+    Sample Value: '{A98268C1-9587-5ACD-0000-001004C40000}'
+    Standard Name: process_guid
+    Type: string
+  SourceProcessId:
+    Description: Process ID used by the os to identify the source process that opened
+      another process. Derived partially from the EPROCESS kernel structure
+    Sample Value: '916'
+    Standard Name: process_id
+    Type: integer
+  SourceThreadId:
+    Description: ID of the specific thread inside of the source process that opened
+      another process
+    Sample Value: '2804'
+    Standard Name: thread_id
+    Type: integer
+  TargetImage:
+    Description: File path of the target process
+    Sample Value: C:\ProgramData\Microsoft\Windows Defender\platform\4.12.17007.18022-0\MsMpEng.exe
+    Standard Name: target_process_path
+    Type: string
+  TargetProcessGuid:
+    Description: Process Guid of the target process
+    Sample Value: '{A98268C1-9597-5ACD-0000-00101D690200}'
+    Standard Name: target_process_guid
+    Type: string
+  TargetProcessId:
+    Description: Process ID used by the os to identify the target process
+    Sample Value: '2288'
+    Standard Name: target_process_id
+    Type: integer
+  UtcTime:
+    Description: Time in UTC when event was created
+    Sample Value: 4/11/18 5:18
+    Standard Name: event_date_creation
+    Type: date
+eventID: 10
+logtype: sysmon
+name: ProcessAccess
+platform: windows
+provider: Microsoft-Windows-Sysmon
+providerGUID: 5770385f-c22a-43e0-bf4c-06f5698ffbd9

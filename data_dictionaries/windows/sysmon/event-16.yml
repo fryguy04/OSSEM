@@ -1,0 +1,29 @@
+author: Roberto Rodriguez (@Cyb3rWard0g)
+channel: Microsoft-Windows-Sysmon/Operational
+date: 04/26/2019
+description: This event logs when the local sysmon configuration is updated.
+details: 'This event logs when the local sysmon configuration is updated.
+
+  '
+eventData:
+  Configuration:
+    Description: name of the sysmon config file being updated
+    Sample Value: C:\Tools\sysmon_config\StartLogging.xml
+    Standard Name: sysmon_configuration
+    Type: string
+  ConfigurationFileHash:
+    Description: hash (SHA1) of the sysmon config file being updated
+    Sample Value: SHA1=647B4A564FA2684252EFB1EA550A06EC432418C8
+    Standard Name: sysmon_configuration_hash
+    Type: string
+  UtcTime:
+    Description: Time in UTC when event was created
+    Sample Value: 4/11/18 5:25
+    Standard Name: event_date_creation
+    Type: date
+eventID: 16
+logtype: sysmon
+name: Sysmon Config State Changed
+platform: windows
+provider: Microsoft-Windows-Sysmon
+providerGUID: 5770385f-c22a-43e0-bf4c-06f5698ffbd9
