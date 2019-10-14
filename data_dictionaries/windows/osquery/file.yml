@@ -1,0 +1,101 @@
+author: ''
+channel: ''
+date: ''
+description: ''
+details: 'Interactive filesystem attributes and metadata.
+
+  [osquery GitHub](https://github.com/facebook/osquery/blob/master/specs/utility/file.table)
+
+  '
+eventData:
+  atime:
+    Description: Last access time
+    Sample Value: ''
+    Standard Name: date_last_access
+    Type: BIGINT
+  block_size:
+    Description: Block size of filesystem
+    Sample Value: ''
+    Standard Name: file_block_size
+    Type: INTEGER
+  btime:
+    Description: (B)irth or (cr)eate time
+    Sample Value: ''
+    Standard Name: date_creation_time
+    Type: BIGINT
+  ctime:
+    Description: Last status change time
+    Sample Value: ''
+    Standard Name: date_last_status_change
+    Type: BIGINT
+  device:
+    Description: Device ID (optional)
+    Sample Value: ''
+    Standard Name: device_id
+    Type: BIGINT
+  directory:
+    Description: Directory of file(s)
+    Sample Value: ''
+    Standard Name: file_directory
+    Type: TEXT
+  filename:
+    Description: Name portion of file path
+    Sample Value: ''
+    Standard Name: file_name
+    Type: TEXT
+  gid:
+    Description: Owning group ID
+    Sample Value: ''
+    Standard Name: user_gid
+    Type: BIGINT
+  hard_links:
+    Description: Number of hard links
+    Sample Value: ''
+    Standard Name: file_hard_links
+    Type: INTEGER
+  inode:
+    Description: Filesystem inode number
+    Sample Value: ''
+    Standard Name: file_inode
+    Type: BIGINT
+  mode:
+    Description: Permission bits
+    Sample Value: ''
+    Standard Name: user_permissions
+    Type: TEXT
+  mtime:
+    Description: Last modification time
+    Sample Value: ''
+    Standard Name: date_last_modification
+    Type: BIGINT
+  path:
+    Description: Absolute file path
+    Sample Value: ''
+    Standard Name: file_path
+    Type: TEXT
+  size:
+    Description: Size of file in bytes
+    Sample Value: ''
+    Standard Name: file_size
+    Type: BIGINT
+  symlink:
+    Description: 1 if the path is a symlink, otherwise 0
+    Sample Value: ''
+    Standard Name: file_symlink
+    Type: INTEGER
+  type:
+    Description: File status
+    Sample Value: ''
+    Standard Name: file_type
+    Type: TEXT
+  uid:
+    Description: Owning user ID
+    Sample Value: ''
+    Standard Name: user_uid
+    Type: BIGINT
+logtype: osquery
+name: ''
+platform: windows
+provider: ''
+providerGUID: ''
+title: ''

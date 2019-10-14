@@ -1,0 +1,55 @@
+author: ''
+channel: ''
+date: ''
+description: An attempt was made to create a hard link
+details: 'This event generates when an NTFS hard link was successfully created.
+
+  [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4664.md)
+
+  '
+eventData:
+  FileName:
+    Description: the name of a file or folder that new hard link refers to.
+    Sample Value: C:\\notepad.exe
+    Standard Name: file_name
+    Type: string
+  LinkName:
+    Description: full path name with new hard link file name.
+    Sample Value: C:\\Docs\\My.exe
+    Standard Name: file_link_name
+    Type: string
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: hexadecimal value that can help you correlate this event with recent
+      events that might contain the same Logon ID
+    Sample Value: '0x43659'
+    Standard Name: user_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: the name of the account that made an attempt to create the hard link.
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: SID of account that made an attempt to create the hard link.
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+  TransactionId:
+    Description: "unique GUID of the transaction. This field can help you correlate\
+      \ this event with other events that might contain the same Transaction ID, such\
+      \ as \u201C4660(S): An object was deleted.\u201D"
+    Sample Value: '{00000000-0000-0000-0000-000000000000}'
+    Standard Name: transaction_id
+    Type: string
+eventID: 4664
+logtype: security_events
+name: 'Event ID 4664: An attempt was made to create a hard link'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4664

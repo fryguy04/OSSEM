@@ -1,0 +1,45 @@
+author: Roberto Rodriguez (@Cyb3rWard0g)
+channel: Microsoft-windows-PowerShell/Operational
+date: 05/16/2018
+description: It records blocks of code as they are executed by the PowerShell engine.
+details: "Script block logging records blocks of code as they are executed by the\
+  \ PowerShell engine, thereby capturing the full contents of code executed by an\
+  \ attacker, including scripts and commands. Due to the nature of script block logging,\
+  \ it also records de-obfuscated code as it is executed. For example, in addition\
+  \ to recording the original obfuscated code, script block logging records the decoded\
+  \ commands passed with PowerShell\u2019s -EncodedCommand argument, as well as those\
+  \ obfuscated with XOR, Base64, ROT13, encryption, etc., in addition to the original\
+  \ obfuscated code. Script block logging will not record output from the executed\
+  \ code. [FireEye](https://www.fireeye.com/blog/threat-research/2016/02/greater_visibilityt.html)\n"
+eventData:
+  MessageNumber:
+    Description: ''
+    Sample Value: '1'
+    Standard Name: powershell_message_number
+    Type: integer
+  MessageTotal:
+    Description: ''
+    Sample Value: '1'
+    Standard Name: powershell_parameter_binding
+    Type: integer
+  Path:
+    Description: ''
+    Sample Value: C:\Tools\Invoke-ATTACKAPI-master\Invoke-ATTACKAPI.ps1
+    Standard Name: powershell_Path
+    Type: string
+  ScriptBlockId:
+    Description: ''
+    Sample Value: 1c97482f-51a2-4cf9-8abd-df9769b6e373
+    Standard Name: powershell_scriptblock_id
+    Type: string
+  ScriptBlockText:
+    Description: function Invoke-ATTACKAPI..
+    Sample Value: ''
+    Standard Name: powershell_scriptblock_text
+    Type: string
+eventID: 4104
+logtype: Windows PowerShell
+name: Script Block Logging
+platform: windows
+provider: Microsoft-Windows-PowerShell
+providerGUID: A0C1853B-5C40-4B15-8766-3CF1C58F985A

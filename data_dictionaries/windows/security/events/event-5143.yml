@@ -1,0 +1,106 @@
+author: ''
+channel: ''
+date: ''
+description: A network share object was modified
+details: 'This event generates every time network share object was modified.
+
+  [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-5143.md)
+
+  '
+eventData:
+  NewMaxUsers:
+    Description: "new hexadecimal value of \u201CLimit the number of simultaneous\
+      \ user to:\u201D field. Has \u201C0xFFFFFFFF\u201D value if the number of connections\
+      \ is unlimited."
+    Sample Value: '0xffffffff'
+    Standard Name: share_new_max_users
+    Type: string
+  NewRemark:
+    Description: "the new value of network share \u201CComments:\u201D field. Has\
+      \ \u201CN/A\u201D value if it is not set."
+    Sample Value: N/A
+    Standard Name: share_new_remak
+    Type: string
+  NewSD:
+    Description: the new Security Descriptor Definition Language (SDDL) value for
+      network share security descriptor.
+    Sample Value: O:BAG:DAD:(D;;FA;;;S-1-5-21-3457937927-2839227994-823803824-1104)(A;OICI;FA;;;WD)(A;OICI;FA;;;BA)
+    Standard Name: share_new_SD
+    Type: string
+  NewShareFlags:
+    Description: "new hexadecimal value of \u201COffline Settings\u201D caching settings\
+      \ window flags."
+    Sample Value: '0x800'
+    Standard Name: share_new_flags
+    Type: string
+  ObjectType:
+    Description: "The type of an object that was modified. Always \u201CDirectory\u201D\
+      \ for this event."
+    Sample Value: Directory
+    Standard Name: object_type
+    Type: string
+  OldMaxUsers:
+    Description: "old hexadecimal value of \u201CLimit the number of simultaneous\
+      \ user to:\u201D field. Has \u201C0xFFFFFFFF\u201D value if the number of connections\
+      \ is unlimited."
+    Sample Value: '0xffffffff'
+    Standard Name: share_old_max_users
+    Type: string
+  OldRemark:
+    Description: "the old value of network share \u201CComments:\u201D field. Has\
+      \ \u201CN/A\u201D value if it is not set."
+    Sample Value: N/A
+    Standard Name: share_old_remark
+    Type: string
+  OldSD:
+    Description: the old Security Descriptor Definition Language (SDDL) value for
+      network share security descriptor.
+    Sample Value: '-'
+    Standard Name: share_old_SD
+    Type: string
+  OldShareFlags:
+    Description: "old hexadecimal value of \u201COffline Settings\u201D caching settings\
+      \ window flags."
+    Sample Value: '0x800'
+    Standard Name: share_old_flags
+    Type: string
+  ShareLocalPath:
+    Description: the full system (NTFS) path for the added share object.
+    Sample Value: C:\\Documents
+    Standard Name: share_local_path
+    Type: string
+  ShareName:
+    Description: 'the name of the modified share object. The format is: \\*\SHARE_NAME'
+    Sample Value: \\\\\*\\Documents
+    Standard Name: share_name
+    Type: string
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name"
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: hexadecimal value that can help you correlate this event with recent
+      events that might contain the same Logon ID
+    Sample Value: '0x38d12'
+    Standard Name: user_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: "the name of the account that requested the \u201Cmodify network\
+      \ share object\u201D operation."
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: "SID of account that requested the \u201Cmodify network share object\u201D\
+      \ operation."
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+eventID: 5143
+logtype: security_events
+name: 'Event ID 5143: A network share object was modified'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 5143

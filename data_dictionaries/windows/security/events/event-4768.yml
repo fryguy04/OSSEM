@@ -1,0 +1,102 @@
+author: ''
+channel: ''
+date: ''
+description: A Kerberos authentication ticket (TGT) was requested
+details: "This event generates every time Key Distribution Center issues a Kerberos\
+  \ Ticket Granting Ticket (TGT). This event generates only on domain controllers.\
+  \ If TGT issue fails then you will see Failure event with Result Code field not\
+  \ equal to \u201C0x0\u201D. This event doesn't generate for Result Codes: 0x10,\
+  \ 0x17 and 0x18. Event \u201C4771: Kerberos pre-authentication failed.\u201D generates\
+  \ instead.\n[MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4768.md)\n"
+eventData:
+  CertIssuerName:
+    Description: the name of the Certification Authority that issued the smart card
+      certificate. Populated in Issued by field in certificate.
+    Sample Value: contoso-DC01-CA-1
+    Standard Name: certificate_issuer_name
+    Type: string
+  CertSerialNumber:
+    Description: "smart card certificate\u2019s serial number. Can be found in Serial\
+      \ number field in the certificate."
+    Sample Value: 1D0000000D292FBE3C6CDDAFA200020000000D
+    Standard Name: certificate_serial_number
+    Type: string
+  CertThumbprint:
+    Description: "smart card certificate\u2019s thumbprint. Can be found in Thumbprint\
+      \ field in the certificate."
+    Sample Value: 564DFAEE99C71D62ABC553E695BD8DBC46669413
+    Standard Name: certificate_thumbprint
+    Type: string
+  IpAddress:
+    Description: IP address of the computer from which the TGT request was received
+    Sample Value: ::ffff:10.0.0.12
+    Standard Name: src_ip
+    Type: ip
+  IpPort:
+    Description: source port number of client network connection (TGT request connection).
+    Sample Value: '49273'
+    Standard Name: src_port
+    Type: integer
+  PreAuthType:
+    Description: the code number of pre-Authentication type which was used in TGT
+      request.
+    Sample Value: '15'
+    Standard Name: ticket_pre_auth_type
+    Type: integer
+  ServiceName:
+    Description: "the name of the service in the Kerberos Realm to which TGT request\
+      \ was sent. Typically has value \u201Ckrbtgt\u201D for TGT requests, which means\
+      \ Ticket Granting Ticket issuing service. For Failure events Service Name typically\
+      \ has the following format: krbtgt/REALM_NAME. For example: krbtgt/CONTOSO."
+    Sample Value: krbtgt
+    Standard Name: service_name
+    Type: string
+  ServiceSid:
+    Description: SID of the service account in the Kerberos Realm to which TGT request
+      was sent. Event Viewer automatically tries to resolve SIDs and show the account
+      name. If the SID cannot be resolved, you will see the source data in the event.
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-502
+    Standard Name: service_sid
+    Type: string
+  Status:
+    Description: hexadecimal result code of TGT issue operation.
+    Sample Value: '0x0'
+    Standard Name: ticket_status
+    Type: string
+  TargetDomainName:
+    Description: the name of the Kerberos Realm that Account Name belongs to. This
+      can appear in a variety of formats
+    Sample Value: CONTOSO.LOCAL
+    Standard Name: user_domain
+    Type: string
+  TargetSid:
+    Description: 'SID of account for which (TGT) ticket was requested. Event Viewer
+      automatically tries to resolve SIDs and show the account name. If the SID cannot
+      be resolved, you will see the source data in the event. For example: CONTOSO\dadmin
+      or CONTOSO\WIN81$.'
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+  TargetUserName:
+    Description: the name of account, for which (TGT) ticket was requested. Computer
+      account name ends with $ character.
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  TicketEncryptionType:
+    Description: the cryptographic suite that was used for issued TGT
+    Sample Value: '0x12'
+    Standard Name: ticket_encryption_type
+    Type: string
+  TicketOptions:
+    Description: this is a set of different ticket flags in hexadecimal format.
+    Sample Value: '0x40810010'
+    Standard Name: ticket_options
+    Type: string
+eventID: 4768
+logtype: security_events
+name: 'Event ID 4768: A Kerberos authentication ticket (TGT) was requested'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4768

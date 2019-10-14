@@ -1,0 +1,68 @@
+author: ''
+channel: ''
+date: ''
+description: The state of a transaction has changed
+details: 'This is an informational event from file system Transaction Manager.
+
+  [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4964.md)
+
+  '
+eventData:
+  NewState:
+    Description: identifier of the new state of the transaction.
+    Sample Value: '52'
+    Standard Name: transaction_new_state
+    Type: string
+  ProcessId:
+    Description: hexadecimal Process ID of the process through which the state of
+      the transaction was changed. Process ID (PID) is a number used by the operating
+      system to uniquely identify an active process
+    Sample Value: '0x370'
+    Standard Name: process_id
+    Type: integer
+  ProcessName:
+    Description: full path and the name of the executable for the process.
+    Sample Value: C:\\Windows\\System32\\svchost.exe
+    Standard Name: process_name
+    Type: string
+  ResourceManager:
+    Description: unique GUID-Identifier of the Resource Manager which associated with
+      this transaction.
+    Sample Value: '{5F5ED427-FCCA-11E3-BD73-B54AB417B853}'
+    Standard Name: transaction_resource_manager
+    Type: string
+  SubjectDomainName:
+    Description: domain or computer name.
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: hexadecimal value that can help you correlate this event with recent
+      events that might contain the same Logon ID
+    Sample Value: '0x3e7'
+    Standard Name: user_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: the name of the account that changed the state of the transaction.
+    Sample Value: DC01$
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: SID of account through which the state of the transaction was changed.
+    Sample Value: S-1-5-18
+    Standard Name: user_sid
+    Type: string
+  TransactionId:
+    Description: "unique GUID of the transaction. This field can help you correlate\
+      \ this event with other events that might contain the same Transaction ID, such\
+      \ as \u201C4656(S, F): A handle to an object was requested.\u201D"
+    Sample Value: '{17EF5E21-5E2C-11E5-810F-00155D987005}'
+    Standard Name: transaction_id
+    Type: string
+eventID: 4985
+logtype: security_events
+name: 'Event ID 4985: The state of a transaction has changed'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4985

@@ -1,0 +1,144 @@
+author: ''
+channel: ''
+date: ''
+description: An account failed to log on
+details: "This event generates if an account logon attempt failed when the account\
+  \ was already locked out. It also generates for a logon attempt after which the\
+  \ account was locked out.\n* It generates on the computer where logon attempt was\
+  \ made, for example, if logon attempt was made on user\u2019s workstation, then\
+  \ event will be logged on this workstation.\n* This event generates on domain controllers,\
+  \ member servers, and workstations.\n[MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4625.md)\n"
+eventData:
+  AuthenticationPackageName:
+    Description: "The name of the authentication package which was used for the logon\
+      \ authentication process. Default packages loaded on LSA startup are located\
+      \ in \u201CHKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\OSConfig\u201D registry\
+      \ key."
+    Sample Value: Negotiate
+    Standard Name: logon_authentication_package_name
+    Type: string
+  FailureReason:
+    Description: textual explanation of Status field value
+    Sample Value: '%%2307'
+    Standard Name: event_failure_reason
+    Type: integer
+  IpAddress:
+    Description: IP address of machine from which logon attempt was performed
+    Sample Value: 127.0.0.1
+    Standard Name: src_ip
+    Type: integer
+  IpPort:
+    Description: source port which was used for logon attempt from remote machine.
+      0 for interactive logons
+    Sample Value: '0'
+    Standard Name: src_port
+    Type: string
+  KeyLength:
+    Description: "the length of NTLM Session Security key. Typically it has 128 bit\
+      \ or 56 bit length. This parameter is always 0 if \u201CAuthentication Package\u201D\
+      \ = \u201CKerberos\u201D, because it is not applicable for Kerberos protocol.\
+      \ This field will also have \u201C0\u201D value if Kerberos was negotiated using\
+      \ Negotiate authentication package."
+    Sample Value: '0'
+    Standard Name: logon_key_length
+    Type: integer
+  LmPackageName:
+    Description: 'The name of the LAN Manager sub-package (NTLM-family protocol name)
+      that was used during logon. Possible values are: NTLM V1, NTLM V2, LM. Only
+      populated if Authentication Package = NTLM.'
+    Sample Value: '-'
+    Standard Name: logon_authentication_lan_package_name
+    Type: integer
+  LogonProcessName:
+    Description: "the name of the trusted logon process that was used for the logon\
+      \ attempt. See event \u201C4611: A trusted logon process has been registered\
+      \ with the Local Security Authority\u201D description for more information."
+    Sample Value: User32
+    Standard Name: logon_process_name
+    Type: string
+  LogonType:
+    Description: the type of logon which was performed
+    Sample Value: '2'
+    Standard Name: logon_type
+    Type: string
+  ProcessId:
+    Description: hexadecimal Process ID of the process that attempted the logon. Process
+      ID (PID) is a number used by the operating system to uniquely identify an active
+      process.
+    Sample Value: '0x1bc'
+    Standard Name: process_id
+    Type: string
+  ProcessName:
+    Description: full path and the name of the executable for the process.
+    Sample Value: C:\\Windows\\System32\\winlogon.exe
+    Standard Name: process_name
+    Type: ip
+  Status:
+    Description: "the reason why logon failed. For this event it typically has \u201C\
+      0xC0000234\u201D value"
+    Sample Value: '0xc0000234'
+    Standard Name: event_status
+    Type: integer
+  SubStatus:
+    Description: additional information about logon failure.
+    Sample Value: '0x0'
+    Standard Name: event_sub_status
+    Type: string
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name"
+    Sample Value: CONTOSO
+    Standard Name: user_reporter_domain
+    Type: string
+  SubjectLogonId:
+    Description: hexadecimal value that can help you correlate this event with recent
+      events that might contain the same Logon ID
+    Sample Value: '0x3e7'
+    Standard Name: user_reporter_id
+    Type: integer
+  SubjectUserName:
+    Description: the name of the account that reported information about logon failure.
+    Sample Value: DC01$
+    Standard Name: user_reporter_name
+    Type: string
+  SubjectUserSid:
+    Description: SID of account that reported information about logon failure.
+    Sample Value: S-1-5-18
+    Standard Name: user_reporter_sid
+    Type: string
+  TargetDomainName:
+    Description: "subject\u2019s domain or computer name"
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  TargetUserName:
+    Description: the name of the account that was specified in the logon attempt
+    Sample Value: Auditor
+    Standard Name: user_name
+    Type: string
+  TargetUserSid:
+    Description: SID of the account that was specified in the logon attempt
+    Sample Value: S-1-0-0
+    Standard Name: user_sid
+    Type: string
+  TransmittedServices:
+    Description: "the list of transmitted services. Transmitted services are populated\
+      \ if the logon was a result of a S4U (Service For User) logon process. S4U is\
+      \ a Microsoft extension to the Kerberos Protocol to allow an application service\
+      \ to obtain a Kerberos service ticket on behalf of a user \u2013 most commonly\
+      \ done by a front-end website to access an internal resource on behalf of a\
+      \ user."
+    Sample Value: '-'
+    Standard Name: logon_trasmitted_services
+    Type: string
+  WorkstationName:
+    Description: machine name from which logon attempt was performed.
+    Sample Value: DC01
+    Standard Name: src_host_name
+    Type: string
+eventID: 4625
+logtype: security_events
+name: 'Event ID 4625: An account failed to log on'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4625

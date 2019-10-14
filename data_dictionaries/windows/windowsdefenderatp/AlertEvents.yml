@@ -1,0 +1,82 @@
+author: Jared Atkinson (@jaredcatkinson)
+channel: ''
+date: 02/21/2019
+description: ''
+details: 'Alerts on Windows Defender Security Center
+
+  '
+eventData:
+  AlertId:
+    Description: Unique identifier for the alert
+    Sample Value: ''
+    Standard Name: alert_id
+    Type: string
+  Category:
+    Description: ''
+    Sample Value: ''
+    Standard Name: category
+    Type: ''
+  ComputerName:
+    Description: Fully qualified domain name (FQDN) of the machine
+    Sample Value: ''
+    Standard Name: computer_name
+    Type: string
+  EventTime:
+    Description: Date and time when the event was recorded
+    Sample Value: ''
+    Standard Name: event_date_creation
+    Type: date
+  FileName:
+    Description: Name of the file that the recorded action was applied to
+    Sample Value: ''
+    Standard Name: file_name
+    Type: string
+  MachineId:
+    Description: Unique identifier for the machine in the service
+    Sample Value: ''
+    Standard Name: machine_id
+    Type: string
+  RemoteIP:
+    Description: IP address that was being connected to
+    Sample Value: ''
+    Standard Name: remote_ip
+    Type: string
+  RemoteUrl:
+    Description: URL or fully qualified domain name (FQDN) that was being connected
+      to
+    Sample Value: ''
+    Standard Name: remote_url
+    Type: string
+  ReportId:
+    Description: Event identifier based on a repeating counter. To identify unique
+      events, this column must be used in conjunction with the ComputerName and EventTime
+      columns.
+    Sample Value: ''
+    Standard Name: report_id
+    Type: long
+  SHA1:
+    Description: "\xDF\tSHA-1 of the file that the recorded action was applied to"
+    Sample Value: ''
+    Standard Name: hash_sha1
+    Type: string
+  Severity:
+    Description: ''
+    Sample Value: ''
+    Standard Name: severity
+    Type: ''
+  Table:
+    Description: Table that contains the details of the event
+    Sample Value: ''
+    Standard Name: table
+    Type: string
+  Title:
+    Description: ''
+    Sample Value: ''
+    Standard Name: title
+    Type: ''
+logtype: windowsdefenderatp
+name: ''
+platform: windows
+provider: ''
+providerGUID: ''
+title: ''

@@ -1,0 +1,121 @@
+author: ''
+channel: ''
+date: ''
+description: A handle to an object was requested
+details: "This event indicates that specific access was requested for an object. The\
+  \ object could be a file system, kernel, or registry object, or a file system object\
+  \ on removable storage or a device.\nIf access was declined, a Failure event is\
+  \ generated.\nThis event generates only if the object\u2019s SACL has the required\
+  \ ACE to handle the use of specific access rights.\nThis event shows that access\
+  \ was requested, and the results of the request, but it doesn\u2019t show that the\
+  \ operation was performed. To see that the operation was performed, check \u201C\
+  4663(S): An attempt was made to access an object.\u201D\n[MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4656.md)\n"
+eventData:
+  AccessList:
+    Description: the list of access rights which were requested by Subject\Security
+      ID.
+    Sample Value: '%%1538 %%1541 %%4416 %%4417 %%4418 %%4419 %%4420 %%4423 %%4424'
+    Standard Name: user_access_list
+    Type: string
+  AccessMask:
+    Description: hexadecimal mask for the requested or performed operation. For more
+      information, see the preceding table.
+    Sample Value: '0x12019f'
+    Standard Name: access_mask
+    Type: string
+  AccessReason:
+    Description: the list of access check results. The format of this varies, depending
+      on the object. For kernel objects, this field does not apply.
+    Sample Value: '%%1538: %%1804 %%1541: %%1809 %%4416: %%1809 %%4417: %%1809 %%4418:
+      %%1802 D:(D;;LC;;;S-1-5-21-3457937927-2839227994-823803824-1104) %%4419: %%1809
+      %%4420: %%1809 %%4423: %%1811 D:(A;OICI;FA;;;S-1-5-21-3457937927-2839227994-823803824-1104)
+      %%4424: %%1809'
+    Standard Name: access_reason
+    Type: string
+  HandleId:
+    Description: "hexadecimal value of a handle to Object Name. This field can help\
+      \ you correlate this event with other events that might contain the same Handle\
+      \ ID, for example, \u201C4663(S): An attempt was made to access an object.\u201D"
+    Sample Value: '0x0'
+    Standard Name: object_handle_id
+    Type: integer
+  ObjectName:
+    Description: name and other identifying information for the object for which access
+      was requested. For example, for a file, the path would be included.
+    Sample Value: C:\\Documents\\HBI Data.txt
+    Standard Name: object_name
+    Type: string
+  ObjectServer:
+    Description: "has \u201CSecurity\u201D value for this event."
+    Sample Value: Security
+    Standard Name: object_server
+    Type: string
+  ObjectType:
+    Description: The type of an object that was accessed during the operation.
+    Sample Value: File
+    Standard Name: object_type
+    Type: string
+  PrivilegeList:
+    Description: the list of user privileges which were used during the operation,
+      for example, SeBackupPrivilege.
+    Sample Value: '-'
+    Standard Name: user_privilege_list
+    Type: string
+  ProcessId:
+    Description: hexadecimal Process ID of the process through which the access was
+      requested.
+    Sample Value: '0x1074'
+    Standard Name: process_id
+    Type: integer
+  ProcessName:
+    Description: full path and the name of the executable for the process.
+    Sample Value: C:\\Windows\\System32\\notepad.exe
+    Standard Name: process_path
+    Type: string
+  ResourceAttributes:
+    Description: "attributes associated with the object. For some objects, the field\
+      \ does not apply and \u201C-\u201C is displayed"
+    Sample Value: S:AI(RA;ID;;;;WD;("Impact\_MS",TI,0x10020,3000))
+    Standard Name: object_resource_attributes
+    Type: string
+  RestrictedSidCount:
+    Description: Number of restricted SIDs in the token. Applicable to only specific
+      Object Types.
+    Sample Value: '-'
+    Standard Name: token_restricted_sid_count
+    Type: string
+  SubjectDomainName:
+    Description: "Subject\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: hexadecimal value that can help you correlate this event with recent
+      events that might contain the same Logon ID
+    Sample Value: '0x4367b'
+    Standard Name: user_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: the name of the account that requested a handle to an object.
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: SID of account that requested a handle to an object.
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+  TransactionId:
+    Description: "unique GUID of the transaction. This field can help you correlate\
+      \ this event with other events that might contain the same Transaction ID, such\
+      \ as \u201C4660(S): An object was deleted.\u201D"
+    Sample Value: '{00000000-0000-0000-0000-000000000000}'
+    Standard Name: transaction_id
+    Type: string
+eventID: 4656
+logtype: security_events
+name: 'Event ID 4656: A handle to an object was requested'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4656

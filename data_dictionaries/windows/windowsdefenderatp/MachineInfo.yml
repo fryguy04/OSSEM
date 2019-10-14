@@ -1,0 +1,88 @@
+author: Jared Atkinson (@jaredcatkinson)
+channel: ''
+date: 02/21/2019
+description: ''
+details: 'Machine information, including OS information
+
+  '
+eventData:
+  ClientVersion:
+    Description: ''
+    Sample Value: ''
+    Standard Name: client_version
+    Type: ''
+  ComputerName:
+    Description: Fully qualified domain name (FQDN) of the machine
+    Sample Value: ''
+    Standard Name: computer_name
+    Type: string
+  EventTime:
+    Description: Date and time when the event was recorded
+    Sample Value: ''
+    Standard Name: event_date_creation
+    Type: date
+  ISAzureADJoined:
+    Description: Boolean indicator of whether machine is joined to the Azure Active
+      Directory
+    Sample Value: ''
+    Standard Name: is_azure_ad_joined
+    Type: boolean
+  LoggedOnUsers:
+    Description: List of all users that are logged on the machine at the time of the
+      event in JSON array format
+    Sample Value: ''
+    Standard Name: logged_on_users
+    Type: string
+  MachineGroup:
+    Description: Machine group of the machine. This group is used by role-based access
+      control to determine access to the machine.
+    Sample Value: ''
+    Standard Name: machine_group
+    Type: string
+  MachineId:
+    Description: Unique identifier for the machine in the service
+    Sample Value: ''
+    Standard Name: machine_id
+    Type: string
+  OSArchitecture:
+    Description: Architecture of the operating system running on the machine
+    Sample Value: ''
+    Standard Name: os_architecture
+    Type: string
+  OSBuild:
+    Description: Build version of the operating system running on the machine
+    Sample Value: ''
+    Standard Name: os_build
+    Type: string
+  OSPlatform:
+    Description: Platform of the operating system running on the machine. This indicates
+      specific operating systems, including variations within the same family, such
+      as Windows 10 and Windows 7.
+    Sample Value: ''
+    Standard Name: os_platform
+    Type: string
+  OSVersion:
+    Description: ''
+    Sample Value: ''
+    Standard Name: os_version
+    Type: ''
+  PublicIP:
+    Description: Public IP address used by the onboarded machine to connect to the
+      Windows Defender ATP service. This could be the IP address of the machine itself,
+      a NAT device, or a proxy.
+    Sample Value: ''
+    Standard Name: public_ip
+    Type: string
+  ReportId:
+    Description: Event identifier based on a repeating counter. To identify unique
+      events, this column must be used in conjunction with the ComputerName and EventTime
+      columns.
+    Sample Value: ''
+    Standard Name: report_id
+    Type: long
+logtype: windowsdefenderatp
+name: ''
+platform: windows
+provider: ''
+providerGUID: ''
+title: ''

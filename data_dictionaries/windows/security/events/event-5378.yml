@@ -1,0 +1,60 @@
+author: ''
+channel: ''
+date: ''
+description: The requested credentials delegation was disallowed by policy
+details: 'This event occurs when an account that is a member of any defined Special
+  Group logs in.
+
+  [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-5378.md)
+
+  '
+eventData:
+  CredType:
+    Description: types of credentials which were presented for delegation
+    Sample Value: '%%8098'
+    Standard Name: user_cred_type
+    Type: string
+  Package:
+    Description: the name of Security Package which was used. Always CREDSSP for this
+      event.
+    Sample Value: CREDSSP
+    Standard Name: user_security_package
+    Type: string
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name"
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: hexadecimal value that can help you correlate this event with recent
+      events that might contain the same Logon ID
+    Sample Value: '0x2b1e04'
+    Standard Name: user_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: the name of the account that requested credentials delegation.
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: SID of account that requested credentials delegation.
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+  TargetServer:
+    Description: SPN of the target service for which delegation was requested.
+    Sample Value: WSMAN/dc01.contoso.local
+    Standard Name: service_SPN
+    Type: string
+  UserUPN:
+    Description: UPN of the account for which delegation was requested.
+    Sample Value: dadmin@contoso
+    Standard Name: user_upn
+    Type: string
+eventID: 5378
+logtype: security_events
+name: 'Event ID 5378: The requested credentials delegation was disallowed by policy'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 5378

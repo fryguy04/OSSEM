@@ -1,0 +1,91 @@
+author: Roberto Rodriguez (@Cyb3rWard0g)
+channel: Windows PowerShell
+date: 05/16/2018
+description: Logs the start and stop of PowerShell providers.
+details: 'Logs the start and stop of PowerShell providers. If the provider started
+  is equal to **WSMan**, then it indicates the use rof PowerShell remoting [Investigating
+  PowerShell Attacks - Mandiant](https://www.defcon.org/images/defcon-22/dc-22-presentations/Kazanciyan-Hastings/DEFCON-22-Ryan-Kazanciyan-Matt-Hastings-Investigating-Powershell-Attacks.pdf)
+
+  '
+eventData:
+  CommandLine:
+    Description: ''
+    Sample Value: ''
+    Standard Name: powershell_command_line
+    Type: string
+  CommandName:
+    Description: ''
+    Sample Value: ''
+    Standard Name: powershell_command_name
+    Type: string
+  CommandPath:
+    Description: ''
+    Sample Value: ''
+    Standard Name: powershell_command_path
+    Type: string
+  CommandType:
+    Description: ''
+    Sample Value: ''
+    Standard Name: powershell_command_type
+    Type: string
+  EngineVersion:
+    Description: ''
+    Sample Value: ''
+    Standard Name: powershell_engine_version
+    Type: string
+  HostApplication:
+    Description: ''
+    Sample Value: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+    Standard Name: powershell_host_application
+    Type: string
+  HostId:
+    Description: ''
+    Sample Value: 7839f0de-2e81-4a34-beb3-526dc9f11385
+    Standard Name: powershell_host_id
+    Type: string
+  HostName:
+    Description: ''
+    Sample Value: ConsoleHost
+    Standard Name: powershell_host_name
+    Type: string
+  HostVersion:
+    Description: ''
+    Sample Value: 5.1.16299.251
+    Standard Name: powershell_host_version
+    Type: string
+  NewProviderState:
+    Description: ''
+    Sample Value: Started
+    Standard Name: powershell_new_provider_state
+    Type: string
+  PipelineId:
+    Description: ''
+    Sample Value: ''
+    Standard Name: powershell_pipeline_id
+    Type: string
+  ProviderName:
+    Description: ''
+    Sample Value: Variable
+    Standard Name: event_provider_name
+    Type: string
+  RunspaceId:
+    Description: ''
+    Sample Value: ''
+    Standard Name: powershell_runspace_id
+    Type: string
+  ScriptName:
+    Description: ''
+    Sample Value: ''
+    Standard Name: powershell_script_name
+    Type: string
+  SequenceNumber:
+    Description: ''
+    Sample Value: '11'
+    Standard Name: powershell_sequence_number
+    Type: integer
+eventID: 600
+logtype: Windows PowerShell
+name: Provider Lifecycle
+platform: windows
+provider: PowerShell
+providerGUID: ''

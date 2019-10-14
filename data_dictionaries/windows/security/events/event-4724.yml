@@ -1,0 +1,62 @@
+author: ''
+channel: ''
+date: ''
+description: An attempt was made to reset an account's password
+details: "This event generates every time an account attempted to reset the password\
+  \ for another account.\n* For user accounts, this event generates on domain controllers,\
+  \ member servers, and workstations.\n* For domain accounts, a Failure event generates\
+  \ if the new password fails to meet the password policy.\n* A Failure event does\
+  \ NOT generate if user gets \u201CAccess Denied\u201D while doing the password reset\
+  \ procedure.\n* This event also generates if a computer account reset procedure\
+  \ was performed.\n* For local accounts, a Failure event generates if the new password\
+  \ fails to meet the local password policy.\n[MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4724.md)\n"
+eventData:
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: "hexadecimal value that can help you correlate this event with recent\
+      \ events that might contain the same Logon ID, for example, \u201C4624: An account\
+      \ was successfully logged on.\u201D"
+    Sample Value: '0x30d5f'
+    Standard Name: user_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: "the name of the account that made an attempt to reset Target\u2019\
+      s Account password."
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: "SID of account that made an attempt to reset Target\u2019s Account\
+      \ password. Event Viewer automatically tries to resolve SIDs and show the account\
+      \ name. If the SID cannot be resolved, you will see the source data in the event."
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+  TargetDomainName:
+    Description: "target account\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: target_user_domain
+    Type: string
+  TargetSid:
+    Description: SID of account for which password reset was requested. Event Viewer
+      automatically tries to resolve SIDs and show the account name. If the SID cannot
+      be resolved, you will see the source data in the event.
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1107
+    Standard Name: target_user_sid
+    Type: string
+  TargetUserName:
+    Description: the name of the account for which password reset was requested.
+    Sample Value: User1
+    Standard Name: target_user_name
+    Type: string
+eventID: 4724
+logtype: security_events
+name: 'Event ID 4724: An attempt was made to reset an account''s password'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4724

@@ -1,0 +1,122 @@
+author: ''
+channel: ''
+date: ''
+description: ''
+details: 'A process has attempted to open a handle into another process OR if a remote
+  thread was created.
+
+  [Carbon Black Developer Docs](https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-crossprocopen-cross-process-open)
+
+  '
+eventData:
+  cb_server:
+    Description: "Used to distinguish between multiple Cb Response servers. Set this\
+      \ in the \u201Cserver_name\u201D option of cb-event-forwarder.ini."
+    Sample Value: cbserver
+    Standard Name: cb_server
+    Type: TEXT
+  computer_name:
+    Description: hostname of the sensor
+    Sample Value: JASON-WIN81-VM
+    Standard Name: host_name
+    Type: TEXT
+  cross_process_type:
+    Description: 'The type of cross process event: either open_process (opening a
+      handle to another process) or open_thread'
+    Sample Value: open_process
+    Standard Name: cross_process_type
+    Type: TEXT
+  event_type:
+    Description: type of event
+    Sample Value: cross_process
+    Standard Name: event_type
+    Type: TEXT
+  is_target:
+    Description: specifies whether process_guid is the target of the cross process
+      event
+    Sample Value: 'false'
+    Standard Name: is_target
+    Type: BOOLEAN
+  link_process:
+    Description: Deep link to Cb Response UI for this process
+    Sample Value: https://cbtests/#analyze/00000007-0000-0ccc-01d1-209ab5339f45/1
+    Standard Name: process_link
+    Type: TEXT
+  link_sensor:
+    Description: Deep link to Cb Response UI for sensor
+    Sample Value: https://cbtests/#/host/7
+    Standard Name: sensor_link
+    Type: TEXT
+  link_target:
+    Description: Deep link to Cb Response UI for target process
+    Sample Value: https://cbtests/#analyze/00000007-0000-02c4-01d1-20982cef85d3/1
+    Standard Name: target_process_link
+    Type: TEXT
+  md5:
+    Description: md5 of process_guid executable image
+    Sample Value: 053EEEE1ABAE53F044F1E386E22AE525
+    Standard Name: hash
+    Type: TEXT
+  pid:
+    Description: Endpoint OS Process id of process that generated the crossprocopen
+      event
+    Sample Value: '3276'
+    Standard Name: process_id
+    Type: INTEGER
+  process_guid:
+    Description: Process guid of child process
+    Sample Value: 00000007-0000-0ccc-01d1-209ab5339f45
+    Standard Name: process_guid
+    Type: TEXT
+  requested_access:
+    Description: Windows bitfield representing the requested access for this process
+      or thread handle (decimal)
+    Sample Value: '5136'
+    Standard Name: process_granted_access
+    Type: INTEGER
+  sensor_id:
+    Description: sensor ID of associated sensor
+    Sample Value: '7'
+    Standard Name: sensor_id
+    Type: INTEGER
+  target_create_time:
+    Description: Target Process create time represented as a 64-bit Windows FILETIME
+    Sample Value: '130921702131467731'
+    Standard Name: target_create_time
+    Type: BIGINT
+  target_md5:
+    Description: md5 of target process executable image
+    Sample Value: 382100E75B6F4668AEAEF228C6CEFFAD
+    Standard Name: target_process_hash
+    Type: TEXT
+  target_path:
+    Description: "Path of the target process\u2019 executable image"
+    Sample Value: c:\\windows\\system32\\lsass.exe
+    Standard Name: target_process_path
+    Type: TEXT
+  target_pid:
+    Description: Process ID of the target process
+    Sample Value: '708'
+    Standard Name: target_process_id
+    Type: INTEGER
+  target_process_guid:
+    Description: process_guid of the target process
+    Sample Value: 00000007-0000-02c4-01d1-20982cef85d3
+    Standard Name: target_process_guid
+    Type: TEXT
+  timestamp:
+    Description: Endpoint timestamp of this event since epoch
+    Sample Value: '1447697702'
+    Standard Name: event_date_creation
+    Type: INTEGER
+  type:
+    Description: The full type of event
+    Sample Value: ingress.event.crossprocopen
+    Standard Name: event_type_detailed
+    Type: TEXT
+logtype: carbonblack
+name: cross_process
+platform: windows
+provider: carbonblack
+providerGUID: ''
+title: ingress.event.crossprocopen (Cross Process Open)

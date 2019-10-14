@@ -1,0 +1,103 @@
+author: Jared Atkinson (@jaredcatkinson)
+channel: ''
+date: 06/09/2018
+description: ''
+details: 'Get-SOHostData enumerates active threads as reported by PowerShell''s Get-Process
+  cmdlet. Every resulting Process instance has a Threads property which contains a
+  list of Threads contained within that Process.
+
+  '
+eventData:
+  BasePriority:
+    Description: The base priority of the thread
+    Sample Value: '8'
+    Standard Name: base_priority
+    Type: INTEGER
+  CurrentPriority:
+    Description: The current priority of the thread
+    Sample Value: '8'
+    Standard Name: current_priority
+    Type: INTEGER
+  Id:
+    Description: SO Host Data's unique identifier of this instance
+    Sample Value: EB4D6E286995C97714EB6EBF8C44E252342E3BAB2B1BF10764FD2386FEBB08D7
+    Standard Name: id
+    Type: TEXT
+  MemoryRegionKey:
+    Description: SO Host Data's unique identifier of associated memory region
+    Sample Value: 702B162209227ABEAB3980BA3B3252CF391233747B036B9F65DAF2E015579019
+    Standard Name: memory_region_key
+    Type: TEXT
+  PriorityBoostEnabled:
+    Description: Indicates if the OS should boost the priority of the thread when
+      the main window is active
+    Sample Value: 'True'
+    Standard Name: priority_boost_enabled
+    Type: BOOLEAN
+  PriorityLevel:
+    Description: The priority level of the thread
+    Sample Value: Normal
+    Standard Name: priority_level
+    Type: TEXT
+  PrivilegedProcessorTime:
+    Description: The amount of time the thread has spent in the operating system core
+    Sample Value: 00:00:00
+    Standard Name: privileged_processor_time
+    Type: ''
+  ProcessKey:
+    Description: SO Host Data's unique identifier of containing process
+    Sample Value: BBB8A0D8A8A3EF0148FE5E4DF188E7FC39741EE4554152B9E6513FE95F4E377B
+    Standard Name: process_key
+    Type: TEXT
+  SourceType:
+    Description: Type of data represented
+    Sample Value: WinEvent-Thread
+    Standard Name: source_type
+    Type: TEXT
+  StartTime:
+    Description: Time the thread started
+    Sample Value: 2/20/2018 11:01:10 PM
+    Standard Name: start_time
+    Type: DATE
+  ThreadId:
+    Description: Unique identifier of the thread
+    Sample Value: '4784'
+    Standard Name: thread_id
+    Type: INTEGER
+  ThreadStartAddress:
+    Description: The memory address of the function called to start the thread
+    Sample Value: '1896232255488'
+    Standard Name: thread_start_address
+    Type: LONG
+  ThreadState:
+    Description: The current state of the thread
+    Sample Value: Wait
+    Standard Name: thread_state
+    Type: TEXT
+  TokenKey:
+    Description: SO Host Data's unique identifier of associated access token
+    Sample Value: 8C3C0F18E053F361BF80D7BD126F67A5B7BE8241388802ABA430D751F60CD7D3
+    Standard Name: token_key
+    Type: TEXT
+  TotalProcessorTime:
+    Description: The total amount of time that the processor has spent on this thread
+    Sample Value: 00:00:00
+    Standard Name: total_processor_time
+    Type: ''
+  UserProcessorTime:
+    Description: The amount of time that the thread has spent running code inside
+      the application
+    Sample Value: 00:00:00
+    Standard Name: user_processor_time
+    Type: ''
+  WaitReason:
+    Description: The reason that the thread is waiting
+    Sample Value: Suspended
+    Standard Name: wait_reason
+    Type: TEXT
+logtype: so-host-data
+name: ''
+platform: windows
+provider: ''
+providerGUID: ''
+title: ''

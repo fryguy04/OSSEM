@@ -1,0 +1,93 @@
+author: ''
+channel: ''
+date: ''
+description: An attempt was made to access an object
+details: "This event indicates that a specific operation was performed on an object.\
+  \ The object could be a file system, kernel, or registry object, or a file system\
+  \ object on removable storage or a device.\nThis event generates only if object\u2019\
+  s SACL has required ACE to handle specific access right use.\nThe main difference\
+  \ with \u201C4656: A handle to an object was requested.\u201D event is that 4663\
+  \ shows that access right was used instead of just requested and 4663 doesn\u2019\
+  t have Failure events.\n[MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4663.md)\n"
+eventData:
+  AccessList:
+    Description: the list of access rights which were used by Subject\Security ID.
+      These access rights depend on Object Type.
+    Sample Value: '%%4417 %%4418'
+    Standard Name: user_access_list
+    Type: string
+  AccessMask:
+    Description: hexadecimal mask for the requested or performed operation. For more
+      information, see the preceding table.
+    Sample Value: '0x6'
+    Standard Name: access_mask
+    Type: string
+  HandleId:
+    Description: "hexadecimal value of a handle to Object Name. This field can be\
+      \ used for correlation with other events, for example with Handle ID field in\
+      \ \u201C4656(S, F): A handle to an object was requested.\u201D"
+    Sample Value: '0x1bc'
+    Standard Name: object_handle_id
+    Type: integer
+  ObjectName:
+    Description: name and other identifying information for the object for which access
+      was requested. For example, for a file, the path would be included.
+    Sample Value: C:\\Documents\\HBI Data.txt
+    Standard Name: object_name
+    Type: string
+  ObjectServer:
+    Description: "has \u201CSecurity\u201D value for this event."
+    Sample Value: Security
+    Standard Name: object_server
+    Type: string
+  ObjectType:
+    Description: The type of object that was accessed during the operation.
+    Sample Value: File
+    Standard Name: object_type
+    Type: string
+  ProcessId:
+    Description: hexadecimal Process ID of the process that accessed the object. Process
+      ID (PID) is a number used by the operating system to uniquely identify an active
+      process.
+    Sample Value: '0x458'
+    Standard Name: process_id
+    Type: integer
+  ProcessName:
+    Description: full path and the name of the executable for the process.
+    Sample Value: C:\\Windows\\System32\\notepad.exe
+    Standard Name: process_path
+    Type: string
+  ResourceAttributes:
+    Description: "attributes associated with the object. For some objects, the field\
+      \ does not apply and \u201C-\u201C is displayed."
+    Sample Value: S:AI(RA;ID;;;;WD;("Impact\_MS",TI,0x10020,3000))
+    Standard Name: object_resource_attributes
+    Type: string
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: hexadecimal value that can help you correlate this event with recent
+      events that might contain the same Logon ID
+    Sample Value: '0x4367b'
+    Standard Name: user_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: the name of the account that made an attempt to access an object.
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: SID of account that made an attempt to access an object.
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+eventID: 4663
+logtype: security_events
+name: 'Event ID 4663: An attempt was made to access an object'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4663

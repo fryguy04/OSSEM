@@ -1,0 +1,145 @@
+author: Jared Atkinson (@jaredcatkinson)
+channel: ''
+date: 06/09/2018
+description: ''
+details: 'Get-SOHostData uses the LsaEnumerateLogonSessions and LsaGetLogonSessionData
+  APIs to enumerate active Logon Sessions running on the target system.
+
+  '
+eventData:
+  AuthenticationPackage:
+    Description: Authentication package used to authenticate
+    Sample Value: NTLM
+    Standard Name: authentication_package
+    Type: TEXT
+  DnsDomainName:
+    Description: DNS name of the logon session owner
+    Sample Value: ''
+    Standard Name: dns_domain_name
+    Type: TEXT
+  FailedAttemptCountSinceLastSuccessfulLogon:
+    Description: ''
+    Sample Value: '0'
+    Standard Name: failed_attempt_count_since_last_successful_logon
+    Type: ''
+  HomeDirectory:
+    Description: Home directory for the user's logon session
+    Sample Value: ''
+    Standard Name: home_directory
+    Type: TEXT
+  HomeDirectoryDrive:
+    Description: Drive location of the home directory
+    Sample Value: ''
+    Standard Name: home_directory_drive
+    Type: TEXT
+  Id:
+    Description: SO Host Data's unique identifier of this instance
+    Sample Value: EC0AC744FFFBE3228F9E73EC60FA74F3BAB8330DFBCA51B269FC8A3B3B5DD7CD
+    Standard Name: id
+    Type: TEXT
+  KickoffTime:
+    Description: Time that the session must end
+    Sample Value: 1/1/1970 1:00:00 AM
+    Standard Name: kickoff_time
+    Type: DATE
+  LastFailedLogon:
+    Description: ''
+    Sample Value: '0'
+    Standard Name: last_failed_logon
+    Type: ''
+  LastSuccessfulLogon:
+    Description: Information about the last logon
+    Sample Value: '0'
+    Standard Name: last_successful_logon
+    Type: INTEGER
+  LogoffTime:
+    Description: Time when session user logged off
+    Sample Value: 1/1/1970 1:00:00 AM
+    Standard Name: logoff_time
+    Type: DATE
+  LogonDomain:
+    Description: Domain name used to authenticate
+    Sample Value: ''
+    Standard Name: logon_domain
+    Type: TEXT
+  LogonId:
+    Description: Unique identifier for Logon Session
+    Sample Value: '351709'
+    Standard Name: logon_id
+    Type: LONG
+  LogonScript:
+    Description: Script user for logging on
+    Sample Value: ''
+    Standard Name: logon_script
+    Type: TEXT
+  LogonServer:
+    Description: Server used to authenticate
+    Sample Value: DESKTOP-HMTGQ0R
+    Standard Name: logon_server
+    Type: TEXT
+  LogonTime:
+    Description: Time the session owner logged on
+    Sample Value: 2/20/2018 6:05:46 PM
+    Standard Name: logon_time
+    Type: DATE
+  LogonType:
+    Description: Logon method
+    Sample Value: Interactive
+    Standard Name: logon_type
+    Type: TEXT
+  PasswordCanChange:
+    Description: Time when password can change
+    Sample Value: 8/14/2015 5:43:32 PM
+    Standard Name: password_can_change
+    Type: DATE
+  PasswordLastSet:
+    Description: Time when the user last set their password
+    Sample Value: 8/13/2015 5:43:32 PM
+    Standard Name: password_last_set
+    Type: DATE
+  PasswordMustChange:
+    Description: Time when password must change
+    Sample Value: 1/1/1970 1:00:00 AM
+    Standard Name: password_must_change
+    Type: DATE
+  ProfilePath:
+    Description: Path of the user's profile
+    Sample Value: ''
+    Standard Name: profile_path
+    Type: TEXT
+  Session:
+    Description: Terminal services session identifier
+    Sample Value: '1'
+    Standard Name: session
+    Type: LONG
+  Sid:
+    Description: User's security identifier
+    Sample Value: S-1-5-21-386661145-2656271985-3844047388-1001
+    Standard Name: sid
+    Type: TEXT
+  SourceType:
+    Description: Type of data represented
+    Sample Value: WinEvent-LogonSession
+    Standard Name: source_type
+    Type: TEXT
+  Upn:
+    Description: User principal name of the logon session owner
+    Sample Value: ''
+    Standard Name: upn
+    Type: TEXT
+  UserFlags:
+    Description: User flags for logon session
+    Sample Value: '33056'
+    Standard Name: user_flags
+    Type: INTEGER
+  UserName:
+    Description: Account name that owns the logon session
+    Sample Value: tester
+    Standard Name: username
+    Type: TEXT
+logtype: so-host-data
+name: ''
+platform: windows
+provider: ''
+providerGUID: ''
+title: ''

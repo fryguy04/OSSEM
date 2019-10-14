@@ -1,0 +1,83 @@
+author: ''
+channel: ''
+date: ''
+description: ''
+details: 'List all installed Windows services and their relevant data.
+
+  [osquery GitHub](https://github.com/facebook/osquery/blob/master/specs/windows/services.table)
+
+  '
+eventData:
+  description:
+    Description: Service Description
+    Sample Value: ''
+    Standard name: service_description
+    Type: TEXT
+  display_name:
+    Description: Service Display name
+    Sample Value: ''
+    Standard name: service_display_name
+    Type: TEXT
+  module_path:
+    Description: Path to ServiceDll
+    Sample Value: ''
+    Standard name: module_path
+    Type: TEXT
+  name:
+    Description: Service name
+    Sample Value: ''
+    Standard name: service_name
+    Type: TEXT
+  path:
+    Description: Path to Service Executable
+    Sample Value: ''
+    Standard name: file_path
+    Type: TEXT
+  pid:
+    Description: the Process ID of the service
+    Sample Value: ''
+    Standard name: process_id
+    Type: INTEGER
+  service_exit_code:
+    Description: The service-specific error code that the service returns when an
+      error occurs while the service is starting or stopping
+    Sample Value: ''
+    Standard name: service_exit_code
+    Type: INTEGER
+  service_type:
+    Description: 'Service Type: OWN_PROCESS, SHARE_PROCESS and maybe Interactive (can
+      interact with the desktop)'
+    Sample Value: ''
+    Standard name: service_type
+    Type: TEXT
+  start_type:
+    Description: 'Service start type: BOOT_START, SYSTEM_START, AUTO_START, DEMAND_START,
+      DISABLED'
+    Sample Value: ''
+    Standard name: service_start_type
+    Type: TEXT
+  status:
+    Description: 'Service Current status: STOPPED, START_PENDING, STOP_PENDING, RUNNING,
+      CONTINUE_PENDING, PAUSE_PENDING, PAUSED'
+    Sample Value: ''
+    Standard name: service_status
+    Type: TEXT
+  user_account:
+    Description: The name of the account that the service process will be logged on
+      as when it runs. This name can be of the form Domain\UserName. If the account
+      belongs to the built-in domain, the name can be of the form .\UserName.
+    Sample Value: ''
+    Standard name: user_name
+    Type: TEXT
+  win32_exit_code:
+    Description: The error code that the service uses to report an error that occurs
+      when it is starting or stopping
+    Sample Value: ''
+    Standard name: service_error_code
+    Type: INTEGER
+logtype: osquery
+name: ''
+platform: windows
+provider: ''
+providerGUID: ''
+title: ''

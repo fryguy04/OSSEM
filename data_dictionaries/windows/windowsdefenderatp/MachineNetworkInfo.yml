@@ -1,0 +1,97 @@
+author: Jared Atkinson (@jaredcatkinson)
+channel: ''
+date: 02/21/2019
+description: ''
+details: 'Network properties of machines, including adapters, IP and MAC addresses,
+  as well as connected networks and domains
+
+  '
+eventData:
+  ComputerName:
+    Description: Fully qualified domain name (FQDN) of the machine
+    Sample Value: ''
+    Standard Name: computer_name
+    Type: string
+  ConnectedNetwork:
+    Description: "Networks that the adapter is connected to. Each JSON array contains\
+      \ the network name, category (public, private or domain), a description, and\
+      \ a flag indicating if it\u2019s connected publicly to the internet."
+    Sample Value: ''
+    Standard Name: connected_network
+    Type: string
+  DefaultGateways:
+    Description: Default gateway addresses in JSON array format
+    Sample Value: ''
+    Standard Name: default_gateways
+    Type: string
+  DnsAddress:
+    Description: DNS server addresses in JSON array format
+    Sample Value: ''
+    Standard Name: dns_address
+    Type: string
+  EventTime:
+    Description: Date and time when the event was recorded
+    Sample Value: ''
+    Standard Name: event_date_creation
+    Type: date
+  IPAddresses:
+    Description: JSON array containing all the IP addresses assigned to the adapter,
+      along with their respective subnet prefix and IP address space, such as public,
+      private, or link-local
+    Sample Value: ''
+    Standard Name: ip_address
+    Type: string
+  IPv4Dhcp:
+    Description: IPv4 address of DHCP server
+    Sample Value: ''
+    Standard Name: ipv4_dhcp
+    Type: string
+  IPv6Dhcp:
+    Description: IPv6 address of DHCP server
+    Sample Value: ''
+    Standard Name: ipv6_dhcp
+    Type: string
+  MacAddress:
+    Description: string
+    Sample Value: MAC address of the network adapter
+    Standard Name: mac_address
+    Type: ''
+  MachineId:
+    Description: Unique identifier for the machine in the service
+    Sample Value: ''
+    Standard Name: machine_id
+    Type: string
+  NetworkAdapterName:
+    Description: Name of the network adapter
+    Sample Value: ''
+    Standard Name: network_adapter_name
+    Type: string
+  NetworkAdapterStatus:
+    Description: Operational status of the network adapter
+    Sample Value: ''
+    Standard Name: network_adapter_status
+    Type: string
+  NetworkAdapterType:
+    Description: Network adapter type
+    Sample Value: ''
+    Standard Name: network_adapter_type
+    Type: string
+  ReportId:
+    Description: Event identifier based on a repeating counter. To identify unique
+      events, this column must be used in conjunction with the ComputerName and EventTime
+      columns.
+    Sample Value: ''
+    Standard Name: report_id
+    Type: long
+  TunnelType:
+    Description: Tunneling protocol, if the interface is used for this purpose, for
+      example 6to4, Teredo, ISATAP, PPTP, SSTP, and SSH
+    Sample Value: ''
+    Standard Name: tunnel_type
+    Type: string
+logtype: windowsdefenderatp
+name: ''
+platform: windows
+provider: ''
+providerGUID: ''
+title: ''

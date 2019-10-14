@@ -1,0 +1,124 @@
+author: ''
+channel: ''
+date: ''
+description: ''
+details: 'A new process has started (or exited) on an endpoint monitored by Carbon
+  Black.
+
+  [Carbon Black Developer Docs](https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-procstart-process-start)
+
+  '
+eventData:
+  cb_server:
+    Description: "Used to distinguish between multiple Cb Response servers. Set this\
+      \ in the \u201Cserver_name\u201D option of cb-event-forwarder.ini."
+    Sample Value: cbserver
+    Standard Name: cb_server
+    Type: TEXT
+  command_line:
+    Description: Command Line of the new process
+    Sample Value: C:\Windows\system32\notepad.exe
+    Standard Name: process_command_line
+    Type: TEXT
+  computer_name:
+    Description: hostname of the sensor
+    Sample Value: JASON-WIN81-VM
+    Standard Name: host_name
+    Type: TEXT
+  event_type:
+    Description: type of event
+    Sample Value: proc
+    Standard Name: event_type
+    Type: TEXT
+  expect_followon_w_md5:
+    Description: If the md5 could not be calculated in time then Cb Response will
+      send another procstart with the process md5
+    Sample Value: 'false'
+    Standard Name: expect_followon_w_md5
+    Type: BOOLEAN
+  link_parent:
+    Description: Deep link to Cb Response UI for parent process
+    Sample Value: https://cbtests/#analyze/00000001-0000-0af4-01d1-1e444bf4c3dd/1
+    Standard Name: process_parent_link
+    Type: TEXT
+  link_process:
+    Description: Deep link to Cb Response UI for this process
+    Sample Value: https://cbtests/#analyze/00000001-0000-07b4-01d1-209a100bc217/1
+    Standard Name: process_link
+    Type: TEXT
+  link_sensor:
+    Description: Deep link to Cb Response UI for sensor
+    Sample Value: https://cbtests/#/host/1
+    Standard Name: sensor_link
+    Type: TEXT
+  md5:
+    Description: MD5 of the executable binary associated with this process
+    Sample Value: D6021013D7C4E248AEB8BED12D3DCC88
+    Standard Name: hash
+    Type: TEXT
+  parent_create_time:
+    Description: seconds since epoch of parent process create time
+    Sample Value: '1447440685'
+    Standard Name: process_process_creation_time
+    Type: INTEGER
+  parent_md5:
+    Description: "MD5 of parent\u2019s executable image"
+    Sample Value: 79227C1E2225DE455F365B607A6D46FB
+    Standard Name: process_parent_hash
+    Type: TEXT
+  parent_path:
+    Description: "file path of parent\u2019s executable image"
+    Sample Value: c:\\windows\\system32\\explorer.exe
+    Standard Name: process_parent_file_path
+    Type: TEXT
+  parent_pid:
+    Description: OS Process id of parent process
+    Sample Value: '2846'
+    Standard Name: parent_process_id
+    Type: INTEGER
+  parent_process_guid:
+    Description: Cb Process GUID of parent process
+    Sample Value: 00000001-0000-0af4-01d1-1e444bf4c3dd
+    Standard Name: process_parent_guid
+    Type: TEXT
+  path:
+    Description: "file path of the child processes\u2019 executable image"
+    Sample Value: C:\Windows\system32\notepad.exe
+    Standard Name: file_path
+    Type: TEXT
+  pid:
+    Description: OS Process id of child process
+    Sample Value: '1972'
+    Standard Name: process_id
+    Type: INTEGER
+  process_guid:
+    Description: Cb Process GUID of child process
+    Sample Value: 00000001-0000-07b4-01d1-209a100bc217
+    Standard Name: process_guid
+    Type: TEXT
+  sensor_id:
+    Description: sensor ID of associated sensor
+    Sample Value: '1'
+    Standard Name: sensor_id
+    Type: INTEGER
+  timestamp:
+    Description: Endpoint timestamp of this event since epoch
+    Sample Value: '1447697423'
+    Standard Name: event_date_creation
+    Type: INTEGER
+  type:
+    Description: The full type of event
+    Sample Value: ingress.event.procstart
+    Standard Name: event_type_detailed
+    Type: TEXT
+  username:
+    Description: Username used to create child process
+    Sample Value: SYSTEM
+    Standard Name: user_name
+    Type: TEXT
+logtype: carbonblack
+name: proc
+platform: windows
+provider: carbonblack
+providerGUID: ''
+title: ingress.event.procstart (Process Start)

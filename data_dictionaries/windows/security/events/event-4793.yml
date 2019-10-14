@@ -1,0 +1,65 @@
+author: ''
+channel: ''
+date: ''
+description: The Password Policy Checking API was called
+details: "This event generates each time the Password Policy Checking API is called.\n\
+  The Password Policy Checking API allows an application to check password compliance\
+  \ against an application-provided account database or single account and verify\
+  \ that passwords meet the complexity, aging, minimum length, and history reuse requirements\
+  \ of a password policy.\n* This event, for example, generates during Directory Services\
+  \ Restore Mode (DSRM) account password reset procedure to check new DSRM password.\n\
+  * This event generates on the computer where Password Policy Checking API was called.\n\
+  Note that starting with Microsoft SQL Server 2005, the \u201CSQL Server password\
+  \ policy\u201D feature can generate many 4793 events on a SQL Server.\n[MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4793.md)\n"
+eventData:
+  Status:
+    Description: "typically has \u201C0x0\u201D value. Status code is \u201C0x0\u201D\
+      , no matter meets password domain Password Policy or not."
+    Sample Value: '0x0'
+    Standard Name: event_status
+    Type: string
+  SubjectDomainName:
+    Description: "subject\u2019s domain name."
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: "hexadecimal value that can help you correlate this event with recent\
+      \ events that might contain the same Logon ID, for example, \u201C4624: An account\
+      \ was successfully logged on.\u201D"
+    Sample Value: '0x36f67'
+    Standard Name: user_logon_id
+    Type: string
+  SubjectUserName:
+    Description: the name of the account that requested Password Policy Checking API
+      operation.
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: SID of account that requested Password Policy Checking API operation.
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+  TargetUserName:
+    Description: "the name of account, which password was provided/requested for validation.\
+      \ This parameter might not be captured in the event, and in that case appears\
+      \ as \u201C-\u201D."
+    Sample Value: '-'
+    Standard Name: target_user_name
+    Type: string
+  Workstation:
+    Description: name of the computer from which the Password Policy Checking API
+      was called. Typically, this is the same computer where this event was generated,
+      for example, DC01. Computer name here does not contain $ symbol at the end.
+      It also can be an IP address or the DNS name of the computer.
+    Sample Value: DC01
+    Standard Name: source_host_name
+    Type: string
+eventID: 4793
+logtype: security_events
+name: 'Event ID 4793: The Password Policy Checking API was called'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4793

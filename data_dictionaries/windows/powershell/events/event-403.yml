@@ -1,0 +1,97 @@
+author: Roberto Rodriguez (@Cyb3rWard0g)
+channel: Windows PowerShell
+date: 05/16/2018
+description: Information about PowerShell engine state. Engine state is changed from
+  Available to Stopped
+details: "Logs the start and stop of PowerShell. Each time that PowerShell executes\
+  \ \u2013 either upon the execution of a single command, the start of a local session,\
+  \ or the start of a remoting session \u2013 this log records an Event ID (EID) 400\
+  \ message: \u201CEngine state is changed from None to Available.\u201D At the completion\
+  \ of the session, the log records an EID 403 event: \u201CEngine state is changed\
+  \ from Available to Stopped\u201D.\nThe message details for both EID 400 and EID\
+  \ 403 events include a HostName field. If executed locally, this field will be logged\
+  \ as HostName=ConsoleHost. If PowerShell remoting is in use, the accessed system\
+  \ will record these events with HostName=ServerRemoteHost.\u201D[Investigating PowerShell\
+  \ Attacks - Mandiant](https://www.blackhat.com/docs/us-14/materials/us-14-Kazanciyan-Investigating-Powershell-Attacks-WP.pdf)\n"
+eventData:
+  CommandLine:
+    Description: ''
+    Sample Value: ''
+    Standard Name: powershell_command_line
+    Type: string
+  CommandName:
+    Description: ''
+    Sample Value: ''
+    Standard Name: powershell_command_name
+    Type: string
+  CommandPath:
+    Description: ''
+    Sample Value: ''
+    Standard Name: powershell_command_path
+    Type: string
+  CommandType:
+    Description: ''
+    Sample Value: ''
+    Standard Name: powershell_command_type
+    Type: string
+  EngineVersion:
+    Description: ''
+    Sample Value: 5.1.16299.64
+    Standard Name: powershell_engine_version
+    Type: string
+  HostApplication:
+    Description: ''
+    Sample Value: C:\WINDOWS\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+    Standard Name: powershell_host_application
+    Type: string
+  HostId:
+    Description: ''
+    Sample Value: 26572281-9dcd-4297-ae4b-d6bb52bdaff6
+    Standard Name: powershell_host_id
+    Type: string
+  HostName:
+    Description: ''
+    Sample Value: Windows PowerShell ISE
+    Standard Name: powershell_host_name
+    Type: string
+  HostVersion:
+    Description: ''
+    Sample Value: 5.1.16299.64
+    Standard Name: powershell_host_version
+    Type: string
+  NewEngineState:
+    Description: ''
+    Sample Value: Stopped
+    Standard Name: powershell_new_engine_state
+    Type: string
+  PipelineId:
+    Description: ''
+    Sample Value: ''
+    Standard Name: powershell_pipeline_id
+    Type: string
+  PreviousEngineState:
+    Description: ''
+    Sample Value: Available
+    Standard Name: powershell_previous_engine_state
+    Type: string
+  RunspaceId:
+    Description: ''
+    Sample Value: aba09534-39f7-4ec3-aa46-8c709c39cf5a
+    Standard Name: powershell_runspace_id
+    Type: string
+  ScriptName:
+    Description: ''
+    Sample Value: ''
+    Standard Name: powershell_script_name
+    Type: string
+  SequenceNumber:
+    Description: ''
+    Sample Value: '13'
+    Standard Name: powershell_sequence_number
+    Type: integer
+eventID: 403
+logtype: Windows PowerShell
+name: Engine Lifecycle
+platform: windows
+provider: PowerShell
+providerGUID: ''

@@ -1,0 +1,59 @@
+author: ''
+channel: ''
+date: ''
+description: An attempt was made to set the Directory Services Restore Mode administrator
+  password
+details: 'This event generates every time Directory Services Restore Mode (DSRM) administrator
+  password is changed. This event generates only on domain controllers.
+
+  [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4794.md)
+
+  '
+eventData:
+  Status:
+    Description: "for Success events it has \u201C0x0\u201D value."
+    Sample Value: '0x0'
+    Standard Name: event_status
+    Type: integer
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: "hexadecimal value that can help you correlate this event with recent\
+      \ events that might contain the same Logon ID, for example, \u201C4624: An account\
+      \ was successfully logged on.\u201D"
+    Sample Value: '0x36f67'
+    Standard Name: user_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: the name of the account that made an attempt to set Directory Services
+      Restore Mode administrator password.
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: SID of account that made an attempt to set Directory Services Restore
+      Mode administrator password. Event Viewer automatically tries to resolve SIDs
+      and show the account name. If the SID cannot be resolved, you will see the source
+      data in the event.
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+  Workstation:
+    Description: "the name of computer account from which Directory Services Restore\
+      \ Mode (DSRM) administrator password change request was received. For example:\
+      \ \u201CDC01\u201D. If the change request was sent locally (from the same server)\
+      \ this field will have the same name as the computer account."
+    Sample Value: DC01
+    Standard Name: source_host_name
+    Type: string
+eventID: 4794
+logtype: security_events
+name: 'Event ID 4794: An attempt was made to set the Directory Services Restore Mode
+  administrator password'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4794

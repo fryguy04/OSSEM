@@ -1,0 +1,202 @@
+author: ''
+channel: ''
+date: ''
+description: An account was successfully logged on
+details: 'This event generates when a logon session is created (on destination machine).
+  It generates on the computer that was accessed, where the session was created.
+
+  [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4624.md)
+
+  '
+eventData:
+  AuthenticationPackageName:
+    Description: "The name of the authentication package which was used for the logon\
+      \ authentication process. Default packages loaded on LSA startup are located\
+      \ in \u201CHKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\OSConfig\u201D registry\
+      \ key. Other packages can be loaded at runtime. When a new package is loaded\
+      \ a \u201C4610: An authentication package has been loaded by the Local Security\
+      \ Authority\u201D (typically for NTLM) or \u201C4622: A security package has\
+      \ been loaded by the Local Security Authority\u201D (typically for Kerberos)\
+      \ event is logged to indicate that a new package has been loaded along with\
+      \ the package name."
+    Sample Value: Negotiate
+    Standard Name: logon_authentication_package_name
+    Type: string
+  ElevatedToken:
+    Description: "a \u201CYes\u201D or \u201CNo\u201D flag. If \u201CYes\u201D then\
+      \ the session this event represents is elevated and has administrator privileges."
+    Sample Value: '%%1842'
+    Standard Name: logon_elevated_token
+    Type: string
+  ImpersonationLevel:
+    Description: Impersonation level
+    Sample Value: '%%1833'
+    Standard Name: logon_impersonation_level
+    Type: string
+  IpAddress:
+    Description: IP address of machine from which logon attempt was performed
+    Sample Value: 127.0.0.1
+    Standard Name: src_ip
+    Type: ip
+  IpPort:
+    Description: source port which was used for logon attempt from remote machine.
+      0 for interactive logons
+    Sample Value: '0'
+    Standard Name: src_port
+    Type: integer
+  KeyLength:
+    Description: "the length of NTLM Session Security key. Typically it has 128 bit\
+      \ or 56 bit length. This parameter is always 0 if \u201CAuthentication Package\u201D\
+      \ = \u201CKerberos\u201D, because it is not applicable for Kerberos protocol.\
+      \ This field will also have \u201C0\u201D value if Kerberos was negotiated using\
+      \ Negotiate authentication package."
+    Sample Value: '0'
+    Standard Name: logon_key_length
+    Type: integer
+  LmPackageName:
+    Description: 'The name of the LAN Manager sub-package (NTLM-family protocol name)
+      that was used during logon. Possible values are: NTLM V1, NTLM V2, LM. Only
+      populated if Authentication Package = NTLM.'
+    Sample Value: '-'
+    Standard Name: logon_authentication_lan_package_name
+    Type: string
+  LogonGuid:
+    Description: "a GUID that can help you correlate this event with another event\
+      \ that can contain the same Logon GUID, \u201C4769(S, F): A Kerberos service\
+      \ ticket was requested event on a domain controller. It also can be used for\
+      \ correlation between a 4624 event and several other events (on the same computer)\
+      \ that can contain the same Logon GUID, \u201C4648(S): A logon was attempted\
+      \ using explicit credentials\u201D and \u201C4964(S): Special groups have been\
+      \ assigned to a new logon.\u201D"
+    Sample Value: '{00000000-0000-0000-0000-000000000000}'
+    Standard Name: user_logon_guid
+    Type: string
+  LogonProcessName:
+    Description: "The name of the trusted logon process that was used for the logon.\
+      \ See event \u201C4611: A trusted logon process has been registered with the\
+      \ Local Security Authority\u201D description for more information."
+    Sample Value: User32
+    Standard Name: logon_process_name
+    Type: string
+  LogonType:
+    Description: the type of logon which was performed
+    Sample Value: '2'
+    Standard Name: logon_type
+    Type: integer
+  ProcessId:
+    Description: hexadecimal Process ID of the process that attempted the logon. Process
+      ID (PID) is a number used by the operating system to uniquely identify an active
+      process.
+    Sample Value: '0x44c'
+    Standard Name: process_id
+    Type: integer
+  ProcessName:
+    Description: full path and the name of the executable for the process.
+    Sample Value: C:\\Windows\\System32\\svchost.exe
+    Standard Name: process_name
+    Type: string
+  RestrictedAdminMode:
+    Description: Only populated for RemoteInteractive logon type sessions. This is
+      a Yes/No flag indicating if the credentials provided were passed using Restricted
+      Admin mode. Restricted Admin mode was added in Win8.1/2012R2 but this flag was
+      added to the event in Win10. If not a RemoteInteractive logon, then this will
+      be "-" string.
+    Sample Value: '-'
+    Standard Name: logon_restricted_admin_mode
+    Type: string
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name"
+    Sample Value: WORKGROUP
+    Standard Name: user_reporter_domain
+    Type: string
+  SubjectLogonId:
+    Description: hexadecimal value that can help you correlate this event with recent
+      events that might contain the same Logon ID
+    Sample Value: '0x3e7'
+    Standard Name: user_reporter_id
+    Type: integer
+  SubjectUserName:
+    Description: the name of the account that reported information about successful
+      logon
+    Sample Value: WIN-GG82ULGC9GO$
+    Standard Name: user_reporter_name
+    Type: string
+  SubjectUserSid:
+    Description: SID of account that reported information about successful logon or
+      invokes it
+    Sample Value: S-1-5-18
+    Standard Name: user_reporter_sid
+    Type: string
+  TargetDomainName:
+    Description: "subject\u2019s domain or computer name"
+    Sample Value: WIN-GG82ULGC9GO
+    Standard Name: user_domain
+    Type: string
+  TargetLinkedLogonId:
+    Description: "A hexadecimal value of the paired logon session. If there is no\
+      \ other logon session associated with this logon session, then the value is\
+      \ \u201C0x0\u201D."
+    Sample Value: '0x0'
+    Standard Name: user_linked_logon_id
+    Type: integer
+  TargetLogonId:
+    Description: hexadecimal value that can help you correlate this event with recent
+      events that might contain the same Logon ID
+    Sample Value: '0x8dcdc'
+    Standard Name: user_logon_id
+    Type: integer
+  TargetOutboundDomainName:
+    Description: Domain for the user that will be used for outbound (network) connections.
+      Valid only for NewCredentials logon type. If not NewCredentials logon, then
+      this will be a "-" string.
+    Sample Value: '-'
+    Standard Name: user_network_account_domain
+    Type: string
+  TargetOutboundUserName:
+    Description: User name that will be used for outbound (network) connections. Valid
+      only for NewCredentials logon type. If not NewCredentials logon, then this will
+      be a "-" string.
+    Sample Value: '-'
+    Standard Name: user_network_account_name
+    Type: string
+  TargetUserName:
+    Description: the name of the account for which logon was performed
+    Sample Value: Administrator
+    Standard Name: user_name
+    Type: string
+  TargetUserSid:
+    Description: SID of account for which logon was performed
+    Sample Value: S-1-5-21-1377283216-344919071-3415362939-500
+    Standard Name: user_sid
+    Type: string
+  TransmittedServices:
+    Description: "the list of transmitted services. Transmitted services are populated\
+      \ if the logon was a result of a S4U (Service For User) logon process. S4U is\
+      \ a Microsoft extension to the Kerberos Protocol to allow an application service\
+      \ to obtain a Kerberos service ticket on behalf of a user \u2013 most commonly\
+      \ done by a front-end website to access an internal resource on behalf of a\
+      \ user."
+    Sample Value: '-'
+    Standard Name: logon_transmitted_services
+    Type: string
+  VirtualAccount:
+    Description: "a \u201CYes\u201D or \u201CNo\u201D flag, which indicates if the\
+      \ account is a virtual account (e.g., \"Managed Service Account\"), which was\
+      \ introduced in Windows 7 and Windows Server 2008 R2 to provide the ability\
+      \ to identify the account that a given Service uses, instead of just using \"\
+      NetworkService\"."
+    Sample Value: '%%1843'
+    Standard Name: logon_virtual_account
+    Type: string
+  WorkstationName:
+    Description: machine name from which logon attempt was performed.
+    Sample Value: WIN-GG82ULGC9GO
+    Standard Name: src_host_name
+    Type: string
+eventID: 4624
+logtype: security_events
+name: 'Event ID 4624: An account was successfully logged on'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4624

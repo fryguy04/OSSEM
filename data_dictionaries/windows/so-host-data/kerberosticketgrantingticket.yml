@@ -1,0 +1,96 @@
+author: Jared Atkinson (@jaredcatkinson)
+channel: ''
+date: 06/09/2018
+description: ''
+details: 'The Kerberos Ticket Granting Ticket (TGT) source type is derived by querying
+  all active Logon Sessions for their TGT with the LsaCallAuthenticationPackage API.
+
+  '
+eventData:
+  AltTargetDomainName:
+    Description: Synonym for the destination domain
+    Sample Value: deathstar.empire.com
+    Standard Name: alt_target_domain_name
+    Type: TEXT
+  ClientName:
+    Description: The client name in the ticket
+    Sample Value: DarthVader
+    Standard Name: client_name
+    Type: TEXT
+  DomainName:
+    Description: The domain that corresponds to the ServiceName
+    Sample Value: deathstar.empire.com
+    Standard Name: domain_name
+    Type: TEXT
+  EndTime:
+    Description: Time at which the ticket expires
+    Sample Value: 2/19/2028 4:13:40 AM
+    Standard Name: end_time
+    Type: DATE
+  Id:
+    Description: SO Host Data's unique identifier of this instance
+    Sample Value: 82E5CB03112897B20C6FF61BE5B9BF7D574B74E5176C51E738BCAB894C98A1E1
+    Standard Name: id
+    Type: TEXT
+  KeyExpirationTime:
+    Description: Time at which the key expires
+    Sample Value: 1/1/1601 1:00:00 AM
+    Standard Name: key_expiration_time
+    Type: DATE
+  LogonSessionKey:
+    Description: SO Host Data's unique identifier of associated logon session
+    Sample Value: EC0AC744FFFBE3228F9E73EC60FA74F3BAB8330DFBCA51B269FC8A3B3B5DD7CD
+    Standard Name: logon_session_key
+    Type: TEXT
+  RenewUntil:
+    Description: The latest time a ticket can be renewed
+    Sample Value: 2/19/2028 4:13:40 AM
+    Standard Name: renew_util
+    Type: DATE
+  ServiceName:
+    Description: A multiple part, canonical, service name
+    Sample Value: krbtgt
+    Standard Name: service_name
+    Type: TEXT
+  SessionKey:
+    Description: The session key for the ticket
+    Sample Value: D55F31C27D4C4517D4B86D72BF8B7276
+    Standard Name: session_key
+    Type: TEXT
+  SessionKeyType:
+    Description: The type of encryption used for the session key
+    Sample Value: rc4_hmac
+    Standard Name: session_key_type
+    Type: TEXT
+  SourceType:
+    Description: Type of data represented
+    Sample Value: WinEvent-KerberosTicketGrantingTicket
+    Standard Name: source_type
+    Type: TEXT
+  StartTime:
+    Description: Time at which the ticket becomes valid
+    Sample Value: 2/21/2018 4:13:40 AM
+    Standard Name: start_time
+    Type: DATE
+  TargetDomainName:
+    Description: The name of the domain in which the ticket is valid
+    Sample Value: deathstar.empire.com
+    Standard Name: target_domain_name
+    Type: TEXT
+  TicketFlags:
+    Description: Ticket flags, as defined in Internet RFC 4120
+    Sample Value: pre_authent, initial, renewable, forwardable
+    Standard Name: ticket_flags
+    Type: TEXT
+  TimeSkew:
+    Description: The measured time difference between the current time on the computer
+      issuing the ticket and the computer where the ticket will be used
+    Sample Value: '0'
+    Standard Name: time_skew
+    Type: LONG
+logtype: so-host-data
+name: ''
+platform: windows
+provider: ''
+providerGUID: ''
+title: ''

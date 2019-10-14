@@ -1,0 +1,95 @@
+author: ''
+channel: ''
+date: ''
+description: A primary token was assigned to process
+details: 'This event generates every time a process runs using the non-current access
+  token, for example, UAC elevated token, RUN AS different user actions, scheduled
+  task with defined user, services, and so on.
+
+  IMPORTANT: this event is deprecated starting from Windows 7 and Windows 2008 R2.
+
+  [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4696.md)
+
+  '
+eventData:
+  ProcessId:
+    Description: hexadecimal Process ID of the process which started the new process
+      with the new security token.
+    Sample Value: '0x698'
+    Standard Name: process_id
+    Type: integer
+  ProcessName:
+    Description: full path and the name of the executable for the process which ran
+      the new process with new security token.
+    Sample Value: C:\\Windows\\System32\\svchost.exe
+    Standard Name: process_name
+    Type: string
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: "hexadecimal value that can help you correlate this event with recent\
+      \ events that might contain the same Logon ID, for example, \u201C4624: An account\
+      \ was successfully logged on.\u201D"
+    Sample Value: '0x3e7'
+    Standard Name: user_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: "the name of the account that requested the \u201Cassign token to\
+      \ process\u201D operation."
+    Sample Value: WIN2008$
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: "SID of account that requested the \u201Cassign token to process\u201D\
+      \ operation."
+    Sample Value: S-1-5-18
+    Standard Name: user_sid
+    Type: string
+  TargetDomainName:
+    Description: "subject\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: target_user_domain
+    Type: string
+  TargetLogonId:
+    Description: "hexadecimal value that can help you correlate this event with recent\
+      \ events that might contain the same Logon ID, for example, \u201C4624: An account\
+      \ was successfully logged on.\u201D"
+    Sample Value: '0x1c8c5'
+    Standard Name: target_user_logon_id
+    Type: integer
+  TargetProcessId:
+    Description: hexadecimal Process ID of the new process with new security token.
+      If you convert the hexadecimal value to decimal, you can compare it to the values
+      in Task Manager.
+    Sample Value: '0xf40'
+    Standard Name: target_process_id
+    Type: integer
+  TargetProcessName:
+    Description: full path and the name of the executable for the new process.
+    Sample Value: C:\\Windows\\System32\\WerFault.exe
+    Standard Name: target_process_name
+    Type: string
+  TargetUserName:
+    Description: the name of the account through which the security token will be
+      assigned to the new process.
+    Sample Value: dadmin
+    Standard Name: target_user_name
+    Type: string
+  TargetUserSid:
+    Description: SID of account through which the security token will be assigned
+      to the new process. Event Viewer automatically tries to resolve SIDs and show
+      the account name. If the SID cannot be resolved, you will see the source data
+      in the event.
+    Sample Value: S-1-5-18
+    Standard Name: target_user_sid
+    Type: string
+eventID: 4696
+logtype: security_events
+name: 'Event ID 4696: A primary token was assigned to process'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4696

@@ -1,0 +1,38 @@
+author: ''
+channel: ''
+date: ''
+description: Credential Manager credentials were backed up
+details: "This event generates every time the user (Subject) successfully backs up\
+  \ the credential manager database.\n* Typically this can be done by clicking \u201C\
+  Back up Credentials\u201D in Credential Manager in the Control Panel.\n* This event\
+  \ generates on domain controllers, member servers, and workstations.\n[MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-5376.md)\n"
+eventData:
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: "hexadecimal value that can help you correlate this event with recent\
+      \ events that might contain the same Logon ID, for example, \u201C4624: An account\
+      \ was successfully logged on.\u201D"
+    Sample Value: '0x30d7c'
+    Standard Name: user_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: the name of the account that performed the restore operation.
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: SID of account that performed the restore operation.
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+eventID: 5376
+logtype: security_events
+name: 'Event ID 5376: Credential Manager credentials were backed up'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 5376

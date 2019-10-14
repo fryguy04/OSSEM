@@ -1,0 +1,255 @@
+author: Jared Atkinson (@jaredcatkinson)
+channel: ''
+date: 02/21/2019
+description: ''
+details: 'Multiple event types, such as process injection, creation of scheduled tasks,
+  and LSASS access attempts
+
+  '
+eventData:
+  AccountDomain:
+    Description: Domain of the account
+    Sample Value: ''
+    Standard Name: user_domain
+    Type: string
+  AccountName:
+    Description: User name of the account
+    Sample Value: ''
+    Standard Name: user_name
+    Type: string
+  AccountSid:
+    Description: Security Identifier (SID) of the account
+    Sample Value: ''
+    Standard Name: user_sid
+    Type: string
+  ActionType:
+    Description: Type of activity that triggered the event
+    Sample Value: ''
+    Standard Name: action_type
+    Type: string
+  AdditionalFields:
+    Description: Additional information about the event in JSON array format
+    Sample Value: ''
+    Standard Name: additional_fields
+    Type: string
+  AppGuardContainerId:
+    Description: Identifier for the virtualized container used by Application Guard
+      to isolate browser activity
+    Sample Value: ''
+    Standard Name: app_guard_container_id
+    Type: string
+  ComputerName:
+    Description: Fully qualified domain name (FQDN) of the machine
+    Sample Value: ''
+    Standard Name: computer_name
+    Type: string
+  EventTime:
+    Description: Date and time when the event was recorded
+    Sample Value: ''
+    Standard Name: event_date_creation
+    Type: date
+  FileName:
+    Description: Name of the file that the recorded action was applied to
+    Sample Value: ''
+    Standard Name: file_name
+    Type: string
+  FileOriginIP:
+    Description: IP address where the file was downloaded from
+    Sample Value: ''
+    Standard Name: file_origin_ip
+    Type: string
+  FileOriginUrl:
+    Description: URL where the file was downloaded from
+    Sample Value: ''
+    Standard Name: file_origin_url
+    Type: string
+  FolderPath:
+    Description: Folder containing the file that the recorded action was applied to
+    Sample Value: ''
+    Standard Name: folder_path
+    Type: string
+  InitiatingProcessAccountDomain:
+    Description: Domain of the account that ran the process responsible for the event
+    Sample Value: ''
+    Standard Name: initiating_process_account_domain
+    Type: string
+  InitiatingProcessAccountName:
+    Description: User name of the account that ran the process responsible for the
+      event
+    Sample Value: ''
+    Standard Name: initiating_process_account_name
+    Type: string
+  InitiatingProcessAccountSid:
+    Description: Security Identifier (SID) of the account that ran the process responsible
+      for the event
+    Sample Value: ''
+    Standard Name: initiating_process_account_sid
+    Type: string
+  InitiatingProcessCommandLine:
+    Description: Command line used to run the process that initiated the event
+    Sample Value: ''
+    Standard Name: initiating_process_command_line
+    Type: string
+  InitiatingProcessCreationTime:
+    Description: Date and time when the process that initiated the event was started
+    Sample Value: ''
+    Standard Name: initiating_process_creation_time
+    Type: date
+  InitiatingProcessFileName:
+    Description: Name of the process that initiated the event
+    Sample Value: ''
+    Standard Name: initiating_process_file_name
+    Type: string
+  InitiatingProcessFolderPath:
+    Description: Folder containing the process (image file) that initiated the event
+    Sample Value: ''
+    Standard Name: initiating_process_folder_path
+    Type: string
+  InitiatingProcessId:
+    Description: Process ID (PID) of the process that initiated the event
+    Sample Value: ''
+    Standard Name: initiating_process_id
+    Type: int
+  InitiatingProcessLogonId:
+    Description: Identifier for a logon session of the process that initiated the
+      event. This identifier is unique on the same machine only between restarts.
+    Sample Value: ''
+    Standard Name: initiating_process_logon_id
+    Type: string
+  InitiatingProcessMD5:
+    Description: MD5 hash of the process (image file) that initiated the event
+    Sample Value: ''
+    Standard Name: initiating_process_md5
+    Type: string
+  InitiatingProcessParentCreationTime:
+    Description: Date and time when the parent of the process responsible for the
+      event was started
+    Sample Value: ''
+    Standard Name: initiating_process_parent_creation_time
+    Type: date
+  InitiatingProcessParentFileName:
+    Description: Name of the parent process that spawned the process responsible for
+      the event
+    Sample Value: ''
+    Standard Name: initiating_process_parent_file_name
+    Type: string
+  InitiatingProcessParentId:
+    Description: Process ID (PID) of the parent process that spawned the process responsible
+      for the event
+    Sample Value: ''
+    Standard Name: initiating_process_parent_id
+    Type: int
+  InitiatingProcessSHA1:
+    Description: SHA-1 of the process (image file) that initiated the event
+    Sample Value: ''
+    Standard Name: iniating_process_sha1
+    Type: string
+  InitiatingProcessSHA256:
+    Description: "SHA-256 of the process (image file) that initiated the event. This\
+      \ field is usually not populated\u2014use the SHA1 column when available."
+    Sample Value: ''
+    Standard Name: iniating_process_sha256
+    Type: string
+  LocalIP:
+    Description: IP address assigned to the local machine used during communication
+    Sample Value: ''
+    Standard Name: local_ip
+    Type: string
+  LocalPort:
+    Description: TCP port on the local machine used during communication
+    Sample Value: ''
+    Standard Name: local_port
+    Type: int
+  LogonId:
+    Description: Identifier for a logon session. This identifier is unique on the
+      same machine only between restarts.
+    Sample Value: ''
+    Standard Name: logon_id
+    Type: string
+  MD5:
+    Description: MD5 hash of the file that the recorded action was applied to
+    Sample Value: ''
+    Standard Name: hash_md5
+    Type: string
+  MachineId:
+    Description: Unique identifier for the machine in the service
+    Sample Value: ''
+    Standard Name: machine_id
+    Type: string
+  ProcessCommandLine:
+    Description: Command line used to create the new process
+    Sample Value: ''
+    Standard Name: process_command_line
+    Type: string
+  ProcessCreationTime:
+    Description: Date and time the process was created
+    Sample Value: ''
+    Standard Name: process_creation_time
+    Type: date
+  ProcessId:
+    Description: Process ID (PID) of the newly created process
+    Sample Value: ''
+    Standard Name: process_id
+    Type: int
+  ProcessTokenElevation:
+    Description: Token type indicating the presence or absence of User Access Control
+      (UAC) privilege elevation applied to the newly created process
+    Sample Value: ''
+    Standard Name: process_token_elevation
+    Type: string
+  RegistryKey:
+    Description: Registry key that the recorded action was applied to
+    Sample Value: ''
+    Standard Name: registry_key
+    Type: string
+  RegistryValueData:
+    Description: Data of the registry value that the recorded action was applied to
+    Sample Value: ''
+    Standard Name: registry_value_data
+    Type: string
+  RegistryValueName:
+    Description: Name of the registry value that the recorded action was applied to
+    Sample Value: ''
+    Standard Name: registry_value_name
+    Type: string
+  RemoteComputerName:
+    Description: Name of the machine that performed a remote operation on the affected
+      machine. Depending on the event being reported, this name could be a fully-qualified
+      domain name (FQDN), a NetBIOS name, or a host name without domain information.
+    Sample Value: ''
+    Standard Name: remote_computer_name
+    Type: string
+  RemoteIP:
+    Description: IP address that was being connected to
+    Sample Value: ''
+    Standard Name: remote_ip
+    Type: string
+  RemotePort:
+    Description: TCP port on the remote device that was being connected to
+    Sample Value: ''
+    Standard Name: remote_port
+    Type: int
+  RemoteUrl:
+    Description: URL or fully qualified domain name (FQDN) that was being connected
+      to
+    Sample Value: ''
+    Standard Name: remote_url
+    Type: string
+  ReportId:
+    Description: Event identifier based on a repeating counter. To identify unique
+      events, this column must be used in conjunction with the ComputerName and EventTime
+      columns.
+    Sample Value: ''
+    Standard Name: report_id
+    Type: long
+  SHA1:
+    Description: SHA-1 of the file that the recorded action was applied to
+    Sample Value: ''
+    Standard Name: hash_sha1
+    Type: string
+logtype: windowsdefenderatp
+name: ''
+platform: windows
+provider: ''
+providerGUID: ''
+title: ''

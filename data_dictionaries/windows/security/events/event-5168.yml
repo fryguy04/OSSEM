@@ -1,0 +1,65 @@
+author: ''
+channel: ''
+date: ''
+description: SPN check for SMB/SMB2 failed
+details: "This event generates when SMB SPN check fails.\nIt often happens because\
+  \ of NTLMv1 or LM protocols usage from client side when \u201CMicrosoft Network\
+  \ Server: Server SPN target name validation level\u201D group policy set to \u201C\
+  Require from client\u201D on server side. SPN only sent to server when NTLMv2 or\
+  \ Kerberos protocols are used, and after that SPN can be validated.\n[MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-5168.md)\n"
+eventData:
+  ConfiguredNames:
+    Description: information about the names which were provided for validation.
+    Sample Value: N/A
+    Standard Name: configured_names
+    Type: string
+  ErrorCode:
+    Description: "hexadecimal error code, for example \u201C0xC0000022\u201D = STATUS_ACCESS_DENIED."
+    Sample Value: '0xc0000022'
+    Standard Name: error_code
+    Type: string
+  IpAddresses:
+    Description: information about possible IP addresses to use to access the target
+      server (IPv4, IPv6).
+    Sample Value: 127.0.0.1;::1;10.0.0.10;;fe80::31ea:6c3c:f40d:1973;;fe80::5efe:10.0.0.10;
+    Standard Name: ip_addresses
+    Type: string
+  ServerNames:
+    Description: information about possible server names to use to access the target
+      server (NETBIOS, DNS, localhost, etc.).
+    Sample Value: CONTOSO;contoso.local;DC01.contoso.local;DC01;LocalHost;
+    Standard Name: server_names
+    Type: string
+  SpnName:
+    Description: SPN which was used to access the server.
+    Sample Value: N/A
+    Standard Name: spn_name
+    Type: string
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: hexadecimal value that can help you correlate this event with recent
+      events that might contain the same Logon ID
+    Sample Value: '0xd0cd4'
+    Standard Name: user_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: the name of the account for which SPN check operation was failed.
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: SID of account for which SPN check operation was failed.
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+eventID: 5168
+logtype: security_events
+name: 'Event ID 5168: SPN check for SMB/SMB2 failed'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 5168

@@ -1,0 +1,96 @@
+author: ''
+channel: ''
+date: ''
+description: A logon was attempted using explicit credentials
+details: "This event is generated when a process attempts an account logon by explicitly\
+  \ specifying that account\u2019s credentials.\n* This most commonly occurs in batch-type\
+  \ configurations such as scheduled tasks, or when using the \u201CRUNAS\u201D command.\n\
+  * It is also a routine event which periodically occurs during normal operating system\
+  \ activity.\n[MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4648.md)\n"
+eventData:
+  IpAddress:
+    Description: IP address of machine from which logon attempt was performed.
+    Sample Value: ::1
+    Standard Name: src_ip
+    Type: ip
+  IpPort:
+    Description: source port which was used for logon attempt from remote machine.
+    Sample Value: '0'
+    Standard Name: src_port
+    Type: integer
+  LogonGuid:
+    Description: a GUID that can help you correlate this event with another event
+      that can contain the same Logon GUID
+    Sample Value: '{00000000-0000-0000-0000-000000000000}'
+    Standard Name: user_logon_guid
+    Type: string
+  ProcessId:
+    Description: hexadecimal Process ID of the process which was run using explicit
+      credentials. Process ID (PID) is a number used by the operating system to uniquely
+      identify an active process.
+    Sample Value: '0x368'
+    Standard Name: process_id
+    Type: integer
+  ProcessName:
+    Description: full path and the name of the executable for the process.
+    Sample Value: C:\\Windows\\System32\\svchost.exe
+    Standard Name: process_name
+    Type: string
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name"
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: hexadecimal value that can help you correlate this event with recent
+      events that might contain the same Logon ID
+    Sample Value: '0x31844'
+    Standard Name: user_id
+    Type: integer
+  SubjectUserName:
+    Description: the name of the account that requested the new logon session with
+      explicit credentials.
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: SID of account that requested the new logon session with explicit
+      credentials.
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+  TargetDomainName:
+    Description: "subject\u2019s domain or computer name"
+    Sample Value: CONTOSO
+    Standard Name: target_user_domain
+    Type: string
+  TargetInfo:
+    Description: there is no detailed information about this field in this document.
+    Sample Value: localhost
+    Standard Name: target_info
+    Type: string
+  TargetLogonGuid:
+    Description: "a GUID that can help you correlate this event with another event\
+      \ that can contain the same Logon GUID, \u201C4769(S, F): A Kerberos service\
+      \ ticket was requested event on a domain controller."
+    Sample Value: '{0887F1E4-39EA-D53C-804F-31D568A06274}'
+    Standard Name: target_user_logon_guid
+    Type: string
+  TargetServerName:
+    Description: "the name of the server on which the new process was run. Has \u201C\
+      localhost\u201D value if the process was run locally."
+    Sample Value: localhost
+    Standard Name: target_server_name
+    Type: string
+  TargetUserName:
+    Description: the name of the account whose credentials were used
+    Sample Value: ladmin
+    Standard Name: target_user_name
+    Type: string
+eventID: 4648
+logtype: security_events
+name: 'Event ID 4648: A logon was attempted using explicit credentials'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4648

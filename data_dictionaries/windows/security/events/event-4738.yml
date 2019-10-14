@@ -1,0 +1,248 @@
+author: ''
+channel: ''
+date: ''
+description: A user account was changed
+details: "This event generates every time user object is changed.\n* This event generates\
+  \ on domain controllers, member servers, and workstations.\n* For each change, a\
+  \ separate 4738 event will be generated.\n* You might see this event without any\
+  \ changes inside, that is, where all Changed Attributes apear as \u201C-\u201C.\
+  \ This usually happens when a change is made to an attribute that is not listed\
+  \ in the event. In this case there is no way to determine which attribute was changed.\
+  \ For example, if the discretionary access control list (DACL) is changed, a 4738\
+  \ event will generate, but all attributes will be \u201C-\u201C.\n* Some changes\
+  \ do not invoke a 4738 event.\n[MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4738.md)\n"
+eventData:
+  AccountExpires:
+    Description: "the date when the account expires. If the value of accountExpires\
+      \ attribute of user object was changed, you will see the new value here. . For\
+      \ example, \u201C9/21/2015 12:00:00 AM\u201D. You can change this attribute\
+      \ by using Active Directory Users and Computers, or through a script, for example.\
+      \ For local accounts, this field always has some value\u2014if the account's\
+      \ attribute was not changed it will contain the current value of the attribute."
+    Sample Value: '-'
+    Standard Name: target_user_account_expires
+    Type: date
+  AllowedToDelegateTo:
+    Description: the list of SPNs to which this account can present delegated credentials.
+      Can be changed using Active Directory Users and Computers management console
+      in Delegation tab of user account, if at least one SPN is registered for user
+      account. If the SPNs list on Delegation tab of a user account was changed, you
+      will see the new SPNs list in AllowedToDelegateTo field (note that you will
+      see the new list instead of changes) of this event.
+    Sample Value: '-'
+    Standard Name: target_user_allowed_to_delegate
+    Type: string
+  DisplayName:
+    Description: "it is a name, displayed in the address book for a particular account.\
+      \ This is usually the combination of the user's first name, middle initial,\
+      \ and last name. You can change this attribute by using Active Directory Users\
+      \ and Computers, or through a script, for example. If the value of displayName\
+      \ attribute of user object was changed, you will see the new value here. For\
+      \ local accounts, this field always has some value\u2014if the account's attribute\
+      \ was not changed it will contain the current value of the attribute."
+    Sample Value: '-'
+    Standard Name: target_user_display
+    Type: string
+  Dummy:
+    Description: ''
+    Sample Value: '-'
+    Standard Name: dumny
+    Type: string
+  HomeDirectory:
+    Description: "user's home directory. If homeDrive attribute is set and specifies\
+      \ a drive letter, homeDirectory should be a UNC path. The path must be a network\
+      \ UNC of the form \\\\Server\\Share\\Directory. If the value of homeDirectory\
+      \ attribute of user object was changed, you will see the new value here. You\
+      \ can change this attribute by using Active Directory Users and Computers, or\
+      \ through a script, for example. For local accounts, this field always has some\
+      \ value\u2014if the account's attribute was not changed it will contain the\
+      \ current value of the attribute."
+    Sample Value: '-'
+    Standard Name: target_user_home_directory
+    Type: string
+  HomePath:
+    Description: "specifies the drive letter to which to map the UNC path specified\
+      \ by homeDirectory account\u2019s attribute. The drive letter must be specified\
+      \ in the form \u201CDRIVE_LETTER:\u201D. For example \u2013 \u201CH:\u201D.\
+      \ If the value of homeDrive attribute of user object was changed, you will see\
+      \ the new value here. You can change this attribute by using Active Directory\
+      \ Users and Computers, or through a script, for example. For local accounts,\
+      \ this field always has some value\u2014if the account's attribute was not changed\
+      \ it will contain the current value of the attribute."
+    Sample Value: '-'
+    Standard Name: target_user_home_path
+    Type: string
+  LogonHours:
+    Description: hours that the account is allowed to logon to the domain. If the
+      value of logonHours attribute of user object was changed, you will see the new
+      value here. You can change this attribute by using Active Directory Users and
+      Computers, or through a script, for example.
+    Sample Value: '-'
+    Standard Name: target_user_logon_hours
+    Type: string
+  NewUacValue:
+    Description: specifies flags that control password, lockout, disable/enable, script,
+      and other behavior for the user account. If the value of userAccountControl
+      attribute of user object was changed, you will see the new value here.
+    Sample Value: '0x211'
+    Standard Name: target_user_new_uac_value
+    Type: string
+  OldUacValue:
+    Description: specifies flags that control password, lockout, disable/enable, script,
+      and other behavior for the user account. This parameter contains the previous
+      value of userAccountControl attribute of user object.
+    Sample Value: '0x15'
+    Standard Name: target_user_old_uac_value
+    Type: string
+  PasswordLastSet:
+    Description: "last time the account\u2019s password was modified. If the value\
+      \ of pwdLastSet attribute of user object was changed, you will see the new value\
+      \ here. For example: 8/12/2015 11:41:39 AM. This value will be changed, for\
+      \ example, after manual user account password reset. For local accounts, this\
+      \ field always has some value\u2014if the account's attribute was not changed\
+      \ it will contain the current value of the attribute."
+    Sample Value: '-'
+    Standard Name: target_user_password_last_set
+    Type: date
+  PrimaryGroupId:
+    Description: "Relative Identifier (RID) of user\u2019s object primary group."
+    Sample Value: '-'
+    Standard Name: user_primary_group_id
+    Type: string
+  PrivilegeList:
+    Description: "the list of user privileges which were used during the operation,\
+      \ for example, SeBackupPrivilege. This parameter might not be captured in the\
+      \ event, and in that case appears as \u201C-\u201D. See full list of user privileges\
+      \ in \u201CTable 8. User Privileges.\u201D."
+    Sample Value: '-'
+    Standard Name: user_privilege_list
+    Type: string
+  ProfilePath:
+    Description: "specifies a path to the account's profile. This value can be a null\
+      \ string, a local absolute path, or a UNC path. If the value of profilePath\
+      \ attribute of user object was changed, you will see the new value here. You\
+      \ can change this attribute by using Active Directory Users and Computers, or\
+      \ through a script, for example. For local accounts, this field always has some\
+      \ value\u2014if the account's attribute was not changed it will contain the\
+      \ current value of the attribute."
+    Sample Value: '-'
+    Standard Name: target_user_profile_path
+    Type: string
+  SamAccountName:
+    Description: "logon name for account used to support clients and servers from\
+      \ previous versions of Windows (pre-Windows 2000 logon name). If the value of\
+      \ sAMAccountName attribute of user object was changed, you will see the new\
+      \ value here. For example: ladmin. For local accounts, this field always has\
+      \ some value\u2014if the account's attribute was not changed it will contain\
+      \ the current value of the attribute."
+    Sample Value: '-'
+    Standard Name: target_user_sam_name
+    Type: string
+  ScriptPath:
+    Description: "specifies the path of the account\u2019s logon script. If the value\
+      \ of scriptPath attribute of user object was changed, you will see the new value\
+      \ here. You can change this attribute by using Active Directory Users and Computers,\
+      \ or through a script, for example. For local accounts, this field always has\
+      \ some value\u2014if the account's attribute was not changed it will contain\
+      \ the current value of the attribute."
+    Sample Value: '-'
+    Standard Name: target_user_script_path
+    Type: string
+  SidHistory:
+    Description: contains previous SIDs used for the object if the object was moved
+      from another domain. Whenever an object is moved from one domain to another,
+      a new SID is created and becomes the objectSID. The previous SID is added to
+      the sIDHistory property. If the value of sIDHistory attribute of user object
+      was changed, you will see the new value here.
+    Sample Value: '-'
+    Standard Name: target_user_sid_history
+    Type: string
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: "hexadecimal value that can help you correlate this event with recent\
+      \ events that might contain the same Logon ID, for example, \u201C4624: An account\
+      \ was successfully logged on.\u201D"
+    Sample Value: '0x30dc2'
+    Standard Name: user_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: "the name of the account that requested the \u201Cchange user account\u201D\
+      \ operation."
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: "SID of account that requested the \u201Cchange user account\u201D\
+      \ operation. Event Viewer automatically tries to resolve SIDs and show the account\
+      \ name. If the SID cannot be resolved, you will see the source data in the event."
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+  TargetDomainName:
+    Description: "target account\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: target_user_domain
+    Type: string
+  TargetSid:
+    Description: SID of account that was changed. Event Viewer automatically tries
+      to resolve SIDs and show the account name. If the SID cannot be resolved, you
+      will see the source data in the event.
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-6609
+    Standard Name: target_user_sid
+    Type: string
+  TargetUserName:
+    Description: the name of the account that was changed.
+    Sample Value: ksmith
+    Standard Name: target_user_name
+    Type: string
+  UserAccountControl:
+    Description: "shows the list of changes in userAccountControl attribute. You will\
+      \ see a line of text for each change. See possible values in here: \u201CTable\
+      \ 7. User\u2019s or Computer\u2019s account UAC flags.\u201D. In the \u201C\
+      User Account Control field text\u201D column, you can see the text that will\
+      \ be displayed in the User Account Control field in 4738 event."
+    Sample Value: '%%2050 %%2089'
+    Standard Name: target_user_account_control
+    Type: string
+  UserParameters:
+    Description: "if you change any setting using Active Directory Users and Computers\
+      \ management console in Dial-in tab of user\u2019s account properties, then\
+      \ you will see \\<value changed, but not displayed\\> in this field. For local\
+      \ accounts, this field is not applicable and always has \u201C\\<value not set\\\
+      >\u201C value."
+    Sample Value: '-'
+    Standard Name: target_user_parameters
+    Type: string
+  UserPrincipalName:
+    Description: "internet-style login name for the account, based on the Internet\
+      \ standard RFC 822. By convention this should map to the account's email name.\
+      \ If the value of userPrincipalName attribute of user object was changed, you\
+      \ will see the new value here. You can change this attribute by using Active\
+      \ Directory Users and Computers, or through a script, for example. For local\
+      \ accounts, this field is not applicable and always has \u201C-\u201C value."
+    Sample Value: '-'
+    Standard Name: target_user_principal_name
+    Type: string
+  UserWorkstations:
+    Description: "contains the list of NetBIOS or DNS names of the computers from\
+      \ which the user can logon. Each computer name is separated by a comma. The\
+      \ name of a computer is the sAMAccountName property of a computer object. If\
+      \ the value of userWorkstations attribute of user object was changed, you will\
+      \ see the new value here. You can change this attribute by using Active Directory\
+      \ Users and Computers, or through a script, for example. For local accounts,\
+      \ this field is not applicable and always appears as \u201C\\<value not set\\\
+      >.\u201C"
+    Sample Value: '-'
+    Standard Name: target_user_workstations
+    Type: string
+eventID: 4738
+logtype: security_events
+name: 'Event ID 4738: A user account was changed'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4738

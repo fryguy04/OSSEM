@@ -1,0 +1,95 @@
+author: ''
+channel: ''
+date: ''
+description: A request was made to authenticate to a wireless network
+details: 'This event generates when 802.1x authentication attempt was made for wireless
+  network.
+
+  * It typically generates when network adapter connects to new wireless network.
+
+  [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-5632.md)
+
+  '
+eventData:
+  EAPErrorCode:
+    Description: there is no information about this field in this document
+    Sample Value: '0x0'
+    Standard Name: event_error_code_eap
+    Type: string
+  EAPReasonCode:
+    Description: there is no information about this field in this document
+    Sample Value: '0x0'
+    Standard Name: event_reason_code_eap
+    Type: string
+  EapRootCauseString:
+    Description: there is no information about this field in this document
+    Sample Value: '-'
+    Standard Name: event_route_cause_string_eap
+    Type: string
+  ErrorCode:
+    Description: there is no information about this field in this document.
+    Sample Value: '0x0'
+    Standard Name: event_error_code
+    Type: string
+  Identity:
+    Description: User Principal Name (UPN) or another type of account identifier for
+      which 802.1x authentication request was made.
+    Sample Value: host/XXXXXXXX.redmond.corp.microsoft.com
+    Standard Name: user_identity
+    Type: string
+  IntfGuid:
+    Description: GUID of the network interface which was used for authentication request.
+    Sample Value: '{2BB33827-6BB6-48DB-8DE6-DB9E0B9F9C9B}'
+    Standard Name: host_interface_guid
+    Type: string
+  LocalMac:
+    Description: "local interface\u2019s MAC-address"
+    Sample Value: 02:1A:C5:14:59:C9
+    Standard Name: host_peer_mac
+    Type: string
+  PeerMac:
+    Description: "peer\u2019s (typically \u2013 access point) MAC-address"
+    Sample Value: 18:64:72:F3:33:91
+    Standard Name: host_local_mac
+    Type: string
+  ReasonCode:
+    Description: Reason Code for wired authentication results.
+    Sample Value: '0x0'
+    Standard Name: event_reason_code
+    Type: integer
+  ReasonText:
+    Description: contains Reason Text (explanation of Reason Code) and Reason Code
+      for wireless authentication results.
+    Sample Value: The operation was successful.
+    Standard Name: event_reason_text
+    Type: string
+  SSID:
+    Description: SSID of the wireless network to which authentication request was
+      sent.
+    Sample Value: Nokia
+    Standard Name: wireless_ssid
+    Type: string
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name"
+    Sample Value: '-'
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: hexadecimal value that can help you correlate this event with recent
+      events that might contain the same Logon ID
+    Sample Value: '0x0'
+    Standard Name: user_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: the name of the account for which 802.1x authentication request was
+      made.
+    Sample Value: '-'
+    Standard Name: user_name
+    Type: string
+eventID: 5632
+logtype: security_events
+name: 'Event ID 5632: A request was made to authenticate to a wireless network'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 5632

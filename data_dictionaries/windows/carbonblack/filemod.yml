@@ -1,0 +1,108 @@
+author: ''
+channel: ''
+date: ''
+description: ''
+details: 'A file on the filesystem has been created, deleted, or modified on an endpoint
+  monitored by Carbon Black.
+
+  [Carbon Black Developer Docs](https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-filemod-file-modification)
+
+  '
+eventData:
+  action:
+    Description: 'Type of file modification: create, write, delete, lastwrite'
+    Sample Value: create
+    Standard Name: action
+    Type: TEXT
+  actiontype:
+    Description: 'Enum value of the file modification: 1=create, 2=write, 4=delete,
+      8=lastwrite'
+    Sample Value: '1'
+    Standard Name: actiontype
+    Type: INTEGER
+  cb_server:
+    Description: "Used to distinguish between multiple Cb Response servers. Set this\
+      \ in the \u201Cserver_name\u201D option of cb-event-forwarder.ini."
+    Sample Value: cbserver
+    Standard Name: cb_server
+    Type: TEXT
+  computer_name:
+    Description: hostname of the sensor
+    Sample Value: JASON-WIN81-VM
+    Standard Name: host_name
+    Type: TEXT
+  event_type:
+    Description: The type of event
+    Sample Value: filemod
+    Standard Name: event_type
+    Type: TEXT
+  filetype:
+    Description: "Enum value of the detected file type of this file. Only valid for\
+      \ \u201Clastwrite\u201D actions. See the CbFileType protobuf definition for\
+      \ the available values."
+    Sample Value: '0'
+    Standard Name: filetype
+    Type: INTEGER
+  filetype_name:
+    Description: "The detected file type of this file. Only valid for \u201Clastwrite\u201D\
+      \ actions. Currently supported file types: PE, ELF, UniversalBin, Eicar, OfficeLegacy,\
+      \ OfficeOpenXml, PDF, PKZIP, LZH, LZW, RAR, TAR, and 7zip."
+    Sample Value: Unknown
+    Standard Name: filetype_name
+    Type: TEXT
+  link_process:
+    Description: Deep link to Cb Response UI for process
+    Sample Value: https://cbtests/#analyze/00000001-0000-0c70-01d1-1e951aae7e2f/1
+    Standard Name: process_link
+    Type: TEXT
+  link_sensor:
+    Description: Deep link to Cb Response UI for sensor
+    Sample Value: https://cbtests/#/host/1
+    Standard Name: sensor_link
+    Type: TEXT
+  md5:
+    Description: md5 of process executable
+    Sample Value: 7A2870C2A8283B3630BF7670D0362B94
+    Standard Name: hash
+    Type: TEXT
+  path:
+    Description: Full file path
+    Sample Value: c:\\users\\admin\\desktop\\test.txt
+    Standard Name: file_path
+    Type: TEXT
+  pid:
+    Description: Endpoint OS Process id of process
+    Sample Value: '3184'
+    Standard Name: process_id
+    Type: INTEGER
+  process_guid:
+    Description: Cb Process GUID of process
+    Sample Value: 00000001-0000-0c70-01d1-1e951aae7e2f
+    Standard Name: process_guid
+    Type: TEXT
+  process_path:
+    Description: Path of the process that created the file
+    Sample Value: c:\windows\system32\notepad.exe
+    Standard Name: process_path
+    Type: TEXT
+  sensor_id:
+    Description: sensor ID of associated sensor
+    Sample Value: '1'
+    Standard Name: sensor_id
+    Type: INTEGER
+  timestamp:
+    Description: Endpoint timestamp of this event since epoch
+    Sample Value: '1447696804'
+    Standard Name: event_date_creation
+    Type: INTEGER
+  type:
+    Description: The full type of event
+    Sample Value: ingress.event.filemod
+    Standard Name: event_type_detailed
+    Type: TEXT
+logtype: carbonblack
+name: filemod
+platform: windows
+provider: carbonblack
+providerGUID: ''
+title: ingress.event.filemod (File Modification)

@@ -1,0 +1,56 @@
+author: ''
+channel: ''
+date: ''
+description: A user account was locked out
+details: 'This event generates every time a user account is locked out. For user accounts,
+  this event generates on domain controllers, member servers, and workstations.
+
+  [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4740.md)
+
+  '
+eventData:
+  SubjectDomainName:
+    Description: domain or computer name.
+    Sample Value: CONTOSO
+    Standard Name: user_reporter_domain
+    Type: string
+  SubjectLogonId:
+    Description: "hexadecimal value that can help you correlate this event with recent\
+      \ events that might contain the same Logon ID, for example, \u201C4624: An account\
+      \ was successfully logged"
+    Sample Value: '0x3e7'
+    Standard Name: user_reporter_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: the name of the account that performed the lockout operation.
+    Sample Value: DC01$
+    Standard Name: user_reporter_name
+    Type: string
+  SubjectUserSid:
+    Description: SID of account that performed the lockout operation.
+    Sample Value: S-1-5-18
+    Standard Name: user_reporter_sid
+    Type: string
+  TargetDomainName:
+    Description: the name of computer account from which logon attempt was received
+      and after which target account was locked out.
+    Sample Value: WIN81
+    Standard Name: user_domain
+    Type: string
+  TargetSid:
+    Description: SID of account that was locked out.
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-2104
+    Standard Name: user_sid
+    Type: string
+  TargetUserName:
+    Description: the name of the account that was locked out.
+    Sample Value: Auditor
+    Standard Name: user_name
+    Type: string
+eventID: 4740
+logtype: security_events
+name: 'Event ID 4740: A user account was locked out'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4740

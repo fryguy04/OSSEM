@@ -1,0 +1,66 @@
+author: ''
+channel: ''
+date: ''
+description: A request was made to authenticate to a wired network
+details: 'This event generates when 802.1x authentication attempt was made for wired
+  network.
+
+  * It typically generates when network adapter connects to new wired network.
+
+  [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-5633.md)
+
+  '
+eventData:
+  ErrorCode:
+    Description: Unique EAP error code
+    Sample Value: '0x0'
+    Standard Name: event_error_code
+    Type: string
+  Identity:
+    Description: User Principal Name (UPN) of account for which 802.1x authentication
+      request was made.
+    Sample Value: '-'
+    Standard Name: user_identity
+    Type: string
+  InterfaceName:
+    Description: "the name (description) of network interface which was used for authentication\
+      \ request. You can get the list of all available network adapters using \u201C\
+      ipconfig /all\u201D command."
+    Sample Value: Microsoft Hyper-V Network Adapter
+    Standard Name: host_interface_name
+    Type: string
+  ReasonCode:
+    Description: Reason Code for wired authentication results.
+    Sample Value: '0x70003'
+    Standard Name: event_reason_code
+    Type: string
+  ReasonText:
+    Description: contains Reason Text (explanation of Reason Code) and Reason Code
+      for wired authentication results.
+    Sample Value: The network does not support authentication
+    Standard Name: event_reason_text
+    Type: string
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name"
+    Sample Value: '-'
+    Standard Name: user_domain
+    Type: integer
+  SubjectLogonId:
+    Description: hexadecimal value that can help you correlate this event with recent
+      events that might contain the same Logon ID
+    Sample Value: '0x0'
+    Standard Name: user_logon_id
+    Type: string
+  SubjectUserName:
+    Description: the name of the account for which 802.1x authentication request was
+      made
+    Sample Value: '-'
+    Standard Name: user_name
+    Type: string
+eventID: 5633
+logtype: security_events
+name: 'Event ID 5633: A request was made to authenticate to a wired network'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 5633

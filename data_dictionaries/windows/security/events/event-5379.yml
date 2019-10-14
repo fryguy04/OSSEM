@@ -1,0 +1,74 @@
+author: ''
+channel: Security
+date: ''
+description: Credential Manager credentials were read
+details: 'This event occurs when a user performs a read operation on stored credentials
+  in Credential Manager.
+
+  '
+eventData:
+  ClienProcessId:
+    Description: ''
+    Sample Value: '4432'
+    Standard Name: process_id
+    Type: integer
+  CountOfCredentialsReturned:
+    Description: ''
+    Sample Value: '0'
+    Standard Name: credential_read_returned_count
+    Type: integer
+  ProcessCreationTime:
+    Description: ''
+    Sample Value: '2019-02-25T22:33:21.621488200Z'
+    Standard Name: process_creation_time
+    Type: date
+  ReadOperation:
+    Description: ''
+    Sample Value: '%%8100'
+    Standard Name: object_operation_type
+    Type: string
+  ReturnCode:
+    Description: ''
+    Sample Value: '0'
+    Standard Name: credentials_read_returned_code
+    Type: string
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name"
+    Sample Value: SHIRE
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: hexadecimal value that can help you correlate this event with recent
+      events that might contain the same Logon ID
+    Sample Value: '0x3e7'
+    Standard Name: user_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: the name of the account that performed a read operation on stored
+      credentials in CM
+    Sample Value: ACCT001$
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: SID of account that performed a read operation on stored credentials
+      in CM
+    Sample Value: S-1-5-18
+    Standard Name: user_sid
+    Type: string
+  TargetName:
+    Description: stored credentials that were read
+    Sample Value: WindowsLive:(token):name=xxxxxasas;serviceuri=*
+    Standard Name: credentials_read
+    Type: string
+  Type:
+    Description: ''
+    Sample Value: '0'
+    Standard Name: credentials_read_type
+    Type: integer
+eventID: 5379
+logtype: security_events
+name: 'Event ID 5379: Credential Manager credentials were read'
+platform: windows
+provider: Microsoft-Windows-Security-Auditing
+providerGUID: 54849625-5478-4994-A5BA-3E3B0328C30D
+title: Event ID 5379

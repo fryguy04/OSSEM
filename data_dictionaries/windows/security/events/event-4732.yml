@@ -1,0 +1,76 @@
+author: ''
+channel: ''
+date: ''
+description: A member was added to a security-enabled local group
+details: "This event generates every time a new member was added to a security-enabled\
+  \ (security) local group.\n* This event generates on domain controllers, member\
+  \ servers, and workstations.\n* For every added member you will get separate 4732\
+  \ event.\n* You will typically see \u201C4735: A security-enabled local group was\
+  \ changed.\u201D event without any changes in it prior to 4732 event.\n[MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4732.md)\n"
+eventData:
+  MemberName:
+    Description: "distinguished name of account that was added to the group. For example:\
+      \ \u201CCN=Auditor,CN=Users,DC=contoso,DC=local\u201D. For local groups this\
+      \ field typically has \u201C-\u201C value, even if new member is a domain account."
+    Sample Value: CN=eadmin,CN=Users,DC=contoso,DC=local
+    Standard Name: target_user_name
+    Type: string
+  MemberSid:
+    Description: SID of account that was added to the group.
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-500
+    Standard Name: target_user_sid
+    Type: string
+  PrivilegeList:
+    Description: "the list of user privileges which were used during the operation,\
+      \ for example, SeBackupPrivilege. This parameter might not be captured in the\
+      \ event, and in that case appears as \u201C-\u201D."
+    Sample Value: '-'
+    Standard Name: user_privilege_list
+    Type: string
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: "hexadecimal value that can help you correlate this event with recent\
+      \ events that might contain the same Logon ID, for example, \u201C4624: An account\
+      \ was successfully logged on.\u201D"
+    Sample Value: '0x3031e'
+    Standard Name: user_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: "the name of the account that requested the \u201Cadd member to the\
+      \ group\u201D operation."
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: "SID of account that requested the \u201Cadd member to the group\u201D\
+      \ operation."
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+  TargetDomainName:
+    Description: domain or computer name of the group to which the new member was
+      added.
+    Sample Value: CONTOSO
+    Standard Name: target_group_domain
+    Type: string
+  TargetSid:
+    Description: SID of the group to which new member was added.
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-6605
+    Standard Name: target_group_sid
+    Type: string
+  TargetUserName:
+    Description: the name of the group to which new member was added.
+    Sample Value: AccountOperators
+    Standard Name: target_group_name
+    Type: string
+eventID: 4732
+logtype: security_events
+name: 'Event ID 4732: A member was added to a security-enabled local group'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4732

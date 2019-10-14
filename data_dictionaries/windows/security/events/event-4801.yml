@@ -1,0 +1,45 @@
+author: ''
+channel: ''
+date: ''
+description: The workstation was unlocked
+details: 'This event is generated when workstation was unlocked.
+
+  [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4801.md)
+
+  '
+eventData:
+  SessionId:
+    Description: unique ID of unlocked session.
+    Sample Value: '3'
+    Standard Name: session_id
+    Type: integer
+  TargetDomainName:
+    Description: "subject\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  TargetLogonId:
+    Description: hexadecimal value that can help you correlate this event with recent
+      events that might contain the same Logon ID,
+    Sample Value: '0x759a9'
+    Standard Name: user_logon_id
+    Type: integer
+  TargetUserName:
+    Description: "the name of the account that requested the \u201Cunlock workstation\u201D\
+      \ operation."
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  TargetUserSid:
+    Description: "SID of account that requested the \u201Cunlock workstation\u201D\
+      \ operation"
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+eventID: 4801
+logtype: security_events
+name: 'Event ID 4801: The workstation was unlocked'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4801

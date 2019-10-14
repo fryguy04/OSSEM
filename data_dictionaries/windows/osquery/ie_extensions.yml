@@ -1,0 +1,36 @@
+author: ''
+channel: ''
+date: ''
+description: ''
+details: 'Internet Explorer browser extensions.
+
+  [osquery GitHub](https://github.com/facebook/osquery/blob/master/specs/windows/ie_extensions.table)
+
+  '
+eventData:
+  name:
+    Description: Extension display name
+    Sample Value: ''
+    Standard name: extension_name
+    Type: TEXT
+  path:
+    Description: Path to executable
+    Sample Value: ''
+    Standard name: process_path
+    Type: TEXT
+  registry_path:
+    Description: Extension identifier
+    Sample Value: ''
+    Standard name: registry_path
+    Type: TEXT
+  version:
+    Description: Version of the executable
+    Sample Value: ''
+    Standard name: file_version
+    Type: TEXT
+logtype: osquery
+name: ''
+platform: windows
+provider: ''
+providerGUID: ''
+title: ''

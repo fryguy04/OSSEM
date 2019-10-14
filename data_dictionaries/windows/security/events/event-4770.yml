@@ -1,0 +1,65 @@
+author: ''
+channel: ''
+date: ''
+description: A Kerberos service ticket was requested
+details: 'This event generates for every Ticket Granting Service (TGS) ticket renewal.
+  This event generates only on domain controllers.
+
+  [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4770.md)
+
+  '
+eventData:
+  IpAddress:
+    Description: IP address of the computer from which the TGS renewal request was
+      received.
+    Sample Value: ::ffff:10.0.0.12
+    Standard Name: src_ip
+    Type: ip
+  IpPort:
+    Description: source port number of client network connection (TGS renewal request
+      connection).
+    Sample Value: '49964'
+    Standard Name: src_port
+    Type: integer
+  ServiceName:
+    Description: the name of the account or computer for which the TGS ticket was
+      renewed.
+    Sample Value: krbtgt
+    Standard Name: service_name
+    Type: string
+  ServiceSid:
+    Description: SID of the account or computer object for which the TGS ticket was
+      renewed. Event Viewer automatically tries to resolve SIDs and show the account
+      name. If the SID cannot be resolved, you will see the source data in the event.
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-502
+    Standard Name: service_id
+    Type: string
+  TargetDomainName:
+    Description: the name of the Kerberos Realm that Account Name belongs to.
+    Sample Value: CONTOSO.LOCAL
+    Standard Name: user_domain
+    Type: string
+  TargetUserName:
+    Description: 'the User Principal Name (UPN) of the account that requested ticket
+      renewal. Computer account name ends with $ character in UPN. This field typically
+      has the following value format: user_account_name@FULL_DOMAIN_NAME.'
+    Sample Value: WIN2008R2$@CONTOSO.LOCAL
+    Standard Name: user_name
+    Type: string
+  TicketEncryptionType:
+    Description: the cryptographic suite that was used in renewed TGS.
+    Sample Value: '0x12'
+    Standard Name: ticket_encryption_type
+    Type: string
+  TicketOptions:
+    Description: this is a set of different Ticket Flags in hexadecimal format.
+    Sample Value: '0x2'
+    Standard Name: ticket_options
+    Type: string
+eventID: 4770
+logtype: security_events
+name: 'Event ID 4769: A Kerberos service ticket was requested'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4769

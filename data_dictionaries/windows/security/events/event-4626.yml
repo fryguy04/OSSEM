@@ -1,0 +1,92 @@
+author: ''
+channel: ''
+date: ''
+description: User/Device claims information
+details: "This event generates for new account logons and contains user/device claims\
+  \ which were associated with a new logon session.\n* This event does not generate\
+  \ if the user/device doesn\u2019t have claims.\n* For computer account logons you\
+  \ will also see device claims listed in the \u201CUser Claims\u201D field.\n[MS\
+  \ Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4626.md)\n"
+eventData:
+  DeviceClaims:
+    Description: list of device claims for new logon session
+    Sample Value: '-'
+    Standard Name: logon_device_claims
+    Type: string
+  EventCountTotal:
+    Description: "The name of the authentication package which was used for the logon\
+      \ authentication process. Default packages loaded on LSA startup are located\
+      \ in \u201CHKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\OSConfig\u201D registry\
+      \ key."
+    Sample Value: '1'
+    Standard Name: event_count_total
+    Type: integer
+  EventIdx:
+    Description: "If is there is not enough space in one event to put all claims,\
+      \ you will see \u201C1 of N\u201D in this field and additional events will be\
+      \ generated. Typically this field has \u201C1 of 1\u201D value."
+    Sample Value: '1'
+    Standard Name: event_sequence_id
+    Type: integer
+  LogonType:
+    Description: the type of logon which was performed.
+    Sample Value: '3'
+    Standard Name: logon_type
+    Type: integer
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name"
+    Sample Value: '-'
+    Standard Name: user_reporter_domain
+    Type: string
+  SubjectLogonId:
+    Description: hexadecimal value that can help you correlate this event with recent
+      events that might contain the same Logon ID
+    Sample Value: '0x0'
+    Standard Name: user_reporter_id
+    Type: integer
+  SubjectUserName:
+    Description: the name of the account that reported information about claims.
+    Sample Value: '-'
+    Standard Name: user_reporter_name
+    Type: string
+  SubjectUserSid:
+    Description: SID of account that reported information about claims.
+    Sample Value: S-1-0-0
+    Standard Name: user_reporter_sid
+    Type: string
+  TargetDomainName:
+    Description: "subject\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  TargetLogonId:
+    Description: hexadecimal value that can help you correlate this event with recent
+      events that might contain the same Logon ID
+    Sample Value: '0x136f7b'
+    Standard Name: user_logon_id
+    Type: integer
+  TargetUserName:
+    Description: the name of the account for which logon was performed
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  TargetUserSid:
+    Description: SID of account for which logon was performed.
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+  UserClaims:
+    Description: list of user claims for new logon session. This field contains user
+      claims if user account was logged in and device claims if computer account was
+      logged in
+    Sample Value: 'ad://ext/cn:88d2b96fdb2b4c49 <%%1818> : "dadmin" ad://ext/Department:88d16a8edaa8c66b
+      <%%1818> : "IT"'
+    Standard Name: logon_user_claims
+    Type: string
+eventID: 4626
+logtype: security_events
+name: 'Event ID 4626: User/Device claims information'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4626

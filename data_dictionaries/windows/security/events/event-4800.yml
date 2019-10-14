@@ -1,0 +1,44 @@
+author: ''
+channel: ''
+date: ''
+description: The workstation was locked
+details: 'This event is generated when a workstation was locked.
+
+  [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4800.md)
+
+  '
+eventData:
+  SessionId:
+    Description: unique ID of locked session.
+    Sample Value: '3'
+    Standard Name: session_id
+    Type: integer
+  TargetDomainName:
+    Description: "subject\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  TargetLogonId:
+    Description: hexadecimal value that can help you correlate this event with recent
+      events that might contain the same Logon ID,
+    Sample Value: '0x759a9'
+    Standard Name: user_logon_id
+    Type: integer
+  TargetUserName:
+    Description: "the name of the account that requested the \u201Clock workstation\u201D\
+      \ operation."
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  TargetUserSid:
+    Description: "SID of account that requested the \u201Clock workstation\u201D operation"
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+eventID: 4800
+logtype: security_events
+name: 'Event ID 4800: The workstation was locked'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4800

@@ -1,0 +1,64 @@
+author: ''
+channel: ''
+date: ''
+description: A user account was enabled
+details: 'This event generates every time user or computer object is enabled.
+
+  * For user accounts, this event generates on domain controllers, member servers,
+  and workstations.
+
+  * For computer accounts, this event generates only on domain controllers.
+
+  [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4722.md)
+
+  '
+eventData:
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: "hexadecimal value that can help you correlate this event with recent\
+      \ events that might contain the same Logon ID, for example, \u201C4624: An account\
+      \ was successfully logged on.\u201D"
+    Sample Value: '0x30d5f'
+    Standard Name: user_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: "the name of the account that requested the \u201Cenable account\u201D\
+      \ operation."
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: "SID of account that requested the \u201Cenable account\u201D operation.\
+      \ Event Viewer automatically tries to resolve SIDs and show the account name.\
+      \ If the SID cannot be resolved, you will see the source data in the event."
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+  TargetDomainName:
+    Description: "target account\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: target_user_domain
+    Type: string
+  TargetSid:
+    Description: SID of account that was enabled. Event Viewer automatically tries
+      to resolve SIDs and show the account name. If the SID cannot be resolved, you
+      will see the source data in the event.
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-2104
+    Standard Name: target_user_sid
+    Type: string
+  TargetUserName:
+    Description: the name of the account that was enabled.
+    Sample Value: Auditor
+    Standard Name: target_user_name
+    Type: string
+eventID: 4722
+logtype: security_events
+name: 'Event ID 4722: A user account was enabled'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4722

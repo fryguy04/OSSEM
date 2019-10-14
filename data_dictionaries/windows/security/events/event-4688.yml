@@ -1,0 +1,101 @@
+author: ''
+channel: ''
+date: ''
+description: A new process has been created
+details: 'This event generates every time a new process starts.
+
+  [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4688.md)
+
+  '
+eventData:
+  CommandLine:
+    Description: "contains the name of executable and arguments which were passed\
+      \ to it. You must enable \u201CAdministrative Templates\\System\\Audit Process\
+      \ Creation\\Include command line in process creation events\u201D group policy\
+      \ to include command line in process creation events"
+    Sample Value: ''
+    Standard Name: process_command_line
+    Type: string
+  MandatoryLabel:
+    Description: SID of integrity label which was assigned to the new process.
+    Sample Value: S-1-16-8192
+    Standard Name: process_mandatory_label
+    Type: string
+  NewProcessId:
+    Description: hexadecimal Process ID of the new process.
+    Sample Value: '0x2bc'
+    Standard Name: process_id
+    Type: integer
+  NewProcessName:
+    Description: full path and the name of the executable for the new process.
+    Sample Value: C:\\Windows\\System32\\rundll32.exe
+    Standard Name: process_name
+    Type: string
+  ParentProcessName:
+    Description: full path and the name of the executable for the process.
+    Sample Value: C:\\Windows\\explorer.exe
+    Standard Name: process_parent_name
+    Type: string
+  ProcessId:
+    Description: hexadecimal Process ID of the process which ran the new process.
+    Sample Value: '0xe74'
+    Standard Name: process_parent_id
+    Type: integer
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: "contains error code for Failure events. For Success events this\
+      \ parameter has \u201C0x0\u201D value. hexadecimal value that can help you correlate\
+      \ this event with recent events that might contain the same Logon ID, for example,\
+      \ \u201C4624: An account was successfully logged on.\u201D"
+    Sample Value: '0x3e7'
+    Standard Name: user_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: "the name of the account that requested the \u201Ccreate process\u201D\
+      \ operation."
+    Sample Value: WIN-GG82ULGC9GO$
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: "SID of account that requested the \u201Ccreate process\u201D operation."
+    Sample Value: S-1-5-18
+    Standard Name: user_sid
+    Type: string
+  TargetDomainName:
+    Description: "target account\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: target_user_domain
+    Type: string
+  TargetLogonId:
+    Description: "hexadecimal value that can help you correlate this event with recent\
+      \ events that might contain the same Logon ID, for example, \u201C4624: An account\
+      \ was successfully logged on.\u201D"
+    Sample Value: '0x4a5af0'
+    Standard Name: target_user_logon_id
+    Type: sinteger
+  TargetUserName:
+    Description: the name of the target account
+    Sample Value: dadmin
+    Standard Name: target_user_name
+    Type: string
+  TargetUserSid:
+    Description: SID of target account.
+    Sample Value: S-1-5-21-1377283216-344919071-3415362939-1104
+    Standard Name: target_user_sid
+    Type: string
+  TokenElevationType:
+    Description: Token elevation type. It can be Default(1), Full(2) or Limited(3)
+    Sample Value: '%%1938'
+    Standard Name: process_token_elevation_type
+    Type: string
+eventID: 4688
+logtype: security_events
+name: 'Event ID 4688: A new process has been created'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4688

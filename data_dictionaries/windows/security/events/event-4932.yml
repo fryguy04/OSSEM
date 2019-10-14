@@ -1,0 +1,53 @@
+author: ''
+channel: ''
+date: ''
+description: Synchronization of a replica of an Active Directory naming context has
+  begun
+details: 'This event generates every time synchronization of a replica of an Active
+  Directory naming context has begun.
+
+  [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4932.md)
+
+  '
+eventData:
+  DestinationDRA:
+    Description: destination directory replication agent distinguished name.
+    Sample Value: CN=NTDS Settings,CN=DC01,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=contoso,DC=local
+    Standard Name: destination_dra
+    Type: string
+  NamingContext:
+    Description: naming context to replicate.
+    Sample Value: CN=Schema,CN=Configuration,DC=contoso,DC=local
+    Standard Name: naming_context
+    Type: string
+  Options:
+    Description: decimal value of DRS Options.
+    Sample Value: '2147483733'
+    Standard Name: options
+    Type: integer
+  SessionID:
+    Description: "unique identifier of replication session. Using this field you can\
+      \ find \u201C4932: Synchronization of a replica of an Active Directory naming\
+      \ context has begun.\u201D and \u201C4933: Synchronization of a replica of an\
+      \ Active Directory naming context has ended.\u201D events for the same session."
+    Sample Value: '48'
+    Standard Name: session_id
+    Type: integer
+  SourceDRA:
+    Description: source directory replication agent distinguished name.
+    Sample Value: CN=NTDS Settings,CN=WIN2012R2,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=contoso,DC=local
+    Standard Name: source_dra
+    Type: string
+  StartUSN:
+    Description: "Naming Context\u2019s USN number before replication begins."
+    Sample Value: '20869'
+    Standard Name: start_usn
+    Type: integer
+eventID: 4932
+logtype: security_events
+name: 'Event ID 4932: Synchronization of a replica of an Active Directory naming context
+  has begun'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4932

@@ -1,0 +1,111 @@
+author: Roberto Rodriguez (@Cyb3rWard0g)
+channel: Microsoft-windows-PowerShell/Operational
+date: 05/16/2018
+description: Detailed logging of all PowerShell command input and output.
+details: 'Beginning in Windows PowerShell 3.0, you can record execution events for
+  the cmdlets and functions in Windows PowerShell modules. This feature can provide
+  detailed logging of all PowerShell command input and output, [Investigating PowerShell
+  Attacks - Mandiant](https://www.defcon.org/images/defcon-22/dc-22-presentations/Kazanciyan-Hastings/DEFCON-22-Ryan-Kazanciyan-Matt-Hastings-Investigating-Powershell-Attacks.pdf)
+
+  Module logging records pipeline execution details as PowerShell executes, including
+  variable initialization and command invocations. Module logging will record portions
+  of scripts, some de-obfuscated code, and some data formatted for output. [FireEye](https://www.fireeye.com/blog/threat-research/2016/02/greater_visibilityt.html)
+
+  '
+eventData:
+  CommandInvocation:
+    Description: ''
+    Sample Value: Get-ChildItem
+    Standard Name: powershell_command_invocation
+    Type: string
+  CommandName:
+    Description: ''
+    Sample Value: Get-ChildItem
+    Standard Name: powershell_command_name
+    Type: string
+  CommandPath:
+    Description: ''
+    Sample Value: ''
+    Standard Name: powershell_command_path
+    Type: string
+  CommandType:
+    Description: ''
+    Sample Value: Cmdlet
+    Standard Name: powershell_command_type
+    Type: string
+  Connected User:
+    Description: ''
+    Sample Value: ''
+    Standard Name: powershell_connected_user
+    Type: string
+  EngineVersion:
+    Description: ''
+    Sample Value: 5.1.16299.431
+    Standard Name: powershell_engine_version
+    Type: string
+  HostApplication:
+    Description: ''
+    Sample Value: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+    Standard Name: powershell_host_application
+    Type: string
+  HostId:
+    Description: ''
+    Sample Value: 312b26a7-53d3-45db-8b45-b79cae3afba9
+    Standard Name: powershell_host_id
+    Type: string
+  HostName:
+    Description: ''
+    Sample Value: ConsoleHost
+    Standard Name: powershell_host_name
+    Type: string
+  HostVersion:
+    Description: ''
+    Sample Value: 5.1.16299.431
+    Standard Name: powershell_host_version
+    Type: string
+  ParameterBinding:
+    Description: ''
+    Sample Value: Filter
+    Standard Name: powershell_parameter_binding
+    Type: string
+  PipelineId:
+    Description: ''
+    Sample Value: '35'
+    Standard Name: powershell_pipeline_id
+    Type: integer
+  RunspaceId:
+    Description: ''
+    Sample Value: 0252cd51-52b5-4825-8029-a4f81a93cef6
+    Standard Name: powershell_runspace_id
+    Type: string
+  ScriptName:
+    Description: ''
+    Sample Value: ''
+    Standard Name: powershell_script_name
+    Type: string
+  Sequence Number:
+    Description: ''
+    Sample Value: '88'
+    Standard Name: powershell_sequence_number
+    Type: string
+  Severity:
+    Description: ''
+    Sample Value: Informational
+    Standard Name: powershell_severity
+    Type: string
+  Shell ID:
+    Description: ''
+    Sample Value: Microsoft.PowerShell
+    Standard Name: powershell_shell_id
+    Type: string
+  User:
+    Description: ''
+    Sample Value: DESKTOP-WARDOG
+    Standard Name: user_domain
+    Type: string
+eventID: 4103
+logtype: Windows PowerShell
+name: Module Logging
+platform: windows
+provider: Microsoft-Windows-PowerShell
+providerGUID: A0C1853B-5C40-4B15-8766-3CF1C58F985A

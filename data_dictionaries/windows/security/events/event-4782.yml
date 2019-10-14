@@ -1,0 +1,50 @@
+author: ''
+channel: ''
+date: ''
+description: The password hash an account was accessed
+details: "This event generates on domain controllers during password migration of\
+  \ an account using Active Directory Migration Toolkit. Typically \u201CSubject\\\
+  Security ID\u201D is the SYSTEM account.\n[MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4782.md)\n"
+eventData:
+  SubjectDomainName:
+    Description: "subject\u2019s domain name."
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: "hexadecimal value that can help you correlate this event with recent\
+      \ events that might contain the same Logon ID, for example, \u201C4624: An account\
+      \ was successfully logged on.\u201D"
+    Sample Value: '0x3e7'
+    Standard Name: user_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: the name of the account that requested hash migration operation.
+    Sample Value: DC01$
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: SID of account that requested hash migration operation. Event Viewer
+      automatically tries to resolve SIDs and show the account name. If the SID cannot
+      be resolved, you will see the source data in the even
+    Sample Value: S-1-5-18
+    Standard Name: user_sid
+    Type: string
+  TargetDomainName:
+    Description: domain name of the account for which the password hash was migrated.
+    Sample Value: CONTOSO
+    Standard Name: target_user_domain
+    Type: string
+  TargetUserName:
+    Description: 'the name of the account for which the password hash was migrated.
+      For example: ServiceDesk'
+    Sample Value: Andrei
+    Standard Name: target_user_name
+    Type: string
+eventID: 4782
+logtype: security_events
+name: 'Event ID 4782: The password hash an account was accessed'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4782

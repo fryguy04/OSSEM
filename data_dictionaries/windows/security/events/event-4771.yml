@@ -1,0 +1,84 @@
+author: ''
+channel: ''
+date: ''
+description: Kerberos pre-authentication failed
+details: "This event generates every time the Key Distribution Center fails to issue\
+  \ a Kerberos Ticket Granting Ticket (TGT). This can occur when a domain controller\
+  \ doesn\u2019t have a certificate installed for smart card authentication (for example,\
+  \ with a \u201CDomain Controller\u201D or \u201CDomain Controller Authentication\u201D\
+  \ template), the user\u2019s password has expired, or the wrong password was provided.\
+  \ This event generates only on domain controllers. This event is not generated if\
+  \ \u201CDo not require Kerberos preauthentication\u201D option is set for the account.\n\
+  [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4771.md)\n"
+eventData:
+  CertIssuerName:
+    Description: the name of the Certification Authority that issued the smart card
+      certificate. Populated in Issued by field in certificate.
+    Sample Value: ''
+    Standard Name: certificate_issuer_name
+    Type: string
+  CertSerialNumber:
+    Description: "smart card certificate\u2019s serial number. Can be found in Serial\
+      \ number field in the certificate."
+    Sample Value: ''
+    Standard Name: certificate_serial_number
+    Type: string
+  CertThumbprint:
+    Description: "smart card certificate\u2019s thumbprint. Can be found in Thumbprint\
+      \ field in the certificate."
+    Sample Value: ''
+    Standard Name: certificate_thumbprint
+    Type: string
+  IpAddress:
+    Description: IP address of the computer from which the TGT request was received.
+    Sample Value: ::ffff:10.0.0.12
+    Standard Name: src_ip
+    Type: ip
+  IpPort:
+    Description: source port number of client network connection (TGT request connection).
+    Sample Value: '49254'
+    Standard Name: src_port
+    Type: integer
+  PreAuthType:
+    Description: the code of pre-Authentication type which was used in TGT request.
+    Sample Value: '15'
+    Standard Name: ticket_pre_auth_type
+    Type: integer
+  ServiceName:
+    Description: 'the name of the service in the Kerberos Realm to which TGT request
+      was sent. Typically has one of the following formats: krbtgt/DOMAIN_NETBIOS_NAME.
+      Example: krbtgt/CONTOSO, krbtgt/DOMAIN_FULL_NAME. Example: krbtgt/CONTOSO.LOCAL'
+    Sample Value: krbtgt/CONTOSO.LOCAL
+    Standard Name: service_name
+    Type: string
+  Status:
+    Description: hexadecimal failure code of failed TGT issue operation
+    Sample Value: '0x10'
+    Standard Name: ticket_status
+    Type: string
+  TargetSid:
+    Description: 'SID of account object for which (TGT) ticket was requested. Event
+      Viewer automatically tries to resolve SIDs and show the account name. If the
+      SID cannot be resolved, you will see the source data in the event. For example:
+      CONTOSO\dadmin or CONTOSO\WIN81$.'
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+  TargetUserName:
+    Description: the name of account, for which (TGT) ticket was requested. Computer
+      account name ends with $ character.
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  TicketOptions:
+    Description: this is a set of different Ticket Flags in hexadecimal format
+    Sample Value: '0x40810010'
+    Standard Name: ticket_options
+    Type: string
+eventID: 4771
+logtype: security_events
+name: 'Event ID 4771: Kerberos pre-authentication failed'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4771

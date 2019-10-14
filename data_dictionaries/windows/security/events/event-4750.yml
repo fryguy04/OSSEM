@@ -1,0 +1,86 @@
+author: ''
+channel: ''
+date: ''
+description: A security-disabled global group was changed
+details: "This event generates every time security-disabled (distribution) global\
+  \ group is changed.This event generates only on domain controllers.\nSome changes\
+  \ do not invoke a 4750 event, for example, changes made using the Active Directory\
+  \ Users and Computers management console in Managed By tab in group account properties.\n\
+  If you change the name of the group (SAM Account Name), you also get \u201C4781:\
+  \ The name of an account was changed\u201D if \u201CAudit User Account Management\u201D\
+  \ subcategory success auditing is enabled.\nIf you change the group type, you get\
+  \ a change event from the new group type auditing subcategory instead of 4750. If\
+  \ you need to monitor for group type changes, it is better to monitor for \u201C\
+  4764: A group\u2019s type was changed.\u201D\n[MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4750.md)\n"
+eventData:
+  PrivilegeList:
+    Description: the list of user privileges which were used during the operation,
+      for example, SeBackupPrivilege.
+    Sample Value: '-'
+    Standard Name: user_privilege_list
+    Type: string
+  SamAccountName:
+    Description: 'This is a new name of changed group used to support clients and
+      servers from previous versions of Windows (pre-Windows 2000 logon name). If
+      the value of sAMAccountName attribute of group object was changed, you will
+      see the new value here. For example: ServiceDesk.'
+    Sample Value: ServiceDeskMain
+    Standard Name: target_group_sam_name
+    Type: string
+  SidHistory:
+    Description: contains previous SIDs used for the object if the object was moved
+      from another domain. Whenever an object is moved from one domain to another,
+      a new SID is created and becomes the objectSID. The previous SID is added to
+      the sIDHistory property. If the value of sIDHistory attribute of group object
+      was changed, you will see the new value here.
+    Sample Value: '-'
+    Standard Name: target_group_sid_history
+    Type: string
+  SubjectDomainName:
+    Description: "subject\u2019s domain name."
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: "hexadecimal value that can help you correlate this event with recent\
+      \ events that might contain the same Logon ID, for example, \u201C4624: An account\
+      \ was successfully logged on.\u201D"
+    Sample Value: '0x3007b'
+    Standard Name: user_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: "the name of the account that requested the \u201Cchange group\u201D\
+      \ operation."
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: "SID of account that requested the \u201Cchange group\u201D operation.\
+      \ Event Viewer automatically tries to resolve SIDs and show the account name."
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+  TargetDomainName:
+    Description: domain name of changed group.
+    Sample Value: CONTOSO
+    Standard Name: target_group_domain
+    Type: string
+  TargetSid:
+    Description: SID of changed group. Event Viewer automatically tries to resolve
+      SIDs and show the group name. If the SID cannot be resolved, you will see the
+      source data in the event.
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-6119
+    Standard Name: target_group_sid
+    Type: string
+  TargetUserName:
+    Description: 'the name of the group that was changed. For example: ServiceDesk'
+    Sample Value: ServiceDeskMain
+    Standard Name: target_group_name
+    Type: string
+eventID: 4750
+logtype: security_events
+name: 'Event ID 4750: A security-disabled global group was changed'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4750

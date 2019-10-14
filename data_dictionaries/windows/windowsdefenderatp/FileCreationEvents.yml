@@ -1,0 +1,192 @@
+author: Jared Atkinson (@jaredcatkinson)
+channel: ''
+date: 02/21/2019
+description: ''
+details: 'File creation, modification, and other file system events
+
+  '
+eventData:
+  ActionType:
+    Description: Type of activity that triggered the event
+    Sample Value: ''
+    Standard Name: action_type
+    Type: string
+  AppGuardContainerId:
+    Description: Identifier for the virtualized container used by Application Guard
+      to isolate browser activity
+    Sample Value: ''
+    Standard Name: app_guard_container_id
+    Type: string
+  ComputerName:
+    Description: Fully qualified domain name (FQDN) of the machine
+    Sample Value: ''
+    Standard Name: computer_name
+    Type: string
+  EventTime:
+    Description: Date and time when the event was recorded
+    Sample Value: ''
+    Standard Name: event_date_creation
+    Type: date
+  FileName:
+    Description: Name of the file that the recorded action was applied to
+    Sample Value: ''
+    Standard Name: file_name
+    Type: string
+  FileOriginIP:
+    Description: IP address where the file was downloaded from
+    Sample Value: ''
+    Standard Name: file_origin_ip
+    Type: string
+  FileOriginReferenceUrl:
+    Description: URL of the web page that links to the downloaded file
+    Sample Value: ''
+    Standard Name: file_origin_reference_url
+    Type: string
+  FileOriginUrl:
+    Description: URL where the file was downloaded from
+    Sample Value: ''
+    Standard Name: file_origin_url
+    Type: string
+  FolderPath:
+    Description: Folder containing the file that the recorded action was applied to
+    Sample Value: ''
+    Standard Name: file_path
+    Type: string
+  InitiatingProcessAccountDomain:
+    Description: Domain of the account that ran the process responsible for the event
+    Sample Value: ''
+    Standard Name: user_domain
+    Type: string
+  InitiatingProcessAccountName:
+    Description: User name of the account that ran the process responsible for the
+      event
+    Sample Value: ''
+    Standard Name: user_name
+    Type: string
+  InitiatingProcessAccountSid:
+    Description: Security Identifier (SID) of the account that ran the process responsible
+      for the event
+    Sample Value: ''
+    Standard Name: user_sid
+    Type: string
+  InitiatingProcessCommandLine:
+    Description: Command line used to run the process that initiated the event
+    Sample Value: ''
+    Standard Name: process_command_line
+    Type: string
+  InitiatingProcessCreationTime:
+    Description: Date and time when the process that initiated the event was started
+    Sample Value: ''
+    Standard Name: process_creation_time
+    Type: date
+  InitiatingProcessFileName:
+    Description: Name of the process that initiated the event
+    Sample Value: ''
+    Standard Name: process_name
+    Type: string
+  InitiatingProcessFolderPath:
+    Description: Folder containing the process (image file) that initiated the event
+    Sample Value: ''
+    Standard Name: process_path
+    Type: string
+  InitiatingProcessId:
+    Description: Process ID (PID) of the process that initiated the event
+    Sample Value: ''
+    Standard Name: process_id
+    Type: int
+  InitiatingProcessIntegrityLevel:
+    Description: Integrity level of the process that initiated the event. Windows
+      assigns integrity levels to processes based on certain characteristics, such
+      as if they were launched from an internet download. These integrity levels influence
+      permissions to resources.
+    Sample Value: ''
+    Standard Name: process_integrity_level
+    Type: string
+  InitiatingProcessMD5:
+    Description: MD5 hash of the process (image file) that initiated the event
+    Sample Value: ''
+    Standard Name: md5_hash
+    Type: string
+  InitiatingProcessParentCreationTime:
+    Description: Date and time when the parent of the process responsible for the
+      event was started
+    Sample Value: ''
+    Standard Name: process_parent_creation_time
+    Type: date
+  InitiatingProcessParentFileName:
+    Description: Name of the parent process that spawned the process responsible for
+      the event
+    Sample Value: ''
+    Standard Name: process_parent_name
+    Type: string
+  InitiatingProcessParentId:
+    Description: Process ID (PID) of the parent process that spawned the process responsible
+      for the event
+    Sample Value: ''
+    Standard Name: process_parent_id
+    Type: int
+  InitiatingProcessSHA1:
+    Description: SHA-1 of the process (image file) that initiated the event
+    Sample Value: ''
+    Standard Name: sha1_hash
+    Type: string
+  InitiatingProcessTokenElevation:
+    Description: Token type indicating the presence or absence of User Access Control
+      (UAC) privilege elevation applied to the process that initiated the event
+    Sample Value: ''
+    Standard Name: process_token_elevation
+    Type: string
+  IsAzureInfoProtectionApplied:
+    Description: ''
+    Sample Value: ''
+    Standard Name: is_azure_info_protection_applied
+    Type: ''
+  IsWindowsInfoProtectionApplied:
+    Description: ''
+    Sample Value: ''
+    Standard Name: is_windows_infor_protection_applied
+    Type: ''
+  MD5:
+    Description: MD5 hash of the file that the recorded action was applied to
+    Sample Value: ''
+    Standard Name: hash_md5
+    Type: string
+  MachineId:
+    Description: Unique identifier for the machine in the service
+    Sample Value: ''
+    Standard Name: machine_id
+    Type: string
+  ReportId:
+    Description: Event identifier based on a repeating counter. To identify unique
+      events, this column must be used in conjunction with the ComputerName and EventTime
+      columns.
+    Sample Value: ''
+    Standard Name: report_id
+    Type: long
+  SHA1:
+    Description: SHA-1 of the file that the recorded action was applied to
+    Sample Value: ''
+    Standard Name: hash_sha1
+    Type: string
+  SHA256:
+    Description: "SHA-256 of the file that the recorded action was applied to. This\
+      \ field is usually not populated\u2014use the SHA1 column when available."
+    Sample Value: ''
+    Standard Name: hash_sha256
+    Type: string
+  SensitivityLabel:
+    Description: ''
+    Sample Value: ''
+    Standard Name: sensitivity_label
+    Type: ''
+  SensitivitySubLabel:
+    Description: ''
+    Sample Value: ''
+    Standard Name: sensitivity_sublabel
+    Type: ''
+logtype: windowsdefenderatp
+name: ''
+platform: windows
+provider: ''
+providerGUID: ''
+title: ''

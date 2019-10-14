@@ -1,0 +1,72 @@
+author: ''
+channel: ''
+date: ''
+description: An object was deleted
+details: "This event generates when an object was deleted. The object could be a file\
+  \ system, kernel, or registry object.\nThis event generates only if \u201CDelete\"\
+  \ auditing is set in object\u2019s SACL.\nThis event doesn\u2019t contain the name\
+  \ of the deleted object (only the Handle ID). It is better to use \u201C4663(S):\
+  \ An attempt was made to access an object\u201D with DELETE access to track object\
+  \ deletion.\n[MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4660.md)\n"
+eventData:
+  HandleId:
+    Description: "hexadecimal value of a handle to Object Name. This field can help\
+      \ you correlate this event with other events that might contain the same Handle\
+      \ ID, for example, \u201C4663(S): An attempt was made to access an object.\u201D"
+    Sample Value: '0x1678'
+    Standard Name: object_handle_id
+    Type: integer
+  ObjectServer:
+    Description: "has \u201CSecurity\u201D value for this event."
+    Sample Value: Security
+    Standard Name: object_server
+    Type: string
+  ProcessId:
+    Description: hexadecimal Process ID of the process that deleted the object. Process
+      ID (PID) is a number used by the operating system to uniquely identify an active
+      process.
+    Sample Value: '0xef0'
+    Standard Name: process_id
+    Type: integer
+  ProcessName:
+    Description: full path and the name of the executable for the process.
+    Sample Value: C:\\Windows\\explorer.exe
+    Standard Name: process_path
+    Type: string
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: "hexadecimal value that can help you correlate this event with recent\
+      \ events that might contain the same Logon ID, for example, \u201C4624: An account\
+      \ was successfully logged on.\u201D"
+    Sample Value: '0x4367b'
+    Standard Name: user_logon_id
+    Type: inter
+  SubjectUserName:
+    Description: "the name of the account that requested the \u201Cdelete object\u201D\
+      \ operation."
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: "SID of account that requested the \u201Cdelete object\u201D operation."
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+  TransactionId:
+    Description: "unique GUID of the transaction. This field can help you correlate\
+      \ this event with other events that might contain the same Transaction ID, such\
+      \ as \u201C4656(S, F): A handle to an object was requested.\u201D"
+    Sample Value: '{00000000-0000-0000-0000-000000000000}'
+    Standard Name: transaction_id
+    Type: string
+eventID: 4660
+logtype: security_events
+name: 'Event ID 4660: An object was deleted'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4660

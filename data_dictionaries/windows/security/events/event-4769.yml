@@ -1,0 +1,85 @@
+author: ''
+channel: ''
+date: ''
+description: A Kerberos service ticket was requested
+details: "This event generates every time Key Distribution Center gets a Kerberos\
+  \ Ticket Granting Service (TGS) ticket request. This event generates only on domain\
+  \ controllers. If TGS issue fails then you will see Failure event with Failure Code\
+  \ field not equal to \u201C0x0\u201D. You will typically see many Failure events\
+  \ with Failure Code \u201C0x20\u201D, which simply means that a TGS ticket has expired.\
+  \ These are informational messages and have little to no security relevance.\n[MS\
+  \ Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4769.md)\n"
+eventData:
+  IpAddress:
+    Description: IP address of the computer from which the TGS request was received.
+    Sample Value: ::ffff:10.0.0.12
+    Standard Name: src_ip
+    Type: ip
+  IpPort:
+    Description: source port number of client network connection (TGS request connection).
+    Sample Value: '49272'
+    Standard Name: src_port
+    Type: integer
+  LogonGuid:
+    Description: "a GUID that can help you correlate this event (on a domain controller)\
+      \ with other events (on the target computer for which the TGS was issued) that\
+      \ can contain the same Logon GUID. These events are \u201C4624: An account was\
+      \ successfully logged on\u201D, \u201C4648(S): A logon was attempted using explicit\
+      \ credentials\u201D and \u201C4964(S): Special groups have been assigned to\
+      \ a new logon.\u201D"
+    Sample Value: '{F85C455E-C66E-205C-6B39-F6C60A7FE453}'
+    Standard Name: user_logon_guid
+    Type: string
+  ServiceName:
+    Description: the name of the account or computer for which the TGS ticket was
+      requested
+    Sample Value: WIN2008R2$
+    Standard Name: service_name
+    Type: string
+  ServiceSid:
+    Description: SID of the account or computer object for which the TGS ticket was
+      requested. Event Viewer automatically tries to resolve SIDs and show the account
+      name. If the SID cannot be resolved, you will see the source data in the event.
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-2102
+    Standard Name: service_sid
+    Type: string
+  Status:
+    Description: hexadecimal result code of TGS issue operation.
+    Sample Value: '0x0'
+    Standard Name: ticket_status
+    Type: string
+  TargetDomainName:
+    Description: the name of the Kerberos Realm that Account Name belongs to
+    Sample Value: CONTOSO.LOCAL
+    Standard Name: user_domain
+    Type: string
+  TargetUserName:
+    Description: 'the User Principal Name (UPN) of the account that requested the
+      ticket. Computer account name ends with $ character in UPN. This field typically
+      has the following value format: user_account_name@FULL_DOMAIN_NAME.'
+    Sample Value: dadmin@CONTOSO.LOCAL
+    Standard Name: user_name
+    Type: string
+  TicketEncryptionType:
+    Description: the cryptographic suite that was used for issued TGS.
+    Sample Value: '0x12'
+    Standard Name: ticket_encryption
+    Type: string
+  TicketOptions:
+    Description: this is a set of different Ticket Flags in hexadecimal format.
+    Sample Value: '0x40810000'
+    Standard Name: ticket_options
+    Type: string
+  TransmittedServices:
+    Description: this field contains list of SPNs which were requested if Kerberos
+      delegation was used.
+    Sample Value: '-'
+    Standard Name: logon_transmitted_services
+    Type: string
+eventID: 4769
+logtype: security_events
+name: 'Event ID 4769: A Kerberos service ticket was requested'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4769

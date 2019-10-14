@@ -1,0 +1,107 @@
+author: Jared Atkinson (@jaredcatkinson)
+channel: ''
+date: 06/09/2018
+description: ''
+details: 'Get-SOHostData collects Access Tokens from every running Process and Thread.
+  Threads only have their own Access Token if they are using impersonation, otherwise
+  they inherit the token from their containing process.
+
+  '
+eventData:
+  AuthenticationId:
+    Description: Unique identifier of the logon session this token represents
+    Sample Value: '351709'
+    Standard Name: authentication_id
+    Type: LONG
+  ElevationType:
+    Description: Token's elevation level
+    Sample Value: TokenElevationTypeFull
+    Standard Name: elevation_type
+    Type: TEXT
+  Id:
+    Description: SO Host Data's unique identifier of this instance
+    Sample Value: 8C3C0F18E053F361BF80D7BD126F67A5B7BE8241388802ABA430D751F60CD7D3
+    Standard Name: id
+    Type: TEXT
+  IntegrityLevel:
+    Description: Integrity level of token
+    Sample Value: HIGH_MANDATORY_LEVEL
+    Standard Name: integrity_level
+    Type: TEXT
+  IsElevated:
+    Description: Specifies if the token is elevated
+    Sample Value: 'True'
+    Standard Name: is_elevated
+    Type: BOOLEAN
+  LogonSessionKey:
+    Description: SO Host Data's unique identifier of associated logon session
+    Sample Value: EC0AC744FFFBE3228F9E73EC60FA74F3BAB8330DFBCA51B269FC8A3B3B5DD7CD
+    Standard Name: logon_session_key
+    Type: TEXT
+  ModifiedId:
+    Description: A value that changes each time the token is modified
+    Sample Value: '26239987'
+    Standard Name: modified_id
+    Type: LONG
+  Origin:
+    Description: Originating logon session
+    Sample Value: '999'
+    Standard Name: origin
+    Type: LONG
+  OwnerName:
+    Description: Default owner's name
+    Sample Value: BUILTIN\Administrators
+    Standard Name: owner_name
+    Type: TEXT
+  OwnerSid:
+    Description: Default owner's security identifier
+    Sample Value: S-1-5-32-544
+    Standard Name: owner_sid
+    Type: TEXT
+  PrimaryTokenKey:
+    Description: SO Host Data's unique identifier of containing process's primary
+      token
+    Sample Value: 8C3C0F18E053F361BF80D7BD126F67A5B7BE8241388802ABA430D751F60CD7D3
+    Standard Name: primary_token_key
+    Type: TEXT
+  Privileges:
+    Description: Token's enabled privileges
+    Sample Value: SeDebugPrivilege;SeChangeNotifyPrivilege;SeImpersonatePrivilege;SeCreateGlobalPrivilege
+    Standard Name: privileges
+    Type: TEXT
+  SessionId:
+    Description: Token's terminal services session
+    Sample Value: '1'
+    Standard Name: session_id
+    Type: INTEGER
+  SourceType:
+    Description: Type of data represented
+    Sample Value: WinEvent-Token
+    Standard Name: source_type
+    Type: TEXT
+  TokenId:
+    Description: Unique identifier of the token
+    Sample Value: '26235631'
+    Standard Name: token_id
+    Type: LONG
+  Type:
+    Description: Indicates whether the token is a primary or impersonation token
+    Sample Value: TokenPrimary
+    Standard Name: type
+    Type: TEXT
+  UserName:
+    Description: Name of token's user
+    Sample Value: DESKTOP-HMTGQ0R\tester
+    Standard Name: username
+    Type: TEXT
+  UserSid:
+    Description: Security identifier of token's user
+    Sample Value: S-1-5-21-386661145-2656271985-3844047388-1001
+    Standard Name: user_sid
+    Type: TEXT
+logtype: so-host-data
+name: ''
+platform: windows
+provider: ''
+providerGUID: ''
+title: ''

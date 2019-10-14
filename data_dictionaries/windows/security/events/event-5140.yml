@@ -1,0 +1,80 @@
+author: ''
+channel: ''
+date: ''
+description: A network share object was accessed
+details: 'This event generates every time network share object was accessed.
+
+  This event generates once per session, when first access attempt was made.
+
+  [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-5140.md)
+
+  '
+eventData:
+  AccessList:
+    Description: "the list of access rights which were requested by Subject\\Security\
+      \ ID. These access rights depend on Object Type. Has always \u201CReadData (or\
+      \ ListDirectory)\u201D value for this event."
+    Sample Value: '%%4416'
+    Standard Name: user_access_list
+    Type: string
+  AccessMask:
+    Description: "the sum of hexadecimal values of requested access rights. See \u201C\
+      Table 13. File access codes.\u201D"
+    Sample Value: '0x1'
+    Standard Name: share_access_mask
+    Type: string
+  IpAddress:
+    Description: source IP address from which access was performed.
+    Sample Value: 10.0.0.100
+    Standard Name: src_ip
+    Type: ip
+  IpPort:
+    Description: source TCP or UDP port which was used from remote or local machine
+      to request the access.
+    Sample Value: '49212'
+    Standard Name: src_port
+    Type: integer
+  ObjectType:
+    Description: "The type of an object that was accessed during the operation. Always\
+      \ \u201CFile\u201D for this event."
+    Sample Value: File
+    Standard Name: object_type
+    Type: string
+  ShareLocalPath:
+    Description: 'the full system (NTFS) path for accessed share. The format is: \\??\PATH'
+    Sample Value: \\??\\C:\\Documents
+    Standard Name: share_local_path
+    Type: string
+  ShareName:
+    Description: the name of accessed network share.
+    Sample Value: \\\\\*\\Documents
+    Standard Name: share_name
+    Type: string
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name"
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: hexadecimal value that can help you correlate this event with recent
+      events that might contain the same Logon ID
+    Sample Value: '0x541f35'
+    Standard Name: user_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: the name of the account that requested access to network share object.
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: SID of account that requested access to network share object.
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+eventID: 5140
+logtype: security_events
+name: 'Event ID 5140: A network share object was accessed'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 5140

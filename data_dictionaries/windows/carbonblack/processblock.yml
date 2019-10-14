@@ -1,0 +1,92 @@
+author: ''
+channel: ''
+date: ''
+description: ''
+details: 'A process was blocked from executing on an endpoint monitored by Carbon
+  Black because the process MD5 has been blacklisted.
+
+  [Carbon Black Developer Docs](https://developer.carbonblack.com/reference/enterprise-response/event-forwarder/event-schema/#ingress-event-processblock-process-block)
+
+  '
+eventData:
+  blocked_event:
+    Description: 'The type of event that was blocked: either ProcessCreate (the process
+      was terminated immediately upon execution) or RunningProcess (the process was
+      already running on the endpoint when the block was applied).'
+    Sample Value: ProcessCreate
+    Standard Name: blocked_event
+    Type: TEXT
+  blocked_reason:
+    Description: The reason for block action (Md5Hash is the only possible value)
+    Sample Value: Md5Hash
+    Standard Name: blocked_reason
+    Type: TEXT
+  blocked_result:
+    Description: 'The result of the blocked action: ProcessTerminated, NotTerminatedCBProcess,
+      NotTerminatedSystemProcess, NotTerminatedCriticalSystemProcess, NotTerminatedWhitelistPath,
+      NotTerminatedOpenProcessError, or NotTerminatedTerminateError.'
+    Sample Value: ProcessTerminated
+    Standard Name: blocked_result
+    Type: TEXT
+  cb_server:
+    Description: "Used to distinguish between multiple Cb Response servers. Set this\
+      \ in the \u201Cserver_name\u201D option of cb-event-forwarder.ini."
+    Sample Value: cbserver
+    Standard Name: cb_server
+    Type: TEXT
+  command_line:
+    Description: Command line associated with the blocked process
+    Sample Value: \"C:\\Program Files\\Microsoft Games\\hearts\\hearts.exe\"
+    Standard Name: process_command_line
+    Type: TEXT
+  computer_name:
+    Description: hostname of the sensor
+    Sample Value: JASON-WIN81-VM
+    Standard Name: host_name
+    Type: TEXT
+  event_type:
+    Description: The type of event
+    Sample Value: blocked_process
+    Standard Name: event_type
+    Type: TEXT
+  md5:
+    Description: md5 of process executable
+    Sample Value: A8524F6C3AFF774911BCA26AB8322602
+    Standard Name: hash
+    Type: TEXT
+  path:
+    Description: Path of the blocked executable on disk
+    Sample Value: c:\\program files\\microsoft games\\hearts\\hearts.exe
+    Standard Name: file_path
+    Type: TEXT
+  sensor_id:
+    Description: Sensor ID of associated sensor
+    Sample Value: '1'
+    Standard Name: sensor_id
+    Type: INTEGER
+  timestamp:
+    Description: Endpoint timestamp of this event since epoch
+    Sample Value: '1450470603'
+    Standard Name: event_date_creation
+    Type: BIGINT
+  type:
+    Description: The full type of event
+    Sample Value: ingress.event.processblock
+    Standard Name: event_type_detailed
+    Type: TEXT
+  uid:
+    Description: Security Identifier of the username name used for process creation
+    Sample Value: S-1-5-21-3382350439-2970772701-2583938045-1000
+    Standard Name: user_sid
+    Type: TEXT
+  username:
+    Description: Username that initiated the process creation
+    Sample Value: DANWIN764\\dan
+    Standard Name: user_name
+    Type: TEXT
+logtype: carbonblack
+name: processblock
+platform: windows
+provider: carbonblack
+providerGUID: ''
+title: ingress.event.processblock (Process Block)

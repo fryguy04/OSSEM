@@ -1,0 +1,46 @@
+author: ''
+channel: ''
+date: ''
+description: An account was logged off
+details: "This event shows that logon session was terminated and no longer exists.\n\
+  * The main difference between \u201C4647: User initiated logoff.\u201D and 4634\
+  \ event is that 4647 event is generated when logoff procedure was initiated by specific\
+  \ account using logoff function, and 4634 event shows that session was terminated\
+  \ and no longer exists.\n* 4647 is more typical for Interactive and RemoteInteractive\
+  \ logon types when user was logged off using standard methods. You will typically\
+  \ see both 4647 and 4634 events when logoff procedure was initiated by user.\n[MS\
+  \ Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4634.md)\n"
+eventData:
+  LogonType:
+    Description: the type of logon which was performed.
+    Sample Value: '2'
+    Standard Name: logon_type
+    Type: integer
+  TargetDomainName:
+    Description: "subject\u2019s domain or computer name."
+    Sample Value: Window Manager
+    Standard Name: user_domain
+    Type: string
+  TargetLogonId:
+    Description: hexadecimal value that can help you correlate this event with recent
+      events that might contain the same Logon ID
+    Sample Value: '0x1a0992'
+    Standard Name: user_logon_id
+    Type: integer
+  TargetUserName:
+    Description: the name of the account that was logged off
+    Sample Value: DQM-1
+    Standard Name: user_name
+    Type: string
+  TargetUserSid:
+    Description: SID of account that was logged off.
+    Sample Value: S-1-5-90-1
+    Standard Name: user_sid
+    Type: string
+eventID: 4634
+logtype: security_events
+name: 'Event ID 4634: An account was logged off'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4634

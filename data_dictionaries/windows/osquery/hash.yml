@@ -1,0 +1,41 @@
+author: ''
+channel: ''
+date: ''
+description: ''
+details: 'Filesystem hash data.
+
+  [osquery GitHub](https://github.com/facebook/osquery/blob/master/specs/hash.table)
+
+  '
+eventData:
+  directory:
+    Description: Must provide a path or directory
+    Sample Value: ''
+    Standard name: file_directory
+    Type: TEXT
+  md5:
+    Description: MD5 hash of provided filesystem data
+    Sample Value: ''
+    Standard name: hash_md5
+    Type: TEXT
+  path:
+    Description: Must provide a path or directory
+    Sample Value: ''
+    Standard name: file_path
+    Type: TEXT
+  sha1:
+    Description: SHA1 hash of provided filesystem data
+    Sample Value: ''
+    Standard name: hash_sha1
+    Type: TEXT
+  sha256:
+    Description: SHA256 hash of provided filesystem data
+    Sample Value: ''
+    Standard name: hadh_sha256
+    Type: TEXT
+logtype: osquery
+name: ''
+platform: windows
+provider: ''
+providerGUID: ''
+title: ''

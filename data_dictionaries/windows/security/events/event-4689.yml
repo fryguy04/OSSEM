@@ -1,0 +1,56 @@
+author: ''
+channel: ''
+date: ''
+description: A process has exited
+details: 'This event generates every time a process has exited.
+
+  [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4689.md)
+
+  '
+eventData:
+  ProcessId:
+    Description: hexadecimal Process ID of the ended/terminated process.
+    Sample Value: '0xfb0'
+    Standard Name: process_id
+    Type: integer
+  ProcessName:
+    Description: full path and the executable name of the exited/terminated process.
+    Sample Value: C:\\Windows\\System32\\notepad.exe
+    Standard Name: process_name
+    Type: string
+  Status:
+    Description: hexadecimal exit code of exited/terminated process.
+    Sample Value: '0x0'
+    Standard Name: event_status
+    Type: integer
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: "hexadecimal value that can help you correlate this event with recent\
+      \ events that might contain the same Logon ID, for example, \u201C4624: An account\
+      \ was successfully logged on.\u201D"
+    Sample Value: '0x31365'
+    Standard Name: user_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: "the name of the account that requested the \u201Cterminate process\u201D\
+      \ operation."
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: "SID of account that requested the \u201Cterminate process\u201D\
+      \ operation."
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+eventID: 4689
+logtype: security_events
+name: 'Event ID 4689: A process has exited'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4689

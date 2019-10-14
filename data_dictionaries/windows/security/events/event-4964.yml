@@ -1,0 +1,81 @@
+author: ''
+channel: ''
+date: ''
+description: Special groups have been assigned to a new logon
+details: 'This event occurs when an account that is a member of any defined Special
+  Group logs in.
+
+  [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4964.md)
+
+  '
+eventData:
+  LogonGuid:
+    Description: "a GUID that can help you correlate this event with another event\
+      \ that can contain the same Logon GUID, \u201C4769(S, F): A Kerberos service\
+      \ ticket was requested event on a domain controller."
+    Sample Value: '{00000000-0000-0000-0000-000000000000}'
+    Standard Name: user_logon_guid
+    Type: string
+  SidList:
+    Description: the list of special group SIDs, which New Logon\Security ID is a
+      member of.
+    Sample Value: '%{S-1-5-21-3457937927-2839227994-823803824-512}'
+    Standard Name: target_user_sid_list
+    Type: string
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: hexadecimal value that can help you correlate this event with recent
+      events that might contain the same Logon ID,
+    Sample Value: '0xd972e'
+    Standard Name: user_logon_id
+    Type: integer
+  SubjectUserName:
+    Description: the name of the account that requested logon for New Logon account
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: SID of account that requested logon for New Logon account
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-1104
+    Standard Name: user_sid
+    Type: string
+  TargetDomainName:
+    Description: "subject\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: target_user_domain
+    Type: string
+  TargetLogonGuid:
+    Description: "a GUID that can help you correlate this event with another event\
+      \ that can contain the same Logon GUID, \u201C4769(S, F): A Kerberos service\
+      \ ticket was requested event on a domain controller."
+    Sample Value: '{B03B6192-09AE-E77F-DD10-2DC430766040}'
+    Standard Name: target_user_logon_guid
+    Type: string
+  TargetLogonId:
+    Description: "hexadecimal value that can help you correlate this event with recent\
+      \ events that might contain the same Logon ID, for example, \u201C4624: An account\
+      \ was successfully logged on.\u201D"
+    Sample Value: '0x139faf'
+    Standard Name: target_user_logon_id
+    Type: integer
+  TargetUserName:
+    Description: the name of the account that performed the logon.
+    Sample Value: ladmin
+    Standard Name: target_user_name
+    Type: string
+  TargetUserSid:
+    Description: SID of account that performed the logon.
+    Sample Value: S-1-5-21-3457937927-2839227994-823803824-500
+    Standard Name: target_user_sid
+    Type: string
+eventID: 4964
+logtype: security_events
+name: 'Event ID 4964: Special groups have been assigned to a new logon'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4964

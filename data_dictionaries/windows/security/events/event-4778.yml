@@ -1,0 +1,53 @@
+author: ''
+channel: ''
+date: ''
+description: A session was reconnected to a Window Station
+details: 'This event is generated when a user reconnects to an existing Terminal Services
+  session, or when a user switches to an existing desktop using Fast User Switching.
+
+  * This event also generates when user reconnects to virtual host Hyper-V Enhanced
+  Session, for example.
+
+  [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4778.md)
+
+  '
+eventData:
+  AccountDomain:
+    Description: "subject\u2019s domain or computer name"
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  AccountName:
+    Description: the name of the account for which the session was reconnected
+    Sample Value: ladmin
+    Standard Name: user_name
+    Type: string
+  ClientAddress:
+    Description: IP address of the computer from which the user was reconnected
+    Sample Value: 10.0.0.100
+    Standard Name: src_ip
+    Type: ip
+  ClientName:
+    Description: "computer name from which the user was reconnected. Has \u201CUnknown\u201D\
+      \ value for console session."
+    Sample Value: WIN81
+    Standard Name: src_host_name
+    Type: string
+  LogonID:
+    Description: hexadecimal value that can help you correlate this event with recent
+      events that might contain the same Logon ID
+    Sample Value: '0x1e01f6'
+    Standard Name: user_logon_id
+    Type: integer
+  SessionName:
+    Description: the name of the session to which the user was reconnected
+    Sample Value: RDP-Tcp\#6
+    Standard Name: session_name
+    Type: string
+eventID: 4778
+logtype: security_events
+name: 'Event ID 4778: A session was reconnected to a Window Station'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4778

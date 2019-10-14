@@ -1,0 +1,71 @@
+author: ''
+channel: ''
+date: ''
+description: A user's local group membership was enumerated
+details: 'This event generates when a process enumerates a user''s security-enabled
+  local groups on a computer or device.
+
+  [MS Source](https://github.com/MicrosoftDocs/windows-itpro-docs/blob/master/windows/security/threat-protection/auditing/event-4798.md)
+
+  '
+eventData:
+  CallerProcessId:
+    Description: hexadecimal Process ID of the process that enumerated the members
+      of the group. Process ID (PID) is a number used by the operating system to uniquely
+      identify an active process.
+    Sample Value: '0xc80'
+    Standard Name: process_id
+    Type: integer
+  CallerProcessName:
+    Description: full path and the name of the executable for the process.
+    Sample Value: C:\\Windows\\System32\\mmc.exe
+    Standard Name: process_name
+    Type: string
+  SubjectDomainName:
+    Description: "subject\u2019s domain or computer name."
+    Sample Value: CONTOSO
+    Standard Name: user_domain
+    Type: string
+  SubjectLogonId:
+    Description: "hexadecimal value that can help you correlate this event with recent\
+      \ events that might contain the same Logon ID, for example, \u201C4624: An account\
+      \ was successfully logged on.\u201D"
+    Sample Value: '0x72d9d'
+    Standard Name: user_logon_id
+    Type: string
+  SubjectUserName:
+    Description: "the name of the account that requested the \u201Cenumerate user's\
+      \ security-enabled local groups\u201D operation."
+    Sample Value: dadmin
+    Standard Name: user_name
+    Type: string
+  SubjectUserSid:
+    Description: "SID of account that requested the \u201Cenumerate user's security-enabled\
+      \ local groups\u201D operation."
+    Sample Value: S-1-5-21-1377283216-344919071-3415362939-1104
+    Standard Name: user_logon_id
+    Type: string
+  TargetDomainName:
+    Description: "group\u2019s domain or computer name."
+    Sample Value: WIN10-1
+    Standard Name: target_user_domain
+    Type: string
+  TargetSid:
+    Description: SID of the account whose groups were enumerated. Event Viewer automatically
+      tries to resolve SIDs and show the account name. If the SID cannot be resolved,
+      you will see the source data in the event.
+    Sample Value: S-1-5-21-1694160624-234216347-2203645164-500
+    Standard Name: target_user_sid
+    Type: string
+  TargetUserName:
+    Description: the name of the account whose groups were enumerated.
+    Sample Value: Administrator
+    Standard Name: target_user_name
+    Type: string
+eventID: 4798
+logtype: security_events
+name: 'Event ID 4798: A user''s local group membership was enumerated'
+platform: windows
+provider: ''
+providerGUID: ''
+title: Event ID 4798
